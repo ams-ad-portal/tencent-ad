@@ -380,7 +380,7 @@ function getItems() { return VARIETY_ITEMS; }
         ${castText}
       </div>
       <button class="tl-expand" type="button">
-        <span class="tl-expand-text">点击展开</span>
+        <span class="tl-expand-text">展开</span>
         <span class="tl-arrow" aria-hidden="true">▾</span>
       </button>
     </article>
@@ -541,7 +541,7 @@ function getItems() { return VARIETY_ITEMS; }
       detail.hidden = isOpen;
       row.classList.toggle("open", !isOpen);
       const txt = row.querySelector(".tl-expand-text");
-      if (txt) txt.textContent = isOpen ? "点击展开" : "收起";
+      if (txt) txt.textContent = isOpen ? "展开" : "收起";
     }
   });
 
