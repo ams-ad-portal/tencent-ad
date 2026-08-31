@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>腾讯内容平台 · 公开资源站</title>
+<meta name="description" content="腾讯内容平台资源入口：腾讯大剧 / 腾讯综艺 / 腾讯刊例 / 腾讯广告常见形式，点击进入对应板块。" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
+    background: #f5f7fb; color: #1a1a2e; min-height: 100vh;
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .hero {
+    width: 100%; background: linear-gradient(120deg, #0046c0 0%, #006eff 60%, #2a8bff 100%);
+    color: #fff; text-align: center; padding: 56px 20px 64px;
+  }
+  .hero h1 { font-size: 30px; font-weight: 800; letter-spacing: 3px; }
+  .hero p { margin-top: 12px; font-size: 14px; color: rgba(255,255,255,.82); line-height: 1.7; }
+  .cards {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 22px;
+    max-width: 1000px; width: 100%; padding: 0 20px; margin: -34px auto 48px;
+  }
+  .card {
+    background: #fff; border-radius: 16px; padding: 30px 22px 26px; text-align: center;
+    box-shadow: 0 6px 24px rgba(0, 68, 192, .10);
+    border: 1px solid rgba(0, 68, 192, .08);
+    text-decoration: none; color: inherit; display: block;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0, 68, 192, .18); }
+  .icon { font-size: 52px; line-height: 1; }
+  .card h2 { margin-top: 14px; font-size: 19px; font-weight: 800; letter-spacing: 1px; }
+  .card .sub { margin-top: 8px; font-size: 12.5px; color: #667; line-height: 1.6; }
+  .go {
+    display: inline-block; margin-top: 16px; padding: 8px 22px; border-radius: 20px;
+    background: var(--c, #006eff); color: #fff; font-size: 13.5px; font-weight: 700;
+  }
+  .tip {
+    max-width: 760px; padding: 0 20px 40px; text-align: center;
+    font-size: 12.5px; color: #889; line-height: 1.8;
+  }
+  footer { width: 100%; text-align: center; padding: 18px 20px 26px; font-size: 12px; color: #99a; border-top: 1px solid #e3e8f2; }
+  @media (max-width: 767px) {
+    .hero { padding: 40px 16px 48px; }
+    .hero h1 { font-size: 23px; }
+    .cards { grid-template-columns: 1fr; gap: 14px; margin-top: -22px; }
+    .card { padding: 22px 18px 20px; }
+  }
+</style>
+</head>
+<body>
+  <header class="hero">
+    <h1>腾讯内容平台 · 公开资源站</h1>
+    <p>腾讯大剧 / 腾讯综艺 / 腾讯刊例 / 腾讯广告常见形式 —— 点击下方入口进入对应板块</p>
+  </header>
+
+  <main class="cards">
+    <a class="card" href="./tv/" style="--c:#e2366a">
+      <div class="icon">📺</div>
+      <h2>腾讯大剧</h2>
+      <p class="sub">电视剧上线时间轴<br/>定级 · 主演 · 上线时间</p>
+      <span class="go">进入大剧</span>
+    </a>
+    <a class="card" href="./variety/" style="--c:#006eff">
+      <div class="icon">🎬</div>
+      <h2>腾讯综艺</h2>
+      <p class="sub">综艺上线时间轴<br/>嘉宾 · 方案 · 结案</p>
+      <span class="go">进入综艺</span>
+    </a>
+    <a class="card" href="./ratecard/" style="--c:#00a870">
+      <div class="icon">📄</div>
+      <h2>腾讯刊例</h2>
+      <p class="sub">广告资源报价单<br/>在线浏览 · 下载</p>
+      <span class="go">进入刊例</span>
+    </a>
+    <a class="card" href="./adformat/" style="--c:#7a4dff">
+      <div class="icon">🧩</div>
+      <h2>腾讯广告常见形式</h2>
+      <p class="sub">常见投放形式速查<br/>位置 · 文档 · Demo</p>
+      <span class="go">进入形式</span>
+    </a>
+  </main>
+
+  <p class="tip">各板块内容均需凭访问码进入：点击「获取访问码」用微信/企业微信登录腾讯文档申请（填写公司名称），管理员审批通过后即可查看访问码。本页面为对外公开资料，仅供商务参考。</p>
+
+  <footer>腾讯内容平台 · 对外公开资料 · © 2026</footer>
+</body>
+</html>

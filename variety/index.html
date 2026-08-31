@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>腾讯内容平台 · 公开资源站</title>
+<meta name="description" content="腾讯广告刊例（视频/体育/新闻/联投/微信/TME/QQ浏览器）+ 综艺 / 电视剧上线时间轴，访问需凭访问码。" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="腾讯内容平台 · 公开资源站" />
+<meta property="og:description" content="广告刊例报价 + 综艺/电视剧上线时间轴，内部参考，访问需凭访问码。" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="assets/style.css" />
+<link rel="stylesheet" href="assets/assistant.css" />
+</head>
+<body>
+<header class="site-head">
+  <a class="btn-home" href="./" title="返回首页"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M10.3 5.3a1 1 0 0 1 1.4 1.4L7.42 11H19a1 1 0 1 1 0 2H7.41l4.3 4.3a1 1 0 1 1-1.42 1.4l-6-6a1 1 0 0 1 0-1.4l6-6Z"/></svg>返回首页</a>
+  <div class="head-inner">
+    <h1 id="pageTitle">综艺上线时间轴</h1>
+    <p class="disclaimer" id="pageDisclaimer">本网页仅供相关人员内部参考，其中的定级、内容、上线时间、嘉宾均为暂定和拟定，并非实际最终信息，请勿对外传播，以免造成不必要的错误信息传播或负面舆论。一切信息以腾讯官方发布为准，如有需要了解实际信息，请与腾讯相关业务对接人员联系。</p>
+  </div>
+</header>
+
+<div class="board" id="board-timeline">
+  <div class="filters" id="filters">
+    <div class="filter-group">
+      <span class="filter-label">季度</span>
+      <div class="filter-chips" id="quarterChips"></div>
+    </div>
+    <div class="filter-group">
+      <span class="filter-label">级别</span>
+      <div class="filter-chips" id="levelChips"></div>
+    </div>
+    <div class="filter-group">
+      <span class="filter-label">类型</span>
+      <div class="filter-chips" id="typeChips"></div>
+    </div>
+    <div class="filter-group" id="subTypeGroup" hidden>
+      <span class="filter-label" id="subTypeLabel">小类</span>
+      <div class="filter-chips" id="subTypeChips"></div>
+    </div>
+  </div>
+
+  <div class="search-bar">
+    <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15.6 15.6 21 21" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
+    <input type="search" id="searchInput" placeholder="搜索综艺 / 电视剧名称，或嘉宾（主演）姓名…" autocomplete="off" />
+    <button class="search-clear" id="searchClear" type="button" aria-label="清除搜索" hidden>×</button>
+  </div>
+
+  <main class="container">
+    <p class="page-sub" id="pageSub">按上线时间排列 · 最新在上</p>
+    <div class="tl-wrap" id="tlWrap">
+      <div class="tl-line" aria-hidden="true"></div>
+      <div class="tl-empty" id="tlEmpty">
+        <div class="tl-empty-icon">🎬</div>
+        <p>时间轴待填充</p>
+        <span>把节目和上线时间发给我，我会按最新在上依次排进来。</span>
+      </div>
+    </div>
+  </main>
+</div>
+</div>
+</div>
+
+<div class="plan-viewer" id="planViewer" aria-hidden="true">
+  <button class="viewer-back-float" type="button" data-plan-close aria-label="返回">
+    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M20 11H7.8l5.6-5.6L12 4l-8 8 8 8 1.4-1.4L7.8 13H20v-2Z"/></svg>
+    返回
+  </button>
+  <div class="plan-backdrop" data-plan-close></div>
+  <div class="plan-panel">
+    <div class="plan-head">
+      <div class="plan-title"><h3 id="planName"></h3></div>
+      <a class="btn-plan btn-plan-sm" id="planDownload" href="#" download>
+        <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.42l2.3 2.3V4a1 1 0 0 1 1-1Zm-7 14a1 1 0 0 1 1 1v1h12v-1a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1Z"/></svg>
+        下载
+      </a>
+    </div>
+    <div class="plan-frame" id="planFrame">
+      <div class="pdf-pages" id="planPages"></div>
+    </div>
+  </div>
+</div>
+
+<div class="plan-viewer" id="reportViewer" aria-hidden="true">
+  <button class="viewer-back-float" type="button" data-report-close aria-label="返回">
+    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M20 11H7.8l5.6-5.6L12 4l-8 8 8 8 1.4-1.4L7.8 13H20v-2Z"/></svg>
+    返回
+  </button>
+  <div class="plan-backdrop" data-report-close></div>
+  <div class="plan-panel">
+    <div class="plan-head">
+      <div class="plan-title"><h3 id="reportName"></h3></div>
+      <a class="btn-plan btn-plan-green btn-plan-sm" id="reportDownload" href="#" download>📥 结案下载</a>
+    </div>
+    <div class="plan-frame report-frame" id="reportFrame">
+      <iframe class="report-iframe" id="reportIframe" title="结案数据文档"></iframe>
+    </div>
+  </div>
+</div>
+
+<div class="gate" id="gate">
+  <div class="gate-card">
+    <div class="gate-brand"><h2>腾讯内容平台 · 公开资源站</h2></div>
+    <p class="gate-intro">本页面包含广告刊例与综艺/电视剧时间轴，查看内容前需凭访问码进入。点击下方「获取访问码」申请，审批通过后即可在文档中查看访问码。</p>
+    <div class="gate-actions">
+      <button class="btn btn-primary" id="btnGetCode" type="button">获取访问码</button>
+      <button class="btn btn-ghost2" id="btnHaveCode" type="button">已获取访问码</button>
+    </div>
+    <div class="gate-code" id="gateCode" hidden>
+      <input class="gate-input" type="text" id="codeInput" placeholder="请输入访问码" autocomplete="off" />
+      <button class="btn btn-primary" id="btnVerify" type="button">确认</button>
+      <p class="gate-err" id="codeErr" hidden>访问码不正确，请检查后重试，或重新获取。</p>
+    </div>
+    <p class="gate-tip">获取访问码：点击后用微信/企业微信登录腾讯文档，申请访问（请填写公司名称），管理员审批通过后即可看到文档中的访问码。</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>本页面为对外公开资料 · 仅供商务参考 · © 2026</p>
+  <a href="#" id="btnLogout" hidden>退出访问</a>
+</footer>
+
+<script src="assets/vendor/pdf.min.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/assistant.js"></script>
+</body>
+</html>

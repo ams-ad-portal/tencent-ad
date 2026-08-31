@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>腾讯内容平台 · 公开资源站</title>
+<meta name="description" content="腾讯广告刊例（视频/体育/新闻/联投/微信/TME/QQ浏览器）+ 综艺 / 电视剧上线时间轴，访问需凭访问码。" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="腾讯内容平台 · 公开资源站" />
+<meta property="og:description" content="广告刊例报价 + 综艺/电视剧上线时间轴，内部参考，访问需凭访问码。" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="assets/style.css" />
+<link rel="stylesheet" href="assets/assistant.css" />
+</head>
+<body>
+<header class="site-head">
+  <a class="btn-home" href="./" title="返回首页"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M10.3 5.3a1 1 0 0 1 1.4 1.4L7.42 11H19a1 1 0 1 1 0 2H7.41l4.3 4.3a1 1 0 1 1-1.42 1.4l-6-6a1 1 0 0 1 0-1.4l6-6Z"/></svg>返回首页</a>
+  <div class="head-inner">
+    <h1 id="pageTitle">腾讯广告刊例</h1>
+  </div>
+</header>
+
+<div class="board" id="board-ratecard">
+  <div class="rc-toolbar">
+    <p class="intro">以下为对外公开版刊例，点击文件名可<b>在线浏览</b>完整报价单，或一键<b>下载</b> PDF 原件。报价以实际执行为准，最终解释权归发布方所有。</p>
+    <a class="btn btn-primary rc-allpack" href="files/all-ratecards.zip" download="【2026】腾讯广告刊例-全套资源报价.zip">
+      <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.42l2.3 2.3V4a1 1 0 0 1 1-1Zm-7 14a1 1 0 0 1 1 1v1h12v-1a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1Z"/></svg>
+      整包下载
+    </a>
+  </div>
+  <div class="filter-bar" id="filterBar">
+    <button class="chip chip-active" data-filter="腾讯视频">腾讯视频</button>
+    <button class="chip" data-filter="腾讯体育">腾讯体育</button>
+    <button class="chip" data-filter="腾讯新闻">腾讯新闻</button>
+    <button class="chip" data-filter="联投类">联投类</button>
+    <button class="chip" data-filter="微信广告">微信广告</button>
+    <button class="chip" data-filter="TME">TME</button>
+    <button class="chip" data-filter="QQ浏览器">QQ浏览器</button>
+  </div>
+  <main class="container rc-container">
+    <div id="sections"></div>
+  </main>
+</div>
+
+<div class="viewer" id="viewer" aria-hidden="true">
+  <button class="viewer-back-float" type="button" data-close aria-label="返回">
+    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M20 11H7.8l5.6-5.6L12 4l-8 8 8 8 1.4-1.4L7.8 13H20v-2Z"/></svg>
+    返回
+  </button>
+  <div class="viewer-backdrop" data-close></div>
+  <div class="viewer-panel">
+    <div class="viewer-head">
+      <div class="viewer-title">
+        <span class="viewer-cat" id="viewerCat"></span>
+        <h3 id="viewerName"></h3>
+      </div>
+      <div class="viewer-tools">
+        <div class="viewer-zoom">
+          <button class="btn btn-ghost2 btn-sm" id="zoomOut" type="button" aria-label="缩小">−</button>
+          <span class="zoom-pct" id="zoomPct">100%</span>
+          <button class="btn btn-ghost2 btn-sm" id="zoomIn" type="button" aria-label="放大">＋</button>
+          <button class="btn btn-ghost2 btn-sm" id="zoomFit" type="button">适应</button>
+        </div>
+        <a class="btn btn-primary btn-sm" id="viewerDownload" download>
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.42l2.3 2.3V4a1 1 0 0 1 1-1Zm-7 14a1 1 0 0 1 1 1v1h12v-1a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1Z"/></svg>
+          下载
+        </a>
+      </div>
+    </div>
+    <div class="viewer-frame" id="viewerFrame">
+      <div class="pdf-pages" id="pdfPages"></div>
+    </div>
+  </div>
+</div>
+
+<div class="gate" id="gate">
+  <div class="gate-card">
+    <div class="gate-brand"><h2>腾讯内容平台 · 公开资源站</h2></div>
+    <p class="gate-intro">本页面包含广告刊例与综艺/电视剧时间轴，查看内容前需凭访问码进入。点击下方「获取访问码」申请，审批通过后即可在文档中查看访问码。</p>
+    <div class="gate-actions">
+      <button class="btn btn-primary" id="btnGetCode" type="button">获取访问码</button>
+      <button class="btn btn-ghost2" id="btnHaveCode" type="button">已获取访问码</button>
+    </div>
+    <div class="gate-code" id="gateCode" hidden>
+      <input class="gate-input" type="text" id="codeInput" placeholder="请输入访问码" autocomplete="off" />
+      <button class="btn btn-primary" id="btnVerify" type="button">确认</button>
+      <p class="gate-err" id="codeErr" hidden>访问码不正确，请检查后重试，或重新获取。</p>
+    </div>
+    <p class="gate-tip">获取访问码：点击后用微信/企业微信登录腾讯文档，申请访问（请填写公司名称），管理员审批通过后即可看到文档中的访问码。</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>本页面为对外公开资料 · 仅供商务参考 · © 2026</p>
+  <a href="#" id="btnLogout" hidden>退出访问</a>
+</footer>
+
+<script src="assets/vendor/pdf.min.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/assistant.js"></script>
+</body>
+</html>

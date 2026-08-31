@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>结案数据 · {{NAME}}</title>
+<style>
+:root { --blue:#0052d9; --ink:#1c2333; --ink2:#6b7688; --line:#e6ebf5; --bg:#f4f7fd; }
+* { box-sizing: border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); line-height:1.7; }
+.head { background:linear-gradient(120deg,#0046c0,#2a8bff); color:#fff; padding:34px 24px 30px; text-align:center; }
+.head h1 { margin:0 0 6px; font-size:24px; font-weight:800; letter-spacing:1px; }
+.head .meta { font-size:13px; color:rgba(255,255,255,.85); }
+.head .meta span { margin:0 8px; }
+.wrap { max-width:900px; margin:0 auto; padding:28px 20px 60px; }
+.card { background:#fff; border:1px solid var(--line); border-radius:14px; padding:20px 22px; margin-bottom:20px; box-shadow:0 4px 16px rgba(20,40,90,.06); }
+.card h2 { margin:0 0 14px; font-size:16px; font-weight:800; display:flex; align-items:center; gap:8px; }
+.card h2::before { content:""; width:4px; height:16px; background:var(--blue); border-radius:2px; }
+/* 指标卡 */
+.kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; }
+.kpi { background:linear-gradient(135deg,#eaf1ff,#f7fbff); border:1px solid var(--line); border-radius:12px; padding:16px 14px; text-align:center; }
+.kpi .v { font-size:22px; font-weight:800; color:var(--blue); }
+.kpi .k { font-size:12px; color:var(--ink2); margin-top:4px; }
+/* 图片墙 */
+.gallery { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:12px; }
+.gallery figure { margin:0; border-radius:10px; overflow:hidden; border:1px solid var(--line); background:#fff; }
+.gallery img { width:100%; height:150px; object-fit:cover; display:block; }
+.gallery figcaption { font-size:12px; color:var(--ink2); padding:8px 10px; }
+.placeholder { border:2px dashed #c4d2ea; border-radius:10px; padding:28px; text-align:center; color:#93a5c4; font-size:13px; background:#fbfdff; }
+/* 总结文字 */
+.desc p { margin:0 0 10px; font-size:14px; }
+/* 数据表 */
+table { width:100%; border-collapse:collapse; font-size:13px; }
+th,td { text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); }
+th { background:var(--bg); color:var(--blue); font-weight:700; white-space:nowrap; }
+tr:hover td { background:#f8faff; }
+.foot { text-align:center; color:#93a5c4; font-size:12px; padding:10px 0 30px; }
+</style>
+</head>
+<body>
+<header class="head">
+  <h1>{{NAME}} · 结案数据</h1>
+  <div class="meta">
+    <span>📅 播出时间：{{TIME}}</span>
+    <span>🏷 级别：{{TAG}}</span>
+    <span>🎬 类型：{{TYPE}}</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="card">
+    <h2>核心指标</h2>
+    <div class="kpis">
+      <div class="kpi"><div class="v">{{KPI1_V}}</div><div class="k">{{KPI1_K}}</div></div>
+      <div class="kpi"><div class="v">{{KPI2_V}}</div><div class="k">{{KPI2_K}}</div></div>
+      <div class="kpi"><div class="v">{{KPI3_V}}</div><div class="k">{{KPI3_K}}</div></div>
+      <div class="kpi"><div class="v">{{KPI4_V}}</div><div class="k">{{KPI4_K}}</div></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>结案图集</h2>
+    <div class="gallery">
+      <figure><img src="{{IMG1}}" alt="图片1" /><figcaption>{{IMG1_CAP}}</figcaption></figure>
+      <figure><img src="{{IMG2}}" alt="图片2" /><figcaption>{{IMG2_CAP}}</figcaption></figure>
+      <figure><img src="{{IMG3}}" alt="图片3" /><figcaption>{{IMG3_CAP}}</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>结案总结</h2>
+    <div class="desc">{{SUMMARY}}</div>
+  </section>
+
+  <section class="card">
+    <h2>数据明细</h2>
+    {{TABLE}}
+  </section>
+
+</div>
+
+<div class="foot">腾讯视频 · 综艺结案数据 · 定期更新</div>
+</body>
+</html>

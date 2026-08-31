@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>腾讯广告常见形式</title>
+<meta name="description" content="腾讯广告常见投放形式速查：腾讯视频合约 / 腾讯视频招商 / TME / 朋友圈，含形式位置说明、介绍文档与 Demo 视频。" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="腾讯广告常见形式" />
+<meta property="og:description" content="常见投放形式速查：位置说明、介绍文档、Demo 视频。内部参考，访问需凭访问码。" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="assets/style.css" />
+<link rel="stylesheet" href="assets/assistant.css" />
+</head>
+<body>
+
+<header class="site-head">
+  <a class="btn-home" href="./" title="返回首页"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M10.3 5.3a1 1 0 0 1 1.4 1.4L7.42 11H19a1 1 0 1 1 0 2H7.41l4.3 4.3a1 1 0 1 1-1.42 1.4l-6-6a1 1 0 0 1 0-1.4l6-6Z"/></svg>返回首页</a>
+  <div class="head-inner">
+    <h1 id="pageTitle">腾讯广告常见形式</h1>
+    <p class="disclaimer">本页面汇总腾讯各资源常见投放形式的位置说明、介绍文档与 Demo 视频，仅供相关人员内部参考。形式名称、样式与投放规则可能随版本调整，一切以腾讯官方最新发布及业务对接人员确认为准，请勿对外传播。</p>
+  </div>
+</header>
+
+<div class="board" id="board-adformat">
+  <div class="af-toolbar">
+    <p class="intro">按资源分页卡查看常见投放形式：点击<b>形式名称</b>可展开详细说明，右侧可查看<b>介绍文档</b>与<b>Demo 视频</b>。</p>
+  </div>
+
+  <!-- 资源页卡 -->
+  <div class="af-tabs" id="afTabs"></div>
+
+  <!-- 搜索 -->
+  <div class="search-bar af-search">
+    <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15.6 15.6 21 21" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
+    <input type="search" id="afSearch" placeholder="搜索投放形式名称或位置关键词…" autocomplete="off" />
+    <button class="search-clear" id="afSearchClear" type="button" aria-label="清除搜索" hidden>×</button>
+  </div>
+
+  <main class="container af-container">
+    <div id="afList"></div>
+  </main>
+</div>
+
+<!-- 介绍文档预览浮层（PDF） -->
+<div class="plan-viewer" id="docViewer" aria-hidden="true">
+  <button class="btn-back" type="button" data-doc-close aria-label="返回">
+    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M20 11H7.8l5.6-5.6L12 4l-8 8 8 8 1.4-1.4L7.8 13H20v-2Z"/></svg>
+    返回
+  </button>
+  <div class="plan-backdrop" data-doc-close></div>
+  <div class="plan-panel">
+    <div class="plan-head">
+      <h3 id="docName"></h3>
+      <a class="btn btn-primary btn-sm" id="docDownload" download>下载</a>
+    </div>
+    <div class="plan-pages" id="docPages"></div>
+  </div>
+</div>
+
+<!-- Demo 视频浮层 -->
+<div class="plan-viewer" id="videoViewer" aria-hidden="true">
+  <button class="btn-back" type="button" data-video-close aria-label="返回">
+    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M20 11H7.8l5.6-5.6L12 4l-8 8 8 8 1.4-1.4L7.8 13H20v-2Z"/></svg>
+    返回
+  </button>
+  <div class="plan-backdrop" data-video-close></div>
+  <div class="plan-panel video-panel">
+    <div class="plan-head">
+      <h3 id="videoName"></h3>
+      <a class="btn btn-primary btn-sm" id="videoDownload" download>下载</a>
+    </div>
+    <div class="video-stage" id="videoStage"></div>
+  </div>
+</div>
+
+<div class="gate" id="gate">
+  <div class="gate-card">
+    <div class="gate-brand"><h2>腾讯广告常见形式</h2></div>
+    <p class="gate-intro">本页面汇总腾讯各资源的常见投放形式说明与 Demo，查看内容前需凭访问码进入。点击下方「获取访问码」申请，审批通过后即可在文档中查看访问码。</p>
+    <div class="gate-actions">
+      <button class="btn btn-primary" id="btnGetCode" type="button">获取访问码</button>
+      <button class="btn btn-ghost2" id="btnHaveCode" type="button">已获取访问码</button>
+    </div>
+    <div class="gate-code" id="gateCode" hidden>
+      <input class="gate-input" type="text" id="codeInput" placeholder="请输入访问码" autocomplete="off" />
+      <button class="btn btn-primary" id="btnVerify" type="button">确认</button>
+      <p class="gate-err" id="codeErr" hidden>访问码不正确，请检查后重试，或重新获取。</p>
+    </div>
+    <p class="gate-tip">获取访问码：点击后用微信/企业微信登录腾讯文档，申请访问（请填写公司名称），管理员审批通过后即可看到文档中的访问码。</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>本页面为对外公开资料 · 仅供商务参考 · © 2026</p>
+  <a href="#" id="btnLogout" hidden>退出访问</a>
+</footer>
+
+<script src="assets/vendor/pdf.min.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/assistant.js"></script>
+</body>
+</html>
