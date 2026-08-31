@@ -655,10 +655,11 @@ body {
   display: inline-flex; align-items: center; gap: 6px;
   border: 0; background: none; cursor: pointer; text-align: left;
   padding: 2px 4px; margin: -2px -4px; font-size: 13.5px; font-weight: 600;
-  color: var(--ink); line-height: 1.5;
+  color: var(--blue); line-height: 1.5; text-decoration: underline;
+  text-underline-offset: 2px;
 }
 .rate-view svg { flex-shrink: 0; color: var(--blue); }
-.rate-view:hover { color: var(--blue); text-decoration: underline; }
+.rate-view:hover { color: #0a5bd6; text-decoration: underline; }
 
 /* 预览缩放：标题栏固定，PDF 内容用按钮缩放；预览区禁用浏览器捏合缩放 */
 .viewer-frame { touch-action: pan-x pan-y; }
