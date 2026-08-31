@@ -1186,7 +1186,7 @@ function getItems() { return TV_ITEMS; }
     planDownload.setAttribute("download", label || name + " 方案.pdf");
     planViewer.classList.add("open");
     planViewer.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
+    lockBodyScroll();
     renderPlan(file);
   }
 
@@ -1198,7 +1198,7 @@ function getItems() { return TV_ITEMS; }
     planRenderers = [];
     if (planScrollHandler) { planFrame.removeEventListener("scroll", planScrollHandler); planScrollHandler = null; }
     planPages.innerHTML = "";
-    document.body.style.overflow = "";
+    unlockBodyScroll();
   }
 
   document.addEventListener("click", e => {
@@ -1208,7 +1208,7 @@ function getItems() { return TV_ITEMS; }
       openPlanViewer(btn.dataset.plan, btn.dataset.name, btn.dataset.label);
       return;
     }
-    if (e.target.closest("[data-plan-close]")) closePlanViewer();
+    if (!_viewerSwiping && e.target.closest("[data-plan-close]")) closePlanViewer();
   });
   document.addEventListener("keydown", e => {
     if (e.key === "Escape" && planViewer.classList.contains("open")) closePlanViewer();
@@ -1228,7 +1228,7 @@ function getItems() { return TV_ITEMS; }
     reportDownload.setAttribute("download", label || name + " 结案.html");
     reportViewer.classList.add("open");
     reportViewer.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
+    lockBodyScroll();
     reportIframe.src = file;
   }
 
@@ -1236,7 +1236,7 @@ function getItems() { return TV_ITEMS; }
     reportViewer.classList.remove("open");
     reportViewer.setAttribute("aria-hidden", "true");
     reportIframe.src = "about:blank";
-    document.body.style.overflow = "";
+    unlockBodyScroll();
   }
 
   document.addEventListener("click", e => {
@@ -1246,7 +1246,7 @@ function getItems() { return TV_ITEMS; }
       openReportViewer(b.dataset.report, b.dataset.name, b.dataset.label);
       return;
     }
-    if (e.target.closest("[data-report-close]")) closeReportViewer();
+    if (!_viewerSwiping && e.target.closest("[data-report-close]")) closeReportViewer();
   });
   document.addEventListener("keydown", e => {
     if (e.key === "Escape" && reportViewer.classList.contains("open")) closeReportViewer();
@@ -1331,5 +1331,31 @@ if (isAuthorized()) {
   window.mergeInit && window.mergeInit();
 } else {
   showGate();
+}
+
+/* 浮层滚动保护：iOS 真正锁定底层滚动 + 滑动手势不触发关闭 */
+let _viewerSwiping = false, _viewerSX = 0, _viewerSY = 0, _viewerLockY = 0;
+document.addEventListener("touchstart", e => {
+  if (!e.touches || !e.touches.length) return;
+  _viewerSX = e.touches[0].clientX; _viewerSY = e.touches[0].clientY; _viewerSwiping = false;
+}, { passive: true });
+document.addEventListener("touchmove", e => {
+  if (!e.touches || !e.touches.length) return;
+  if (Math.abs(e.touches[0].clientX - _viewerSX) > 10 || Math.abs(e.touches[0].clientY - _viewerSY) > 10) _viewerSwiping = true;
+}, { passive: true });
+document.addEventListener("touchend", () => { setTimeout(() => { _viewerSwiping = false; }, 60); }, { passive: true });
+function lockBodyScroll() {
+  _viewerLockY = window.scrollY || window.pageYOffset || 0;
+  document.body.style.position = "fixed";
+  document.body.style.top = "-" + _viewerLockY + "px";
+  document.body.style.width = "100%";
+  document.body.style.overflow = "hidden";
+}
+function unlockBodyScroll() {
+  document.body.style.position = "";
+  document.body.style.top = "";
+  document.body.style.width = "";
+  document.body.style.overflow = "";
+  window.scrollTo(0, _viewerLockY);
 }
 

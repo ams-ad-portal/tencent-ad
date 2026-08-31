@@ -210,7 +210,7 @@ body {
 .plan-title { flex: 1; min-width: 0; }
 .plan-title h3 { margin: 0; font-size: 15px; font-weight: 800; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .btn-plan-sm { padding: 7px 14px; margin-top: 0; font-size: 12.5px; }
-.plan-frame { flex: 1; width: 100%; overflow: auto; background: #525659; padding: 16px; }
+.plan-frame { flex: 1; width: 100%; overflow: auto; background: #525659; padding: 16px; overscroll-behavior: contain; touch-action: pan-y; -webkit-overflow-scrolling: touch; }
 .pdf-pages { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
 .pdf-page { display: block; height: auto; margin: 0 auto; box-shadow: 0 2px 12px rgba(0,0,0,.35); background: #fff; }
 .pdf-ph {
