@@ -5,17 +5,32 @@
 
 /* 悬浮按钮 */
 .ai-fab {
-  display: inline-flex; align-items: center; gap: 7px;
-  border: 0; cursor: pointer;
-  background: linear-gradient(135deg, #0052d9 0%, #006eff 100%);
-  color: #fff; padding: 12px 18px; border-radius: 999px;
-  font-size: 14px; font-weight: 700; letter-spacing: .5px;
-  box-shadow: 0 6px 20px rgba(0, 82, 217, .34);
-  transition: transform .15s ease, box-shadow .15s ease;
+  width: 62px; height: 62px; margin: 0; padding: 0; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 3px solid #fff; cursor: pointer;
+  background: radial-gradient(circle at 32% 28%, #5dffac 0%, #16e07c 52%, #06b85f 100%);
+  box-shadow: 0 6px 18px rgba(6, 184, 95, .45);
+  transition: transform .15s ease;
+  animation: aiPulse 2s infinite ease-out;
 }
-.ai-fab:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(0, 82, 217, .42); }
-.ai-fab-on { background: linear-gradient(135deg, #3d4757 0%, #5b6575 100%); box-shadow: 0 6px 18px rgba(60, 70, 85, .3); }
+.ai-fab:hover { transform: scale(1.07); }
+.ai-fab:active { transform: scale(.95); }
+.ai-fab-on { animation: none; }
 .ai-fab svg { flex-shrink: 0; }
+/* 常驻「小助理」文字标签 */
+.ai-fab-label {
+  position: absolute; right: 0; bottom: 76px;
+  background: rgba(6, 26, 16, .85); color: #eafff4;
+  font-size: 12.5px; font-weight: 700; letter-spacing: .5px;
+  padding: 4px 11px; border-radius: 999px; white-space: nowrap;
+  pointer-events: none; box-shadow: 0 2px 10px rgba(0, 0, 0, .22);
+}
+.ai-fab.ai-fab-on + .ai-fab-label { display: none; }
+@keyframes aiPulse {
+  0%   { box-shadow: 0 6px 18px rgba(6, 184, 95, .45), 0 0 0 0 rgba(22, 224, 124, .55); }
+  70%  { box-shadow: 0 6px 18px rgba(6, 184, 95, .45), 0 0 0 15px rgba(22, 224, 124, 0); }
+  100% { box-shadow: 0 6px 18px rgba(6, 184, 95, .45), 0 0 0 0 rgba(22, 224, 124, 0); }
+}
 
 /* 面板 */
 .ai-panel {
@@ -115,9 +130,8 @@
 /* 移动端 */
 @media (max-width: 640px) {
   .ai-root { right: 14px; bottom: 14px; }
-  .ai-fab { padding: 11px 15px; font-size: 13px; }
-  .ai-fab-txt { display: none; }
-  .ai-fab { padding: 13px; }
+  .ai-fab { width: 56px; height: 56px; }
+  .ai-fab-label { bottom: 68px; font-size: 12px; }
   .ai-panel {
     width: calc(100vw - 28px); height: calc(100vh - 110px);
     right: 0; bottom: 56px;

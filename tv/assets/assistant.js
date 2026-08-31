@@ -368,9 +368,12 @@
   window.__aiReply = reply; // 便于调试/自测
   function buildHTML() {
     return ''
-    + '<button class="ai-fab" id="aiFab" type="button" aria-label="打开页内查询">'
-    + '<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M12 3c4.97 0 9 3.36 9 7.5 0 4.14-4.03 7.5-9 7.5-.9 0-1.77-.11-2.58-.32L5.3 20.4a.75.75 0 0 1-1.12-.8l.77-3.04C3.13 15.2 3 13.2 3 10.5 3 6.36 7.03 3 12 3Zm-3.5 6a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Zm3.5 0a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Zm3.5 0a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/></svg>'
-    + '<span class="ai-fab-txt">页内查询</span></button>'
+    + '<button class="ai-fab" id="aiFab" type="button" aria-label="打开小助理">'
+    + '<svg class="ai-face" viewBox="0 0 24 24" width="34" height="34" aria-hidden="true">'
+    + '<circle cx="9" cy="9.5" r="1.5" fill="#fff"/><circle cx="15" cy="9.5" r="1.5" fill="#fff"/>'
+    + '<path d="M7.5 14.6c1.6 2 7.4 2 9 0" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>'
+    + '</button>'
+    + '<div class="ai-fab-label">小助理</div>'
     + '<div class="ai-panel" id="aiPanel" hidden>'
     + '  <div class="ai-head">'
     + '    <div class="ai-head-l"><span class="ai-dot"></span><b>站内小助手</b><span class="ai-sub">' + esc(SITE) + '信息问答</span></div>'
