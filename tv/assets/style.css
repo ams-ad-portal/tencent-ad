@@ -27,11 +27,11 @@ body {
 }
 /* 返回首页按钮（左上角） */
 .btn-home {
-  position: absolute; left: 18px; top: 14px;
+  position: absolute; left: 0; top: 14px;
   display: inline-flex; align-items: center; gap: 5px; z-index: 5;
   background: rgba(255, 255, 255, .16); color: #fff;
-  border: 1px solid rgba(255, 255, 255, .38);
-  font-size: 13px; font-weight: 700; padding: 7px 14px; border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, .38); border-left: 0;
+  font-size: 13px; font-weight: 700; padding: 7px 16px 7px 14px; border-radius: 0 999px 999px 0;
   text-decoration: none; -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
   transition: background .15s ease, border-color .15s ease;
 }
@@ -132,7 +132,7 @@ body {
 /* 点击展开的大图详情：左海报 + 右信息（含方案下载） */
 .tl-detail { padding: 2px 0 14px 200px; }
 .tl-detail[hidden] { display: none; }
-.tl-detail-body { display: flex; gap: 18px; align-items: flex-start; }
+.tl-detail-body { display: flex; gap: 18px; align-items: flex-start; max-width: 720px; }
 .tl-bigwrap { flex: 0 0 auto; width: min(420px, 100%); position: relative; }
 /* 点击海报直接预览方案 */
 .tl-big-click { cursor: pointer; }

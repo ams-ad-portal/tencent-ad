@@ -26,11 +26,11 @@ body {
   color: #fff; padding: 34px 20px 30px; text-align: center;
 }
 .btn-home {
-  position: absolute; left: 18px; top: 14px;
+  position: absolute; left: 0; top: 14px;
   display: inline-flex; align-items: center; gap: 5px; z-index: 5;
   background: rgba(255, 255, 255, .16); color: #fff;
-  border: 1px solid rgba(255, 255, 255, .38);
-  font-size: 13px; font-weight: 700; padding: 7px 14px; border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, .38); border-left: 0;
+  font-size: 13px; font-weight: 700; padding: 7px 16px 7px 14px; border-radius: 0 999px 999px 0;
   text-decoration: none; -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
   transition: background .15s ease, border-color .15s ease;
 }
