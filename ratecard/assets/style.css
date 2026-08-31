@@ -27,15 +27,16 @@ body {
 }
 /* 返回首页按钮（左上角） */
 .btn-home {
-  position: absolute; left: 0; top: 14px;
-  display: inline-flex; align-items: center; gap: 5px; z-index: 5;
-  background: rgba(255, 255, 255, .16); color: #fff;
-  border: 1px solid rgba(255, 255, 255, .38); border-left: 0;
+  position: fixed; left: 0; top: 14px; z-index: 60;
+  display: inline-flex; align-items: center; gap: 5px;
+  background: rgba(20, 28, 46, .82); color: #fff;
+  border: 0; border-left: 0;
   font-size: 13px; font-weight: 700; padding: 7px 16px 7px 14px; border-radius: 0 999px 999px 0;
-  text-decoration: none; -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
-  transition: background .15s ease, border-color .15s ease;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .28);
+  transition: background .15s ease;
 }
-.btn-home:hover { background: rgba(255, 255, 255, .32); border-color: rgba(255, 255, 255, .7); }
+.btn-home:hover { background: rgba(20, 28, 46, .95); }
 .btn-home svg { flex-shrink: 0; }
 .head-inner h1 { margin: 0; font-size: 26px; font-weight: 800; letter-spacing: 2px; }
 .head-inner .disclaimer {
