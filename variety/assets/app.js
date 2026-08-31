@@ -371,7 +371,7 @@ function getItems() { return VARIETY_ITEMS; }
       : '<div class="btns-block"><span class="btns-label">结案</span><div class="plan-btns"><button class="btn-plan btn-plan-off" type="button" disabled>结案待更新</button></div></div>';
     return `
     <article class="tl-row">
-      <span class="tl-time">${it.dateText}</span>
+      <span class="tl-time">${it.dateText.replace(/(\d{4})年/g, (_, y) => y.slice(2) + "年")}</span>
       <span class="tl-dot" aria-hidden="true"></span>
       <div class="tl-main">
         ${level}
