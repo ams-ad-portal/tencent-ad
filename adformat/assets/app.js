@@ -48,7 +48,8 @@ const AD_FORMATS = [
         label: "",
         items: [
           {
-            name: "8秒片中标版《九重紫》-康师傅面",
+            name: "8秒片中标板",
+            demoDesc: "康《九重紫》康师傅面",
             position: "",
             video: "videos/txv-sponsor/8s-pianzhongbiaoban-jiuchongzi-kangshifu.mp4",
             videoLabel: "8秒片中标版《九重紫》-康师傅面.mp4"
@@ -118,6 +119,7 @@ window.AdFormatBoard = (function () {
       + '      <b>' + esc(it.name) + '</b>'
       + '    </div>'
       + '    <div class="af-cell af-cell-pos">' + esc(it.position || "—") + (it.spec ? '<span class="af-spec">' + esc(it.spec) + "</span>" : "") + '</div>'
+      + '    <div class="af-cell af-cell-demo">' + esc(it.demoDesc || "—") + '</div>'
       + '    <div class="af-cell af-cell-btns">' + docBtn + videoBtn + '</div>'
       + '  </div>'
       + (hasDetail
@@ -142,7 +144,8 @@ window.AdFormatBoard = (function () {
         || String(it.name || "").toLowerCase().includes(kw)
         || String(it.position || "").toLowerCase().includes(kw)
         || String(it.spec || "").toLowerCase().includes(kw)
-        || String(it.desc || "").toLowerCase().includes(kw));
+        || String(it.desc || "").toLowerCase().includes(kw)
+        || String(it.demoDesc || "").toLowerCase().includes(kw));
       return { label: g.label, items };
     }).filter(g => g.items.length);
 
@@ -164,6 +167,7 @@ window.AdFormatBoard = (function () {
       + '    <div class="af-row af-row-head">'
       + '      <div class="af-cell af-cell-name">投放形式</div>'
       + '      <div class="af-cell af-cell-pos">具体位置</div>'
+      + '      <div class="af-cell af-cell-demo">Demo描述</div>'
       + '      <div class="af-cell af-cell-btns">介绍文档 / Demo</div>'
       + '    </div>'
       + g.items.map(itemHTML).join("")

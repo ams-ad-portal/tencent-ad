@@ -118,6 +118,7 @@ body {
 .af-cell { min-width: 0; }
 .af-cell-name { flex: 0 0 210px; font-weight: 700; font-size: 14.5px; display: flex; align-items: center; gap: 6px; }
 .af-cell-pos { flex: 1; min-width: 0; color: var(--ink-2); font-size: 13px; line-height: 1.5; }
+.af-cell-demo { flex: 0 0 200px; min-width: 0; color: var(--ink-2); font-size: 13px; line-height: 1.5; }
 .af-cell-btns { flex-shrink: 0; display: flex; gap: 8px; }
 .af-caret { color: var(--blue); font-size: 12px; transition: transform .15s ease; display: inline-block; }
 .af-row-open .af-caret { transform: rotate(90deg); }
@@ -224,7 +225,8 @@ body {
   .af-row-head { display: none; }
   .af-cell-name { flex: 1 0 100%; }
   .af-cell-pos { flex: 1 0 100%; order: 2; }
-  .af-cell-btns { flex: 1 0 100%; order: 3; justify-content: flex-start; }
+  .af-cell-demo { flex: 1 0 100%; order: 3; }
+  .af-cell-btns { flex: 1 0 100%; order: 4; justify-content: flex-start; }
   .plan-panel { inset: 0; border-radius: 0; }
   .plan-head { flex-wrap: wrap; row-gap: 8px; }
 }
