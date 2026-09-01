@@ -11,13 +11,13 @@
   background: radial-gradient(circle at 32% 28%, #5dffac 0%, #16e07c 52%, #06b85f 100%);
   box-shadow: 0 6px 18px rgba(6, 184, 95, .45);
   transition: transform .15s ease;
-  animation: aiNudge 30s infinite ease-in-out;
+  animation: aiNudge 5s infinite ease-in-out;
 }
 .ai-fab:hover { transform: scale(1.07); }
 .ai-fab:active { transform: scale(.95); }
 .ai-fab-on { animation: none; }
 .ai-fab svg { flex-shrink: 0; }
-/* 常驻「小助理」文字标签 */
+/* 常驻「小助手」文字标签 */
 .ai-fab-label {
   position: absolute; right: 0; bottom: 76px;
   background: rgba(6, 26, 16, .85); color: #eafff4;

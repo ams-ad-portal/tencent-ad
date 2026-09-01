@@ -282,12 +282,12 @@
   window.__aiReply = reply;
   function buildHTML() {
     return ''
-      + '<button class="ai-fab" id="aiFab" type="button" aria-label="打开小助理">'
+      + '<button class="ai-fab" id="aiFab" type="button" aria-label="打开小助手">'
       + '<svg class="ai-face" viewBox="0 0 24 24" width="34" height="34" aria-hidden="true">'
       + '<circle cx="9" cy="9.5" r="1.5" fill="#fff"/><circle cx="15" cy="9.5" r="1.5" fill="#fff"/>'
       + '<path d="M7.5 14.6c1.6 2 7.4 2 9 0" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>'
       + '</button>'
-      + '<div class="ai-fab-label">小助理</div>'
+      + '<div class="ai-fab-label">小助手</div>'
       + '<div class="ai-panel" id="aiPanel" hidden>'
       + '  <div class="ai-head">'
       + '    <div class="ai-head-l"><span class="ai-dot"></span><b>站内小助手</b><span class="ai-sub">' + esc(SITE) + '信息问答</span></div>'
