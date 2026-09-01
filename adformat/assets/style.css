@@ -173,7 +173,12 @@ body {
 .btn-sm { padding: 8px 12px; font-size: 13px; }
 .btn-primary { background: #fff; color: var(--blue); box-shadow: 0 4px 14px rgba(0, 0, 0, .12); }
 .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 22px rgba(0, 0, 0, .18); }
-.btn-back { flex-shrink: 0; background: #fff; color: var(--blue); border: 1px solid var(--blue); font-weight: 700; }
+.btn-back {
+  position: absolute; top: 16px; left: 16px; z-index: 5;
+  display: inline-flex; align-items: center; gap: 6px;
+  flex-shrink: 0; padding: 8px 14px; border-radius: 10px;
+  background: #fff; color: var(--blue); border: 1px solid var(--blue); font-weight: 700;
+}
 .btn-back:hover { background: var(--blue-soft); }
 .pdf-page { display: block; height: auto; margin: 0 auto; box-shadow: 0 2px 12px rgba(0, 0, 0, .35); background: #fff; }
 .pdf-loading, .pdf-error { color: #fff; padding: 48px 20px; text-align: center; font-size: 14px; line-height: 1.7; }
