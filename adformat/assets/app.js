@@ -87,7 +87,18 @@ const AD_FORMATS = [
     category: "TME",
     key: "tme",
     groups: [
-      { label: "", items: [] }
+      {
+        label: "",
+        items: [
+          {
+            name: "Oneshot移动端",
+            position: "TME移动端闪屏+焦点图",
+            demoDesc: "Chanel唇膏",
+            video: "videos/tme/tme-oneshot-mobile-chanel.mp4",
+            videoLabel: "TME-Oneshot移动端-Chanel.mp4"
+          }
+        ]
+      }
     ]
   },
   {
