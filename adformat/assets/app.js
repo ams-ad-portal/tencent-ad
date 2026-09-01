@@ -49,7 +49,7 @@ const AD_FORMATS = [
         items: [
           {
             name: "8秒片中标板",
-            demoDesc: "康《九重紫》康师傅面",
+            demoDesc: "《九重紫》康师傅面",
             position: "电视剧片中",
             video: "videos/txv-sponsor/8s-pianzhongbiaoban-jiuchongzi-kangshifu.mp4",
             videoLabel: "8秒片中标版《九重紫》-康师傅面.mp4"
