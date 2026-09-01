@@ -36,6 +36,103 @@
   const norm = s => String(s || "").toLowerCase().replace(/[\s·、,，。.!！?？:：;；"'“”‘’()（）《》【】\-_/]/g, "");
   const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
+  /* ---------- 2.1 反馈 / 纠错收集（可选） ----------
+     把访客对助手回答的反馈发到你可读的地方。
+     - 留空 ""：纠错内容改为「复制到剪贴板」，访客可微信转发给你，无需任何后端。
+     - 填 Formspree 等表单地址：提交即发你邮箱、可看表格（免费、不用服务器）。 */
+  const FEEDBACK_ENDPOINT = ""; // ← 如需自动收集，把表单地址填这里，例如 "https://formspree.io/f/abcdwxyz"
+
+  function stripTags(html) {
+    const tmp = document.createElement("div");
+    tmp.innerHTML = html || "";
+    return (tmp.textContent || "").replace(/\s+/g, " ").trim();
+  }
+
+  function sendFeedback(payload) {
+    const text =
+      "【小助手纠错】\n页面：" + (payload.page || "") +
+      "\n站点：" + (payload.site || "") +
+      "\n问题：" + (payload.question || "") +
+      "\n小助手回答：" + (payload.answer || "") +
+      "\n纠正/补充：" + (payload.correction || "（未填写，仅标记为回答可能有误）") +
+      "\n时间：" + (payload.time || "");
+    function copyFallback() {
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text);
+        } else {
+          const ta = document.createElement("textarea");
+          ta.value = text; document.body.appendChild(ta); ta.select();
+          document.execCommand("copy"); document.body.removeChild(ta);
+        }
+        return true;
+      } catch (e) { return false; }
+    }
+    if (FEEDBACK_ENDPOINT) {
+      try {
+        fetch(FEEDBACK_ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          body: JSON.stringify(payload)
+        }).catch(() => copyFallback());
+      } catch (e) { copyFallback(); }
+    } else {
+      copyFallback();
+    }
+    return text;
+  }
+
+  /* 给每条机器人回答挂一个 👍/👎 + 纠错 条 */
+  function attachFeedback(msgEl, q, ansHtml) {
+    if (!msgEl || msgEl.querySelector(".ai-fb")) return;
+    const fb = document.createElement("div");
+    fb.className = "ai-fb";
+    fb.innerHTML =
+      '<span class="ai-fb-tip">这个回答有帮助吗？</span>' +
+      '<button class="ai-fb-yes" type="button">👍 有用</button>' +
+      '<button class="ai-fb-no" type="button">👎 有误</button>' +
+      '<button class="ai-fb-fix" type="button">纠错</button>' +
+      '<div class="ai-fb-box" hidden>' +
+        '<textarea class="ai-fb-ta" rows="3" placeholder="请告诉我们正确答案或补充信息（可留空，仅标记回答有误）"></textarea>' +
+        '<button class="ai-fb-send" type="button">提交</button>' +
+      '</div>' +
+      '<span class="ai-fb-ok" hidden></span>';
+    msgEl.appendChild(fb);
+
+    const box = fb.querySelector(".ai-fb-box");
+    const ta = fb.querySelector(".ai-fb-ta");
+    const ok = fb.querySelector(".ai-fb-ok");
+    const yes = fb.querySelector(".ai-fb-yes");
+    const no = fb.querySelector(".ai-fb-no");
+    const fix = fb.querySelector(".ai-fb-fix");
+    const send = fb.querySelector(".ai-fb-send");
+    let sent = false;
+
+    function done(msg) { ok.textContent = msg; ok.hidden = false; }
+    function reveal() { box.hidden = false; ta.focus(); }
+
+    yes.addEventListener("click", () => {
+      yes.disabled = no.disabled = fix.disabled = true;
+      done("感谢反馈！");
+    });
+    no.addEventListener("click", () => {
+      reveal();
+      if (!sent) {
+        sent = true;
+        sendFeedback({ question: q, answer: stripTags(ansHtml), correction: "", page: location.href, site: SITE, time: new Date().toISOString() });
+        done("已记录：这条回答可能有误");
+      }
+    });
+    fix.addEventListener("click", reveal);
+    send.addEventListener("click", () => {
+      if (sent) { done("已收到，感谢纠正！"); box.hidden = true; return; }
+      sent = true;
+      sendFeedback({ question: q, answer: stripTags(ansHtml), correction: ta.value.trim(), page: location.href, site: SITE, time: new Date().toISOString() });
+      done(FEEDBACK_ENDPOINT ? "已提交，感谢纠正！" : "已复制到剪贴板，请发给管理员纠正");
+      box.hidden = true;
+    });
+  }
+
   function quarterOf(sortKey) {
     const m = /^(\d{4})-(\d{2})/.exec(sortKey || "");
     if (!m) return "";
@@ -422,7 +519,9 @@
       bubble("me", esc(q));
       const t = bubble("bot", '<span class="ai-typing"><i></i><i></i><i></i></span>');
       setTimeout(() => {
-        t.querySelector(".ai-bub").innerHTML = reply(q);
+        const ansHtml = reply(q);
+        t.querySelector(".ai-bub").innerHTML = ansHtml;
+        attachFeedback(t, q, ansHtml);
         body.scrollTop = body.scrollHeight;
       }, 260 + Math.random() * 220);
     }
