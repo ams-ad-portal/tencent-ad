@@ -730,7 +730,9 @@ const TV_ITEMS = [
     sortKey: "2026-10-01",
     type: "家庭情感",
     cast: "蒋欣、李光洁、梁冠华、杨采钰、冯嘉怡、任重、韩童生",
-    img: "",
+    img: "images/duoxiyijiaren.jpg",
+    file: "plans/duoxiyijiaren.pdf",
+    fileLabel: "现实主义家庭群像大剧《多喜一家人》招商方案",
     cats: [
       "家庭"
     ]
