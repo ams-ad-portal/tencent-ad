@@ -46,6 +46,13 @@ const AD_FORMATS = [
             demoDesc: "飘柔洗发露",
             video: "videos/txv-contract/8s-heyuebiaoban-piaorou.mp4",
             videoLabel: "8秒合约标版-飘柔洗发露.mp4"
+          },
+          {
+            name: "OTT Oneshot Plus",
+            position: "腾讯视频OTT端闪屏+焦点图",
+            demoDesc: "Tiffany",
+            video: "videos/txv-contract/ott-oneshot-plus-tiffany.mp4",
+            videoLabel: "腾讯视频OTT-ONESHOT plus-Tiffany.mp4"
           }
         ]
       }
