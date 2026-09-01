@@ -119,8 +119,8 @@ window.AdFormatBoard = (function () {
       + '      <b>' + esc(it.name) + '</b>'
       + '    </div>'
       + '    <div class="af-cell af-cell-pos">' + esc(it.position || "—") + (it.spec ? '<span class="af-spec">' + esc(it.spec) + "</span>" : "") + '</div>'
-      + '    <div class="af-cell af-cell-demo">' + esc(it.demoDesc || "—") + '</div>'
       + '    <div class="af-cell af-cell-btns">' + docBtn + videoBtn + '</div>'
+      + '    <div class="af-cell af-cell-demo">' + esc(it.demoDesc || "—") + '</div>'
       + '  </div>'
       + (hasDetail
         ? '  <div class="af-detail" hidden><div class="af-detail-inner">'
@@ -167,8 +167,8 @@ window.AdFormatBoard = (function () {
       + '    <div class="af-row af-row-head">'
       + '      <div class="af-cell af-cell-name">投放形式</div>'
       + '      <div class="af-cell af-cell-pos">具体位置</div>'
-      + '      <div class="af-cell af-cell-demo">Demo描述</div>'
       + '      <div class="af-cell af-cell-btns">介绍文档 / Demo</div>'
+      + '      <div class="af-cell af-cell-demo">Demo描述</div>'
       + '    </div>'
       + g.items.map(itemHTML).join("")
       + '  </div>'

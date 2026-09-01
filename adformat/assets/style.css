@@ -230,8 +230,8 @@ body {
   .af-row-head { display: none; }
   .af-cell-name { flex: 1 0 100%; }
   .af-cell-pos { flex: 1 0 100%; order: 2; }
-  .af-cell-demo { flex: 1 0 100%; order: 3; }
-  .af-cell-btns { flex: 1 0 100%; order: 4; justify-content: flex-start; }
+  .af-cell-demo { flex: 1 0 100%; order: 4; }
+  .af-cell-btns { flex: 1 0 100%; order: 3; justify-content: flex-start; }
   .plan-panel { inset: 0; border-radius: 0; }
   .plan-head { flex-wrap: wrap; row-gap: 8px; }
 }
