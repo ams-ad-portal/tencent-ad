@@ -44,7 +44,17 @@ const AD_FORMATS = [
     category: "腾讯视频招商",
     key: "txv-sponsor",
     groups: [
-      { label: "", items: [] }
+      {
+        label: "",
+        items: [
+          {
+            name: "8秒片中标版《九重紫》-康师傅面",
+            position: "",
+            video: "videos/txv-sponsor/8s-pianzhongbiaoban-jiuchongzi-kangshifu.mp4",
+            videoLabel: "8秒片中标版《九重紫》-康师傅面.mp4"
+          }
+        ]
+      }
     ]
   },
   {
