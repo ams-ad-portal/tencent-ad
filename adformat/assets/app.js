@@ -37,7 +37,18 @@ const AD_FORMATS = [
     category: "腾讯视频合约",
     key: "txv-contract",
     groups: [
-      { label: "", items: [] }
+      {
+        label: "",
+        items: [
+          {
+            name: "8秒合约标版",
+            position: "电视剧片内",
+            demoDesc: "飘柔洗发露",
+            video: "videos/txv-contract/8s-heyuebiaoban-piaorou.mp4",
+            videoLabel: "8秒合约标版-飘柔洗发露.mp4"
+          }
+        ]
+      }
     ]
   },
   {
