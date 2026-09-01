@@ -94,7 +94,18 @@ const AD_FORMATS = [
     category: "朋友圈",
     key: "moments",
     groups: [
-      { label: "", items: [] }
+      {
+        label: "",
+        items: [
+          {
+            name: "朋友圈轮播卡片",
+            position: "朋友圈广告",
+            demoDesc: "荣耀",
+            video: "videos/moments/moments-lunbo-kapian-honor.mp4",
+            videoLabel: "朋友圈轮播卡片-荣耀.mp4"
+          }
+        ]
+      }
     ]
   }
 ];
