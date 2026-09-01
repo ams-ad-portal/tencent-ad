@@ -71,6 +71,13 @@ const AD_FORMATS = [
             demoDesc: "奥利奥/优酸乳",
             video: "videos/txv-sponsor/5s-piantou-biaoban-aoliao-yousuanru.mp4",
             videoLabel: "5秒片头标版-奥利奥优酸乳.mp4"
+          },
+          {
+            name: "如意贴",
+            position: "电视剧片内",
+            demoDesc: "复方阿胶",
+            video: "videos/txv-sponsor/liuzhouji-ruyitie-fufangejiao.mp4",
+            videoLabel: "《柳州记》如意贴-复方阿胶.mp4"
           }
         ]
       }
