@@ -64,6 +64,13 @@ const AD_FORMATS = [
             position: "电视剧片中",
             video: "videos/txv-sponsor/8s-pianzhongbiaoban-jiuchongzi-kangshifu.mp4",
             videoLabel: "8秒片中标版《九重紫》-康师傅面.mp4"
+          },
+          {
+            name: "5秒片头标版",
+            position: "电视剧片头",
+            demoDesc: "奥利奥/优酸乳",
+            video: "videos/txv-sponsor/5s-piantou-biaoban-aoliao-yousuanru.mp4",
+            videoLabel: "5秒片头标版-奥利奥优酸乳.mp4"
           }
         ]
       }
