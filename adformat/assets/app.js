@@ -48,11 +48,12 @@ const AD_FORMATS = [
             videoLabel: "8秒合约标版-飘柔洗发露.mp4"
           },
           {
-            name: "OTT Oneshot Plus",
-            position: "腾讯视频OTT端闪屏+焦点图",
-            demoDesc: "Tiffany",
-            video: "videos/txv-contract/ott-oneshot-plus-tiffany.mp4",
-            videoLabel: "腾讯视频OTT-ONESHOT plus-Tiffany.mp4"
+            name: "TV Max",
+            position: "腾讯视频OTT端闪屏破框",
+            demoDesc: "Lancome粉底",
+            docUrl: "docs/txv-contract/ott-tvmax-intro.pptx",
+            video: "videos/txv-contract/tv-max-lancome-wuyifan.mp4",
+            videoLabel: "腾讯视频OTT-TV Max-Lancome 吴亦凡.mp4"
           }
         ]
       }
