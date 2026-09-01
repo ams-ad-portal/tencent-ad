@@ -83,7 +83,7 @@ const AD_FORMATS = [
           {
             name: "如意贴",
             position: "电视剧片内",
-            demoDesc: "复方阿胶",
+            demoDesc: "《柳州记》复方阿胶",
             video: "videos/txv-sponsor/liuzhouji-ruyitie-fufangejiao.mp4",
             videoLabel: "《柳州记》如意贴-复方阿胶.mp4"
           }
