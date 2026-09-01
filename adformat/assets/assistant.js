@@ -130,7 +130,7 @@
 
   function itemLine(rec) {
     const it = rec.item;
-    const bits = [rec.category, rec.group, it.position].filter(Boolean);
+    const bits = [rec.category, rec.group, it.position, it.demoDesc].filter(Boolean);
     const tail = (it.doc || it.docUrl ? "📄文档" : "") + (it.video || it.videoUrl ? " ▶Demo" : "");
     return "· <b>" + esc(it.name) + "</b>（" + esc(bits.join(" | ")) + "）" + (tail ? "  " + tail : "");
   }
@@ -163,7 +163,7 @@
       },
       {
         k: ["搜索", "怎么搜", "查找", "找不到", "关键词"],
-        a: "用页面上方的搜索框（蓝色放大镜处），支持按<b>形式名称</b>、<b>具体位置</b>、<b>规格</b>或<b>介绍</b>关键词搜索，输入即时过滤当前资源下的形式；也可点顶部资源页卡切换腾讯视频合约 / 招商 / TME / 朋友圈。"
+        a: "用页面上方的搜索框（蓝色放大镜处），支持按<b>形式名称</b>、<b>具体位置</b>、<b>Demo描述</b>、<b>规格</b>或<b>介绍</b>关键词搜索，输入即时过滤当前资源下的形式；也可点顶部资源页卡切换腾讯视频合约 / 招商 / TME / 朋友圈。"
       },
       {
         k: ["资源", "平台", "分类", "腾讯视频", "tme", "朋友圈", "招商", "合约"],
@@ -199,6 +199,7 @@
           ["规格", it.spec],
           ["介绍", it.desc],
           ["介绍文档", it.doc || it.docUrl ? "有（右侧「📄 介绍文档」可查看）" : "待补充"],
+          ["Demo描述", it.demoDesc],
           ["Demo 视频", it.video || it.videoUrl ? "有（右侧「▶ Demo 视频」可播放）" : "待补充"]
         ].filter(rr => rr[1]).map(rr => "· " + rr[0] + "：" + esc(rr[1])).join("<br>");
         return "<b>" + esc(it.name) + "</b><br>" + rows;
