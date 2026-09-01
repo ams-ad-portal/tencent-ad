@@ -822,7 +822,7 @@ const TV_ITEMS = [
     sortKey: "2026-12-31",
     type: "都市悬疑",
     cast: "杨茜尧、陈豪、林夏薇、马国明、陈展鹏、姚子羚、傅嘉莉、陈自瑶",
-    img: "",
+    img: "images/meiguizhanzheng.jpg",
     cats: [
       "都市",
       "悬疑"
@@ -835,7 +835,7 @@ const TV_ITEMS = [
     sortKey: "2026-12-31",
     type: "志怪传说",
     cast: "张淼怡、常华森、林允、叶祖新、陈瑶、李嘉琦、陈若轩、宋祖儿",
-    img: "",
+    img: "images/liaozhai.jpg",
     cats: [
       "古装",
       "奇幻"
