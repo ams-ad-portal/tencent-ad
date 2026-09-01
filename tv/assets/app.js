@@ -809,7 +809,7 @@ const TV_ITEMS = [
     sortKey: "2026-12-31",
     type: "悬疑爱情",
     cast: "景甜、张新成、刘畅、黄米依、秦晓轩、盛冠森、阿丽亚、柯蓝",
-    img: "",
+    img: "images/daiwoxinglaishi.jpg",
     cats: [
       "悬疑",
       "爱情"
