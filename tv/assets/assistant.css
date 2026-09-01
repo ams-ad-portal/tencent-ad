@@ -11,7 +11,7 @@
   background: radial-gradient(circle at 32% 28%, #5dffac 0%, #16e07c 52%, #06b85f 100%);
   box-shadow: 0 6px 18px rgba(6, 184, 95, .45);
   transition: transform .15s ease;
-  animation: aiPulse 2s infinite ease-out;
+  animation: aiNudge 30s infinite ease-in-out;
 }
 .ai-fab:hover { transform: scale(1.07); }
 .ai-fab:active { transform: scale(.95); }
@@ -26,10 +26,27 @@
   pointer-events: none; box-shadow: 0 2px 10px rgba(0, 0, 0, .22);
 }
 .ai-fab.ai-fab-on + .ai-fab-label { display: none; }
-@keyframes aiPulse {
-  0%   { box-shadow: 0 6px 18px rgba(6, 184, 95, .45), 0 0 0 0 rgba(22, 224, 124, .55); }
-  70%  { box-shadow: 0 6px 18px rgba(6, 184, 95, .45), 0 0 0 15px rgba(22, 224, 124, 0); }
-  100% { box-shadow: 0 6px 18px rgba(6, 184, 95, .45), 0 0 0 0 rgba(22, 224, 124, 0); }
+@keyframes aiNudge {
+  0%, 92%, 100% {
+    transform: translateY(0);
+    box-shadow: 0 6px 18px rgba(6, 184, 95, .45);
+  }
+  93.2% {
+    transform: translateY(-5px);
+    box-shadow: 0 9px 22px rgba(6, 184, 95, .5);
+  }
+  94.4% {
+    transform: translateY(0);
+    box-shadow: 0 6px 18px rgba(6, 184, 95, .45);
+  }
+  95.4% {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(6, 184, 95, .47);
+  }
+  96.2% {
+    transform: translateY(0);
+    box-shadow: 0 6px 18px rgba(6, 184, 95, .45);
+  }
 }
 
 /* 面板 */
