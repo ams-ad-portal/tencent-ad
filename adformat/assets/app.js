@@ -41,14 +41,6 @@ const AD_FORMATS = [
         label: "",
         items: [
           {
-            majorType: "内容类",
-            name: "8秒合约标版",
-            position: "电视剧片内",
-            demoDesc: "飘柔洗发露",
-            video: "videos/txv-contract/8s-heyuebiaoban-piaorou.mp4",
-            videoLabel: "8秒合约标版-飘柔洗发露.mp4"
-          },
-          {
             majorType: "闪屏",
             name: "TV Max",
             position: "腾讯视频OTT端闪屏破框",
@@ -66,44 +58,6 @@ const AD_FORMATS = [
             docLabel: "OneshotPlus-自定义版 联动出框广告-产品手册-10月.pdf",
             video: "videos/txv-contract/ott-oneshot-plus-tiffany.mp4",
             videoLabel: "腾讯视频OTT-ONESHOT plus-Tiffany.mp4"
-          },
-          {
-            majorType: "贴片&类贴片",
-            name: "全屏暂停",
-            position: "腾讯视频多端视频播放页",
-            demoDesc: "美团",
-            doc: "docs/txv-contract/fullscreen-pause-intro.pdf",
-            docLabel: "腾讯视频-全屏暂停-产品介绍.pdf",
-            video: "videos/txv-contract/fullscreen-pause-meituan.mp4",
-            videoLabel: "腾讯视频-全屏暂停-美团.mp4"
-          },
-          {
-            majorType: "贴片&类贴片",
-            name: "Maxview",
-            position: "腾讯视频-移动端视频播放页",
-            demoDesc: "阿玛尼香水",
-            doc: "docs/txv-contract/maxview-intro.pdf",
-            docLabel: "Maxview 介绍横版.pdf",
-            video: "videos/txv-contract/maxview-armani.mp4",
-            videoLabel: "腾讯视频APP-Maxivew-阿玛尼.mp4"
-          },
-          {
-            majorType: "内容类",
-            name: "天衣无缝",
-            position: "腾讯视频-多端电视剧内",
-            demoDesc: "百威",
-            docUrl: "docs/txv-contract/tianyiwufeng-intro-t09.pptx",
-            docLabel: "【通发】腾讯视频天衣无缝产品升级T09.pptx",
-            video: "videos/txv-contract/tianyiwufeng-baiwei-demo.mp4",
-            videoLabel: "腾讯视频-天衣无缝-百威-Demo.mp4"
-          },
-          {
-            majorType: "内容类",
-            name: "高光标版",
-            position: "腾讯视频-多端电视剧内",
-            demoDesc: "兰蔻",
-            video: "videos/txv-contract/highlight-biaoban-lancome.mp4",
-            videoLabel: "腾讯视频高光标版-兰蔻.mp4"
           },
           {
             majorType: "闪屏",
@@ -128,6 +82,52 @@ const AD_FORMATS = [
             demoDesc: "欧莱雅护肤",
             video: "videos/txv-contract/mobile-light-interaction-shanping-loreal.mp4",
             videoLabel: "腾讯视频APP-轻互动摇动闪屏-欧莱雅.mp4"
+          },
+          {
+            majorType: "贴片&类贴片",
+            name: "全屏暂停",
+            position: "腾讯视频多端视频播放页",
+            demoDesc: "美团",
+            doc: "docs/txv-contract/fullscreen-pause-intro.pdf",
+            docLabel: "腾讯视频-全屏暂停-产品介绍.pdf",
+            video: "videos/txv-contract/fullscreen-pause-meituan.mp4",
+            videoLabel: "腾讯视频-全屏暂停-美团.mp4"
+          },
+          {
+            majorType: "贴片&类贴片",
+            name: "Maxview",
+            position: "腾讯视频-移动端视频播放页",
+            demoDesc: "阿玛尼香水",
+            doc: "docs/txv-contract/maxview-intro.pdf",
+            docLabel: "Maxview 介绍横版.pdf",
+            video: "videos/txv-contract/maxview-armani.mp4",
+            videoLabel: "腾讯视频APP-Maxivew-阿玛尼.mp4"
+          },
+          {
+            majorType: "内容类",
+            name: "8秒合约标版",
+            position: "电视剧片内",
+            demoDesc: "飘柔洗发露",
+            video: "videos/txv-contract/8s-heyuebiaoban-piaorou.mp4",
+            videoLabel: "8秒合约标版-飘柔洗发露.mp4"
+          },
+          {
+            majorType: "内容类",
+            name: "天衣无缝",
+            position: "腾讯视频-多端电视剧内",
+            demoDesc: "百威",
+            docUrl: "docs/txv-contract/tianyiwufeng-intro-t09.pptx",
+            docLabel: "【通发】腾讯视频天衣无缝产品升级T09.pptx",
+            video: "videos/txv-contract/tianyiwufeng-baiwei-demo.mp4",
+            videoLabel: "腾讯视频-天衣无缝-百威-Demo.mp4"
+          },
+          {
+            majorType: "内容类",
+            name: "高光标版",
+            position: "腾讯视频-多端电视剧内",
+            demoDesc: "兰蔻",
+            video: "videos/txv-contract/highlight-biaoban-lancome.mp4",
+            videoLabel: "腾讯视频高光标版-兰蔻.mp4"
           }
         ]
       }
