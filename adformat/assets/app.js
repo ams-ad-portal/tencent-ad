@@ -104,6 +104,13 @@ const AD_FORMATS = [
             demoDesc: "雅诗兰黛",
             video: "videos/txv-contract/phonemax-esteelauder.mp4",
             videoLabel: "腾讯视频APP-Phonemax-雅诗兰黛 2.mp4"
+          },
+          {
+            name: "移动端Oneshot",
+            position: "腾讯视频-移动端闪屏+焦点图",
+            demoDesc: "Lancome",
+            video: "videos/txv-contract/mobile-oneshot-lancome.mp4",
+            videoLabel: "腾讯视频APP-Oneshot-Lancome.mp4"
           }
         ]
       }
