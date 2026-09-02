@@ -70,6 +70,15 @@ const AD_FORMATS = [
             docLabel: "腾讯视频-全屏暂停-产品介绍.pdf",
             video: "videos/txv-contract/fullscreen-pause-meituan.mp4",
             videoLabel: "腾讯视频-全屏暂停-美团.mp4"
+          },
+          {
+            name: "Maxview",
+            position: "腾讯视频-移动端视频播放页",
+            demoDesc: "阿玛尼香水",
+            doc: "docs/txv-contract/maxview-intro.pdf",
+            docLabel: "Maxview 介绍横版.pdf",
+            video: "videos/txv-contract/maxview-armani.mp4",
+            videoLabel: "腾讯视频APP-Maxivew-阿玛尼.mp4"
           }
         ]
       }
