@@ -172,6 +172,7 @@ window.AdFormatBoard = (function () {
       : (it.videoUrl
         ? '<a class="btn-af btn-af-video" href="' + esc(it.videoUrl) + '" target="_blank" rel="noopener">▶ Demo 视频</a>'
         : '<button class="btn-af btn-af-off" type="button" disabled>Demo 待补充</button>');
+    const demoNote = '<div class="af-demo-note">' + esc(it.demoDesc || "—") + '</div>';
     const hasDetail = !!(it.desc || it.spec);
     return ''
       + '<div class="af-item">'
@@ -181,7 +182,7 @@ window.AdFormatBoard = (function () {
       + '      <b>' + esc(it.name) + '</b>'
       + '    </div>'
       + '    <div class="af-cell af-cell-pos">' + esc(it.position || "—") + (it.spec ? '<span class="af-spec">' + esc(it.spec) + "</span>" : "") + '</div>'
-      + '    <div class="af-cell af-cell-btns">' + docBtn + videoBtn + '</div>'
+      + '    <div class="af-cell af-cell-btns"><div class="af-btn-col af-btn-col-doc">' + docBtn + '</div><div class="af-btn-col af-btn-col-video">' + videoBtn + demoNote + '</div></div>'
       + '    <div class="af-cell af-cell-demo">' + esc(it.demoDesc || "—") + '</div>'
       + '  </div>'
       + (hasDetail
