@@ -165,7 +165,7 @@ window.AdFormatBoard = (function () {
     const docBtn = it.doc
       ? '<button class="btn-af btn-af-doc" type="button" data-doc="' + esc(it.doc) + '" data-label="' + esc(it.docLabel || "") + '" data-name="' + esc(it.name) + '">📄 介绍文档</button>'
       : (it.docUrl
-        ? '<a class="btn-af btn-af-doc" href="' + esc(it.docUrl) + '" target="_blank" rel="noopener">📄 介绍文档</a>'
+        ? '<button class="btn-af btn-af-doc" type="button" data-doc="' + esc(it.docUrl) + '" data-label="' + esc(it.docLabel || "") + '" data-name="' + esc(it.name) + '">📄 介绍文档</button>'
         : '<button class="btn-af btn-af-off" type="button" disabled>文档待补充</button>');
     const videoBtn = it.video
       ? '<button class="btn-af btn-af-video" type="button" data-video="' + esc(it.video) + '" data-label="' + esc(it.videoLabel || "") + '" data-name="' + esc(it.name) + '">▶ Demo 视频</button>'
