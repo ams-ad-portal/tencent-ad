@@ -90,6 +90,13 @@ const AD_FORMATS = [
             docLabel: "【通发】腾讯视频天衣无缝产品升级T09.pptx",
             video: "videos/txv-contract/tianyiwufeng-baiwei-demo.mp4",
             videoLabel: "腾讯视频-天衣无缝-百威-Demo.mp4"
+          },
+          {
+            name: "高光标版",
+            position: "腾讯视频-多端电视剧内",
+            demoDesc: "兰蔻",
+            video: "videos/txv-contract/highlight-biaoban-lancome.mp4",
+            videoLabel: "腾讯视频高光标版-兰蔻.mp4"
           }
         ]
       }
