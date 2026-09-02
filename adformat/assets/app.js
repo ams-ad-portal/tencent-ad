@@ -61,6 +61,15 @@ const AD_FORMATS = [
             demoDesc: "Tiffany",
             video: "videos/txv-contract/ott-oneshot-plus-tiffany.mp4",
             videoLabel: "腾讯视频OTT-ONESHOT plus-Tiffany.mp4"
+          },
+          {
+            name: "全屏暂停",
+            position: "腾讯视频多端视频播放页",
+            demoDesc: "美团",
+            doc: "docs/txv-contract/fullscreen-pause-intro.pdf",
+            docLabel: "腾讯视频-全屏暂停-产品介绍.pdf",
+            video: "videos/txv-contract/fullscreen-pause-meituan.mp4",
+            videoLabel: "腾讯视频-全屏暂停-美团.mp4"
           }
         ]
       }
