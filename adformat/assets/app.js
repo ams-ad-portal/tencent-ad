@@ -59,6 +59,8 @@ const AD_FORMATS = [
             name: "OTT Oneshot Plus",
             position: "腾讯视频OTT端闪屏+焦点图",
             demoDesc: "Tiffany",
+            doc: "docs/txv-contract/oneshot-plus-intro-oct.pdf",
+            docLabel: "OneshotPlus-自定义版 联动出框广告-产品手册-10月.pdf",
             video: "videos/txv-contract/ott-oneshot-plus-tiffany.mp4",
             videoLabel: "腾讯视频OTT-ONESHOT plus-Tiffany.mp4"
           },
