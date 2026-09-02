@@ -97,6 +97,13 @@ const AD_FORMATS = [
             demoDesc: "兰蔻",
             video: "videos/txv-contract/highlight-biaoban-lancome.mp4",
             videoLabel: "腾讯视频高光标版-兰蔻.mp4"
+          },
+          {
+            name: "Phonemax",
+            position: "腾讯视频-移动端闪屏",
+            demoDesc: "雅诗兰黛",
+            video: "videos/txv-contract/phonemax-esteelauder.mp4",
+            videoLabel: "腾讯视频APP-Phonemax-雅诗兰黛 2.mp4"
           }
         ]
       }
