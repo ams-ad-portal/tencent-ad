@@ -81,6 +81,15 @@ const AD_FORMATS = [
             docLabel: "Maxview 介绍横版.pdf",
             video: "videos/txv-contract/maxview-armani.mp4",
             videoLabel: "腾讯视频APP-Maxivew-阿玛尼.mp4"
+          },
+          {
+            name: "天衣无缝",
+            position: "腾讯视频-多端电视剧内",
+            demoDesc: "百威",
+            docUrl: "docs/txv-contract/tianyiwufeng-intro-t09.pptx",
+            docLabel: "【通发】腾讯视频天衣无缝产品升级T09.pptx",
+            video: "videos/txv-contract/tianyiwufeng-baiwei-demo.mp4",
+            videoLabel: "腾讯视频-天衣无缝-百威-Demo.mp4"
           }
         ]
       }
