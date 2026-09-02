@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>腾讯内容平台 · 常用流程</title>
+<meta name="description" content="腾讯内容平台常用流程页，按账户类流程、执行类流程、业务审批类流程分类展示。" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #f5f7fb;
+    --card: #ffffff;
+    --text: #1a1a2e;
+    --sub: #667085;
+    --line: #e6ecf5;
+    --primary: #006eff;
+    --primary-2: #0046c0;
+    --soft: rgba(0, 110, 255, 0.08);
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+  .hero {
+    background: linear-gradient(120deg, var(--primary-2) 0%, var(--primary) 60%, #2a8bff 100%);
+    color: #fff;
+    padding: 52px 20px 72px;
+  }
+  .hero-inner,
+  .main,
+  .foot {
+    width: min(1120px, calc(100% - 32px));
+    margin: 0 auto;
+  }
+  .topbar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.14);
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .hero h1 {
+    margin-top: 18px;
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+  .hero p {
+    margin-top: 12px;
+    max-width: 760px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.84);
+    font-size: 14px;
+  }
+  .summary {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .summary-card {
+    border: 1px solid rgba(255,255,255,0.16);
+    background: rgba(255,255,255,0.1);
+    border-radius: 18px;
+    padding: 18px 18px 16px;
+    backdrop-filter: blur(8px);
+  }
+  .summary-card .kicker {
+    font-size: 12px;
+    letter-spacing: 1px;
+    opacity: 0.82;
+  }
+  .summary-card strong {
+    display: block;
+    margin-top: 8px;
+    font-size: 20px;
+  }
+  .summary-card span {
+    display: block;
+    margin-top: 6px;
+    font-size: 13px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.82);
+  }
+  .main {
+    margin-top: -34px;
+    padding-bottom: 44px;
+  }
+  .panel {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+    overflow: hidden;
+  }
+  .panel-head {
+    padding: 24px 24px 20px;
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(180deg, rgba(0,110,255,0.05) 0%, rgba(0,110,255,0.01) 100%);
+  }
+  .panel-head h2 {
+    font-size: 22px;
+    font-weight: 800;
+  }
+  .panel-head p {
+    margin-top: 8px;
+    color: var(--sub);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .sections {
+    display: grid;
+    gap: 18px;
+    padding: 22px;
+  }
+  .section-card {
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 22px;
+    background: #fff;
+  }
+  .section-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-icon {
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: var(--soft);
+    color: var(--primary);
+    font-size: 22px;
+  }
+  .section-title h3 {
+    font-size: 20px;
+    font-weight: 800;
+  }
+  .section-title p {
+    margin-top: 4px;
+    font-size: 13px;
+    color: var(--sub);
+    line-height: 1.7;
+  }
+  .badge {
+    white-space: nowrap;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: #eff6ff;
+    color: var(--primary-2);
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .placeholder {
+    border: 1px dashed #c9d8f2;
+    border-radius: 16px;
+    background: #f8fbff;
+    padding: 18px;
+  }
+  .placeholder strong {
+    display: block;
+    font-size: 14px;
+  }
+  .placeholder p {
+    margin-top: 8px;
+    color: var(--sub);
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  .placeholder ul {
+    margin-top: 12px;
+    padding-left: 18px;
+    color: var(--sub);
+    font-size: 13px;
+    line-height: 1.9;
+  }
+  .foot {
+    padding: 0 0 28px;
+    text-align: center;
+    color: #98a2b3;
+    font-size: 12px;
+  }
+  @media (max-width: 900px) {
+    .summary { grid-template-columns: 1fr; }
+    .section-top { flex-direction: column; }
+  }
+  @media (max-width: 767px) {
+    .hero { padding: 36px 16px 56px; }
+    .hero-inner, .main, .foot { width: min(100% - 24px, 1120px); }
+    .hero h1 { font-size: 26px; }
+    .panel-head, .sections, .section-card { padding: 18px; }
+    .section-title h3 { font-size: 18px; }
+  }
+</style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <a class="topbar" href="../">← 返回资源门户</a>
+      <h1>常用流程</h1>
+      <p>先搭好页面结构。后续你把具体流程内容发我，我直接按分类补进去。</p>
+      <div class="summary">
+        <div class="summary-card">
+          <div class="kicker">01</div>
+          <strong>账户类流程</strong>
+          <span>账号申请、开通、权限配置、密码重置等内容。</span>
+        </div>
+        <div class="summary-card">
+          <div class="kicker">02</div>
+          <strong>执行类流程</strong>
+          <span>日常投放执行、素材处理、数据提取、提报操作等内容。</span>
+        </div>
+        <div class="summary-card">
+          <div class="kicker">03</div>
+          <strong>业务审批类流程</strong>
+          <span>业务提审、盖章、合同、结算、特殊审批等内容。</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="panel">
+      <div class="panel-head">
+        <h2>流程目录</h2>
+        <p>当前只建立分类框架，不填具体流程内容。等你发内容后，我按你给的原文继续补。</p>
+      </div>
+      <div class="sections">
+        <section class="section-card" id="account-flow">
+          <div class="section-top">
+            <div class="section-title">
+              <span class="section-icon">👤</span>
+              <div>
+                <h3>账户类流程</h3>
+                <p>适合放账号开通、账号绑定、权限申请、权限变更、密码与安全设置相关流程。</p>
+              </div>
+            </div>
+            <span class="badge">待补内容</span>
+          </div>
+          <div class="placeholder">
+            <strong>这里等你后续发内容</strong>
+            <p>收到你的具体流程后，我会按你给的标题、步骤、注意事项原样补进来。</p>
+            <ul>
+              <li>可补：流程名称</li>
+              <li>可补：适用场景 / 入口地址</li>
+              <li>可补：操作步骤 / 注意事项 / 截图</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section-card" id="execution-flow">
+          <div class="section-top">
+            <div class="section-title">
+              <span class="section-icon">⚙️</span>
+              <div>
+                <h3>执行类流程</h3>
+                <p>适合放执行动作、日常操作、物料提交、数据导出、排期更新等流程。</p>
+              </div>
+            </div>
+            <span class="badge">待补内容</span>
+          </div>
+          <div class="placeholder">
+            <strong>这里等你后续发内容</strong>
+            <p>你后面发给我的内容，我会放到这一类里，不会先编步骤。</p>
+            <ul>
+              <li>可补：前置条件</li>
+              <li>可补：执行步骤</li>
+              <li>可补：常见错误 / 处理办法</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section-card" id="approval-flow">
+          <div class="section-top">
+            <div class="section-title">
+              <span class="section-icon">✅</span>
+              <div>
+                <h3>业务审批类流程</h3>
+                <p>适合放业务审批、合同审批、盖章、付款、结算、特殊申请等流程。</p>
+              </div>
+            </div>
+            <span class="badge">待补内容</span>
+          </div>
+          <div class="placeholder">
+            <strong>这里等你后续发内容</strong>
+            <p>后面如果你要分二级标题、加附件入口或下载模版，也可以继续往这页扩。</p>
+            <ul>
+              <li>可补：审批场景</li>
+              <li>可补：审批链路</li>
+              <li>可补：材料清单 / 时效说明</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">腾讯内容平台 · 常用流程页骨架 · © 2026</footer>
+</body>
+</html>

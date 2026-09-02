@@ -41,6 +41,7 @@ const AD_FORMATS = [
         label: "",
         items: [
           {
+            majorType: "内容类",
             name: "8秒合约标版",
             position: "电视剧片内",
             demoDesc: "飘柔洗发露",
@@ -48,6 +49,7 @@ const AD_FORMATS = [
             videoLabel: "8秒合约标版-飘柔洗发露.mp4"
           },
           {
+            majorType: "闪屏",
             name: "TV Max",
             position: "腾讯视频OTT端闪屏破框",
             demoDesc: "Lancome粉底",
@@ -56,6 +58,7 @@ const AD_FORMATS = [
             videoLabel: "腾讯视频OTT-TV Max-Lancome 吴亦凡.mp4"
           },
           {
+            majorType: "闪屏",
             name: "OTT Oneshot Plus",
             position: "腾讯视频OTT端闪屏+焦点图",
             demoDesc: "Tiffany",
@@ -65,6 +68,7 @@ const AD_FORMATS = [
             videoLabel: "腾讯视频OTT-ONESHOT plus-Tiffany.mp4"
           },
           {
+            majorType: "贴片&类贴片",
             name: "全屏暂停",
             position: "腾讯视频多端视频播放页",
             demoDesc: "美团",
@@ -74,6 +78,7 @@ const AD_FORMATS = [
             videoLabel: "腾讯视频-全屏暂停-美团.mp4"
           },
           {
+            majorType: "贴片&类贴片",
             name: "Maxview",
             position: "腾讯视频-移动端视频播放页",
             demoDesc: "阿玛尼香水",
@@ -83,6 +88,7 @@ const AD_FORMATS = [
             videoLabel: "腾讯视频APP-Maxivew-阿玛尼.mp4"
           },
           {
+            majorType: "内容类",
             name: "天衣无缝",
             position: "腾讯视频-多端电视剧内",
             demoDesc: "百威",
@@ -92,6 +98,7 @@ const AD_FORMATS = [
             videoLabel: "腾讯视频-天衣无缝-百威-Demo.mp4"
           },
           {
+            majorType: "内容类",
             name: "高光标版",
             position: "腾讯视频-多端电视剧内",
             demoDesc: "兰蔻",
@@ -99,6 +106,7 @@ const AD_FORMATS = [
             videoLabel: "腾讯视频高光标版-兰蔻.mp4"
           },
           {
+            majorType: "闪屏",
             name: "Phonemax",
             position: "腾讯视频-移动端闪屏",
             demoDesc: "雅诗兰黛",
@@ -106,11 +114,20 @@ const AD_FORMATS = [
             videoLabel: "腾讯视频APP-Phonemax-雅诗兰黛 2.mp4"
           },
           {
+            majorType: "闪屏",
             name: "移动端Oneshot",
             position: "腾讯视频-移动端闪屏+焦点图",
             demoDesc: "Lancome",
             video: "videos/txv-contract/mobile-oneshot-lancome.mp4",
             videoLabel: "腾讯视频APP-Oneshot-Lancome.mp4"
+          },
+          {
+            majorType: "闪屏",
+            name: "移动端轻互动闪屏",
+            position: "腾讯视频-移动端闪屏",
+            demoDesc: "欧莱雅护肤",
+            video: "videos/txv-contract/mobile-light-interaction-shanping-loreal.mp4",
+            videoLabel: "腾讯视频APP-轻互动摇动闪屏-欧莱雅.mp4"
           }
         ]
       }
@@ -143,6 +160,20 @@ const AD_FORMATS = [
             demoDesc: "《柳州记》复方阿胶",
             video: "videos/txv-sponsor/liuzhouji-ruyitie-fufangejiao.mp4",
             videoLabel: "《柳州记》如意贴-复方阿胶.mp4"
+          },
+          {
+            name: "Super剧场5秒标版",
+            position: "腾讯视频-多端电视剧剧场内",
+            demoDesc: "哈尔滨啤酒",
+            video: "videos/txv-sponsor/super-juchang-5s-biaoban-haerbin.mp4",
+            videoLabel: "Super剧场5s标版.mp4"
+          },
+          {
+            name: "Super剧场15秒标版",
+            position: "腾讯视频-多端电视剧剧场内",
+            demoDesc: "999小儿感冒药",
+            video: "videos/txv-sponsor/super-juchang-15s-biaoban-999xiaoerganmao.mp4",
+            videoLabel: "super剧场15s标版.mp4"
           }
         ]
       }
@@ -211,7 +242,7 @@ window.AdFormatBoard = (function () {
   }
 
   /* 单个形式 = 一行（可点击展开详情） */
-  function itemHTML(it) {
+  function itemHTML(it, showMajorType) {
     const docBtn = it.doc
       ? '<button class="btn-af btn-af-doc" type="button" data-doc="' + esc(it.doc) + '" data-label="' + esc(it.docLabel || "") + '" data-name="' + esc(it.name) + '">📄 介绍文档</button>'
       : (it.docUrl
@@ -224,9 +255,13 @@ window.AdFormatBoard = (function () {
         : '<button class="btn-af btn-af-off" type="button" disabled>Demo 待补充</button>');
     const demoNote = '<div class="af-demo-note">' + esc(it.demoDesc || "—") + '</div>';
     const hasDetail = !!(it.desc || it.spec);
+    const majorTypeCell = showMajorType
+      ? '<div class="af-cell af-cell-major"><span class="af-major-tag">' + esc(it.majorType || "—") + '</span></div>'
+      : '';
     return ''
       + '<div class="af-item">'
       + '  <div class="af-row' + (hasDetail ? " af-row-clickable" : "") + '">'
+      + majorTypeCell
       + '    <div class="af-cell af-cell-name">'
       + (hasDetail ? '<span class="af-caret" aria-hidden="true">▸</span>' : '<span class="af-caret af-caret-none" aria-hidden="true"></span>')
       + '      <b>' + esc(it.name) + '</b>'
@@ -252,8 +287,10 @@ window.AdFormatBoard = (function () {
 
     if (!catObj) { listEl.innerHTML = ""; return; }
 
+    const showMajorType = current === "腾讯视频合约";
     const groups = (catObj.groups || []).map(g => {
       const items = (g.items || []).filter(it => !kw
+        || String(it.majorType || "").toLowerCase().includes(kw)
         || String(it.name || "").toLowerCase().includes(kw)
         || String(it.position || "").toLowerCase().includes(kw)
         || String(it.spec || "").toLowerCase().includes(kw)
@@ -278,12 +315,13 @@ window.AdFormatBoard = (function () {
       + (g.label ? '<h2 class="af-group-title">' + esc(g.label) + '<span class="af-group-n">' + g.items.length + " 个形式</span></h2>" : "")
       + '  <div class="af-table">'
       + '    <div class="af-row af-row-head">'
+      + (showMajorType ? '      <div class="af-cell af-cell-major">大类</div>' : '')
       + '      <div class="af-cell af-cell-name">投放形式</div>'
       + '      <div class="af-cell af-cell-pos">具体位置</div>'
       + '      <div class="af-cell af-cell-btns">介绍文档 / Demo</div>'
       + '      <div class="af-cell af-cell-demo">Demo描述</div>'
       + '    </div>'
-      + g.items.map(itemHTML).join("")
+      + g.items.map(it => itemHTML(it, showMajorType)).join("")
       + '  </div>'
       + '</section>').join("");
   }
