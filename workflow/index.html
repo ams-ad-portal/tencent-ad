@@ -169,6 +169,56 @@
     font-size: 12px;
     font-weight: 700;
   }
+  .flow-list {
+    display: grid;
+    gap: 14px;
+  }
+  .flow-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 18px;
+    border: 1px solid #d7e5fb;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #fbfdff 0%, #f4f8ff 100%);
+  }
+  .flow-item strong {
+    display: block;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .flow-item p {
+    margin-top: 6px;
+    color: var(--sub);
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  .flow-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .flow-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 96px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: 0 10px 20px rgba(0, 110, 255, 0.14);
+  }
+  .flow-btn-secondary {
+    background: #eaf2ff;
+    color: var(--primary-2);
+    box-shadow: none;
+  }
   .placeholder {
     border: 1px dashed #c9d8f2;
     border-radius: 16px;
@@ -208,6 +258,8 @@
     .hero h1 { font-size: 26px; }
     .panel-head, .sections, .section-card { padding: 18px; }
     .section-title h3 { font-size: 18px; }
+    .flow-item { flex-direction: column; align-items: flex-start; }
+    .flow-actions { width: 100%; justify-content: flex-start; }
   }
 </style>
 </head>
@@ -216,7 +268,7 @@
     <div class="hero-inner">
       <a class="topbar" href="../">← 返回资源门户</a>
       <h1>常用流程</h1>
-      <p>先搭好页面结构。后续你把具体流程内容发我，我直接按分类补进去。</p>
+      <p>按分类沉淀常用流程文档。你继续发内容，我就直接补到对应分类里。</p>
       <div class="summary">
         <div class="summary-card">
           <div class="kicker">01</div>
@@ -241,7 +293,7 @@
     <section class="panel">
       <div class="panel-head">
         <h2>流程目录</h2>
-        <p>当前只建立分类框架，不填具体流程内容。等你发内容后，我按你给的原文继续补。</p>
+        <p>当前已开始收录流程文档。账户类流程先放入一条 ADQ 开户相关文档，其余分类继续按你给的内容补充。</p>
       </div>
       <div class="sections">
         <section class="section-card" id="account-flow">
@@ -253,16 +305,19 @@
                 <p>适合放账号开通、账号绑定、权限申请、权限变更、密码与安全设置相关流程。</p>
               </div>
             </div>
-            <span class="badge">待补内容</span>
+            <span class="badge">1 条流程</span>
           </div>
-          <div class="placeholder">
-            <strong>这里等你后续发内容</strong>
-            <p>收到你的具体流程后，我会按你给的标题、步骤、注意事项原样补进来。</p>
-            <ul>
-              <li>可补：流程名称</li>
-              <li>可补：适用场景 / 入口地址</li>
-              <li>可补：操作步骤 / 注意事项 / 截图</li>
-            </ul>
+          <div class="flow-list">
+            <article class="flow-item">
+              <div class="flow-main">
+                <strong>【腾讯ADQ开户流程】</strong>
+                <p>客户版流程文档 · Word 文件 · 适用于账户开户相关查看与下载。</p>
+              </div>
+              <div class="flow-actions">
+                <a class="flow-btn" href="./docs/tencent-adq-kaihu-flow-customer.docx" target="_blank" rel="noopener">打开文档</a>
+                <a class="flow-btn flow-btn-secondary" href="./docs/tencent-adq-kaihu-flow-customer.docx" download>下载文档</a>
+              </div>
+            </article>
           </div>
         </section>
 
