@@ -848,7 +848,7 @@ const TV_ITEMS = [
     sortKey: "2026-12-31",
     type: "奇幻爱情",
     cast: "鞠婧祎、张云龙、肖燕、古子成、张峻宁、漆昱辰、海一天、林允",
-    img: "",
+    img: "images/laizhan.jpg",
     cats: [
       "古装",
       "奇幻"
