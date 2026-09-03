@@ -295,7 +295,7 @@
       + '<circle cx="9" cy="9.5" r="1.5" fill="#fff"/><circle cx="15" cy="9.5" r="1.5" fill="#fff"/>'
       + '<path d="M7.5 14.6c1.6 2 7.4 2 9 0" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>'
       + '</button>'
-      + '<div class="ai-fab-label">小助手</div>'
+      + '<div class="ai-fab-label">点我提问</div>'
       + '<div class="ai-panel" id="aiPanel" hidden>'
       + '  <div class="ai-head">'
       + '    <div class="ai-head-l"><span class="ai-dot"></span><b>站内小助手</b><span class="ai-sub">' + esc(SITE) + '信息问答</span></div>'
