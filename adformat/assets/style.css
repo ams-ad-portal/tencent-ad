@@ -112,6 +112,10 @@ body {
   background: var(--blue-soft); color: var(--blue);
   font-size: 12px; font-weight: 800; position: sticky; top: 0; z-index: 1;
 }
+.af-row-head .af-cell {
+  font-size: 12px; font-weight: 800; color: var(--blue);
+  line-height: 1.4; display: flex; align-items: center;
+}
 .af-row-clickable { cursor: pointer; transition: background .12s ease; }
 .af-row-clickable:hover { background: #f8faff; }
 .af-row-open { background: #f4f8ff; }
