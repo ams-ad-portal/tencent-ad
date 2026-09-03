@@ -60,36 +60,52 @@
     color: rgba(255,255,255,0.84);
     font-size: 14px;
   }
-  .summary {
+  .tabs {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 16px;
     margin-top: 24px;
   }
-  .summary-card {
-    border: 1px solid rgba(255,255,255,0.16);
+  .tab-card {
+    border: 2px solid rgba(255,255,255,0.16);
     background: rgba(255,255,255,0.1);
     border-radius: 18px;
     padding: 18px 18px 16px;
     backdrop-filter: blur(8px);
+    color: #fff;
+    text-align: left;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
   }
-  .summary-card .kicker {
+  .tab-card:hover {
+    background: rgba(255,255,255,0.18);
+    transform: translateY(-2px);
+  }
+  .tab-card.active {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: var(--primary-2);
+    box-shadow: 0 14px 30px rgba(0, 28, 80, 0.22);
+  }
+  .tab-card .kicker {
     font-size: 12px;
     letter-spacing: 1px;
     opacity: 0.82;
   }
-  .summary-card strong {
+  .tab-card strong {
     display: block;
     margin-top: 8px;
     font-size: 20px;
   }
-  .summary-card span {
+  .tab-card span {
     display: block;
     margin-top: 6px;
     font-size: 13px;
     line-height: 1.7;
     color: rgba(255,255,255,0.82);
   }
+  .tab-card.active span { color: var(--sub); }
   .main {
     margin-top: -34px;
     padding-bottom: 44px;
@@ -105,6 +121,10 @@
     padding: 24px 24px 20px;
     border-bottom: 1px solid var(--line);
     background: linear-gradient(180deg, rgba(0,110,255,0.05) 0%, rgba(0,110,255,0.01) 100%);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
   }
   .panel-head h2 {
     font-size: 22px;
@@ -116,50 +136,6 @@
     font-size: 14px;
     line-height: 1.7;
   }
-  .sections {
-    display: grid;
-    gap: 18px;
-    padding: 22px;
-  }
-  .section-card {
-    border: 1px solid var(--line);
-    border-radius: 18px;
-    padding: 22px;
-    background: #fff;
-  }
-  .section-top {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 16px;
-    margin-bottom: 16px;
-  }
-  .section-title {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .section-icon {
-    width: 44px;
-    height: 44px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 14px;
-    background: var(--soft);
-    color: var(--primary);
-    font-size: 22px;
-  }
-  .section-title h3 {
-    font-size: 20px;
-    font-weight: 800;
-  }
-  .section-title p {
-    margin-top: 4px;
-    font-size: 13px;
-    color: var(--sub);
-    line-height: 1.7;
-  }
   .badge {
     white-space: nowrap;
     padding: 7px 12px;
@@ -169,27 +145,52 @@
     font-size: 12px;
     font-weight: 700;
   }
-  .flow-list {
-    display: grid;
-    gap: 14px;
+  .name-list {
+    list-style: none;
+    padding: 12px 22px 22px;
   }
-  .flow-item {
+  .name-row { border-bottom: 1px solid var(--line); }
+  .name-row:last-child { border-bottom: none; }
+  .name-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 16px 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    text-align: left;
+  }
+  .name-btn:hover { color: var(--primary); }
+  .name-btn .arrow {
+    font-size: 13px;
+    color: var(--sub);
+    transition: transform 0.18s ease;
+  }
+  .name-row.open .name-btn { color: var(--primary); }
+  .name-row.open .name-btn .arrow { transform: rotate(90deg); }
+  .detail {
+    display: none;
+    padding: 0 6px 18px;
+  }
+  .name-row.open .detail { display: block; }
+  .detail-box {
+    border: 1px solid #d7e5fb;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #fbfdff 0%, #f4f8ff 100%);
+    padding: 18px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 18px;
-    padding: 18px;
-    border: 1px solid #d7e5fb;
-    border-radius: 16px;
-    background: linear-gradient(180deg, #fbfdff 0%, #f4f8ff 100%);
   }
-  .flow-item strong {
-    display: block;
-    font-size: 16px;
-    line-height: 1.5;
-  }
-  .flow-item p {
-    margin-top: 6px;
+  .detail-box p {
     color: var(--sub);
     font-size: 13px;
     line-height: 1.8;
@@ -219,28 +220,11 @@
     color: var(--primary-2);
     box-shadow: none;
   }
-  .placeholder {
-    border: 1px dashed #c9d8f2;
-    border-radius: 16px;
-    background: #f8fbff;
-    padding: 18px;
-  }
-  .placeholder strong {
-    display: block;
+  .empty {
+    padding: 26px 22px 30px;
+    color: var(--sub);
     font-size: 14px;
-  }
-  .placeholder p {
-    margin-top: 8px;
-    color: var(--sub);
-    font-size: 13px;
     line-height: 1.8;
-  }
-  .placeholder ul {
-    margin-top: 12px;
-    padding-left: 18px;
-    color: var(--sub);
-    font-size: 13px;
-    line-height: 1.9;
   }
   .foot {
     padding: 0 0 28px;
@@ -249,16 +233,15 @@
     font-size: 12px;
   }
   @media (max-width: 900px) {
-    .summary { grid-template-columns: 1fr; }
-    .section-top { flex-direction: column; }
+    .tabs { grid-template-columns: 1fr; }
   }
   @media (max-width: 767px) {
     .hero { padding: 36px 16px 56px; }
     .hero-inner, .main, .foot { width: min(100% - 24px, 1120px); }
     .hero h1 { font-size: 26px; }
-    .panel-head, .sections, .section-card { padding: 18px; }
-    .section-title h3 { font-size: 18px; }
-    .flow-item { flex-direction: column; align-items: flex-start; }
+    .panel-head { padding: 18px; flex-direction: column; }
+    .name-list { padding: 8px 16px 18px; }
+    .detail-box { flex-direction: column; align-items: flex-start; }
     .flow-actions { width: 100%; justify-content: flex-start; }
   }
 </style>
@@ -268,106 +251,125 @@
     <div class="hero-inner">
       <a class="topbar" href="../">← 返回资源门户</a>
       <h1>常用流程</h1>
-      <p>按分类沉淀常用流程文档。你继续发内容，我就直接补到对应分类里。</p>
-      <div class="summary">
-        <div class="summary-card">
-          <div class="kicker">01</div>
-          <strong>账户类流程</strong>
-          <span>账号申请、开通、权限配置、密码重置等内容。</span>
-        </div>
-        <div class="summary-card">
-          <div class="kicker">02</div>
-          <strong>执行类流程</strong>
-          <span>日常投放执行、素材处理、数据提取、提报操作等内容。</span>
-        </div>
-        <div class="summary-card">
-          <div class="kicker">03</div>
-          <strong>业务审批类流程</strong>
-          <span>业务提审、盖章、合同、结算、特殊审批等内容。</span>
-        </div>
-      </div>
+      <p>点击上方分区，下方只显示该分区收录的流程名称；再点流程名称，展开详情与下载入口。</p>
+      <div class="tabs" id="tabs"></div>
     </div>
   </header>
 
   <main class="main">
     <section class="panel">
       <div class="panel-head">
-        <h2>流程目录</h2>
-        <p>当前已开始收录流程文档。账户类流程先放入一条 ADQ 开户相关文档，其余分类继续按你给的内容补充。</p>
+        <div>
+          <h2 id="panel-title"></h2>
+          <p id="panel-desc"></p>
+        </div>
+        <span class="badge" id="panel-badge"></span>
       </div>
-      <div class="sections">
-        <section class="section-card" id="account-flow">
-          <div class="section-top">
-            <div class="section-title">
-              <span class="section-icon">👤</span>
-              <div>
-                <h3>账户类流程</h3>
-                <p>适合放账号开通、账号绑定、权限申请、权限变更、密码与安全设置相关流程。</p>
-              </div>
-            </div>
-            <span class="badge">1 条流程</span>
-          </div>
-          <div class="flow-list">
-            <article class="flow-item">
-              <div class="flow-main">
-                <strong>【腾讯ADQ开户流程】</strong>
-                <p>客户版流程文档 · Word 文件 · 适用于账户开户相关查看与下载。</p>
-              </div>
-              <div class="flow-actions">
-                <a class="flow-btn" href="./previews/tencent-adq-kaihu-flow/" target="_blank" rel="noopener">打开文档</a>
-                <a class="flow-btn flow-btn-secondary" href="./docs/tencent-adq-kaihu-flow-customer.docx" download>下载文档</a>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="section-card" id="execution-flow">
-          <div class="section-top">
-            <div class="section-title">
-              <span class="section-icon">⚙️</span>
-              <div>
-                <h3>执行类流程</h3>
-                <p>适合放执行动作、日常操作、物料提交、数据导出、排期更新等流程。</p>
-              </div>
-            </div>
-            <span class="badge">待补内容</span>
-          </div>
-          <div class="placeholder">
-            <strong>这里等你后续发内容</strong>
-            <p>你后面发给我的内容，我会放到这一类里，不会先编步骤。</p>
-            <ul>
-              <li>可补：前置条件</li>
-              <li>可补：执行步骤</li>
-              <li>可补：常见错误 / 处理办法</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="section-card" id="approval-flow">
-          <div class="section-top">
-            <div class="section-title">
-              <span class="section-icon">✅</span>
-              <div>
-                <h3>业务审批类流程</h3>
-                <p>适合放业务审批、合同审批、盖章、付款、结算、特殊申请等流程。</p>
-              </div>
-            </div>
-            <span class="badge">待补内容</span>
-          </div>
-          <div class="placeholder">
-            <strong>这里等你后续发内容</strong>
-            <p>后面如果你要分二级标题、加附件入口或下载模版，也可以继续往这页扩。</p>
-            <ul>
-              <li>可补：审批场景</li>
-              <li>可补：审批链路</li>
-              <li>可补：材料清单 / 时效说明</li>
-            </ul>
-          </div>
-        </section>
-      </div>
+      <div id="panel-body"></div>
     </section>
   </main>
 
-  <footer class="foot">腾讯内容平台 · 常用流程页骨架 · © 2026</footer>
+  <footer class="foot">腾讯内容平台 · 常用流程 · © 2026</footer>
+
+<script>
+  const SECTIONS = [
+    {
+      id: "account",
+      kicker: "01",
+      title: "账户类流程",
+      summary: "账号申请、开通、权限配置、密码重置等内容。",
+      desc: "适合放账号开通、账号绑定、权限申请、权限变更、密码与安全设置相关流程。",
+      flows: [
+        {
+          name: "【腾讯ADQ开户流程】",
+          desc: "客户版流程文档 · Word 文件 · 适用于账户开户相关查看与下载。",
+          openUrl: "./previews/tencent-adq-kaihu-flow/",
+          downloadUrl: "./docs/tencent-adq-kaihu-flow-customer.docx"
+        }
+      ]
+    },
+    {
+      id: "execution",
+      kicker: "02",
+      title: "执行类流程",
+      summary: "日常投放执行、素材处理、数据提取、提报操作等内容。",
+      desc: "适合放执行动作、日常操作、物料提交、数据导出、排期更新等流程。",
+      flows: []
+    },
+    {
+      id: "approval",
+      kicker: "03",
+      title: "业务审批类流程",
+      summary: "业务提审、盖章、合同、结算、特殊审批等内容。",
+      desc: "适合放业务审批、合同审批、盖章、付款、结算、特殊申请等流程。",
+      flows: []
+    }
+  ];
+
+  const tabsEl = document.getElementById("tabs");
+  const titleEl = document.getElementById("panel-title");
+  const descEl = document.getElementById("panel-desc");
+  const badgeEl = document.getElementById("panel-badge");
+  const bodyEl = document.getElementById("panel-body");
+
+  let currentId = SECTIONS[0].id;
+
+  function renderTabs() {
+    tabsEl.innerHTML = SECTIONS.map(function (s) {
+      return '<button type="button" class="tab-card' + (s.id === currentId ? " active" : "") + '" data-id="' + s.id + '">' +
+        '<div class="kicker">' + s.kicker + '</div>' +
+        '<strong>' + s.title + '</strong>' +
+        '<span>' + s.summary + '</span>' +
+      '</button>';
+    }).join("");
+  }
+
+  function renderPanel() {
+    const s = SECTIONS.find(function (x) { return x.id === currentId; });
+    titleEl.textContent = s.title;
+    descEl.textContent = s.desc;
+    badgeEl.textContent = s.flows.length ? (s.flows.length + " 条流程") : "待补内容";
+
+    if (!s.flows.length) {
+      bodyEl.innerHTML = '<div class="empty">这个分区还没有收录流程。你把内容发给我，我会直接补到这一类里。</div>';
+      return;
+    }
+
+    bodyEl.innerHTML = '<ul class="name-list">' + s.flows.map(function (f, i) {
+      return '<li class="name-row" data-index="' + i + '">' +
+        '<button type="button" class="name-btn">' +
+          '<span>' + f.name + '</span>' +
+          '<span class="arrow">展开 ›</span>' +
+        '</button>' +
+        '<div class="detail">' +
+          '<div class="detail-box">' +
+            '<p>' + f.desc + '</p>' +
+            '<div class="flow-actions">' +
+              '<a class="flow-btn" href="' + f.openUrl + '" target="_blank" rel="noopener">打开文档</a>' +
+              '<a class="flow-btn flow-btn-secondary" href="' + f.downloadUrl + '" download>下载文档</a>' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+      '</li>';
+    }).join("") + '</ul>';
+  }
+
+  tabsEl.addEventListener("click", function (e) {
+    const btn = e.target.closest(".tab-card");
+    if (!btn) return;
+    currentId = btn.getAttribute("data-id");
+    renderTabs();
+    renderPanel();
+  });
+
+  bodyEl.addEventListener("click", function (e) {
+    const btn = e.target.closest(".name-btn");
+    if (!btn) return;
+    btn.closest(".name-row").classList.toggle("open");
+  });
+
+  renderTabs();
+  renderPanel();
+</script>
 </body>
 </html>
