@@ -42,6 +42,8 @@ const AD_FORMATS = [
         items: [
           {
             majorType: "闪屏",
+            memberVisible: "会员可见",
+            duration: "15秒",
             name: "TV Max",
             position: "腾讯视频OTT端闪屏破框",
             demoDesc: "Lancome粉底",
@@ -51,6 +53,8 @@ const AD_FORMATS = [
           },
           {
             majorType: "闪屏",
+            memberVisible: "会员可见",
+            duration: "5秒闪屏+最长60秒焦点图",
             name: "OTT Oneshot Plus",
             position: "腾讯视频OTT端闪屏+焦点图",
             demoDesc: "Tiffany",
@@ -61,6 +65,8 @@ const AD_FORMATS = [
           },
           {
             majorType: "闪屏",
+            memberVisible: "会员可见",
+            duration: "最长90秒",
             name: "Phonemax",
             position: "腾讯视频-移动端闪屏",
             demoDesc: "雅诗兰黛",
@@ -69,6 +75,7 @@ const AD_FORMATS = [
           },
           {
             majorType: "闪屏",
+            memberVisible: "会员可见",
             name: "移动端Oneshot",
             position: "腾讯视频-移动端闪屏+焦点图",
             demoDesc: "Lancome",
@@ -77,6 +84,7 @@ const AD_FORMATS = [
           },
           {
             majorType: "闪屏",
+            memberVisible: "会员可见",
             name: "移动端轻互动闪屏",
             position: "腾讯视频-移动端闪屏",
             demoDesc: "欧莱雅护肤",
@@ -85,6 +93,7 @@ const AD_FORMATS = [
           },
           {
             majorType: "贴片&类贴片",
+            memberVisible: "会员可见",
             name: "全屏暂停",
             position: "腾讯视频多端视频播放页",
             demoDesc: "美团",
@@ -95,6 +104,7 @@ const AD_FORMATS = [
           },
           {
             majorType: "贴片&类贴片",
+            memberVisible: "会员不可见",
             name: "Maxview",
             position: "腾讯视频-移动端视频播放页",
             demoDesc: "阿玛尼香水",
@@ -105,6 +115,7 @@ const AD_FORMATS = [
           },
           {
             majorType: "内容类",
+            memberVisible: "会员可见",
             name: "8秒合约标版",
             position: "电视剧片内",
             demoDesc: "飘柔洗发露",
@@ -113,6 +124,7 @@ const AD_FORMATS = [
           },
           {
             majorType: "内容类",
+            memberVisible: "会员可见",
             name: "天衣无缝",
             position: "腾讯视频-多端电视剧内",
             demoDesc: "百威",
@@ -123,6 +135,7 @@ const AD_FORMATS = [
           },
           {
             majorType: "内容类",
+            memberVisible: "会员可见",
             name: "高光标版",
             position: "腾讯视频-多端电视剧内",
             demoDesc: "兰蔻",
@@ -242,7 +255,7 @@ window.AdFormatBoard = (function () {
   }
 
   /* 单个形式 = 一行（可点击展开详情） */
-  function itemHTML(it, showMajorType) {
+  function itemHTML(it, showMajorType, showMemberVisible, showDuration) {
     const docBtn = it.doc
       ? '<button class="btn-af btn-af-doc" type="button" data-doc="' + esc(it.doc) + '" data-label="' + esc(it.docLabel || "") + '" data-name="' + esc(it.name) + '">📄 介绍文档</button>'
       : (it.docUrl
@@ -258,10 +271,18 @@ window.AdFormatBoard = (function () {
     const majorTypeCell = showMajorType
       ? '<div class="af-cell af-cell-major"><span class="af-major-tag">' + esc(it.majorType || "—") + '</span></div>'
       : '';
+    const memberVisibleCell = showMemberVisible
+      ? '<div class="af-cell af-cell-member"><span class="af-member-tag ' + ((it.memberVisible || "") === "会员不可见" ? 'af-member-no' : 'af-member-yes') + '">' + esc(it.memberVisible || "—") + '</span></div>'
+      : '';
+    const durationCell = showDuration
+      ? '<div class="af-cell af-cell-duration"><span class="af-duration-tag">' + esc(it.duration || "—") + '</span></div>'
+      : '';
     return ''
       + '<div class="af-item">'
       + '  <div class="af-row' + (hasDetail ? " af-row-clickable" : "") + '">'
       + majorTypeCell
+      + memberVisibleCell
+      + durationCell
       + '    <div class="af-cell af-cell-name">'
       + (hasDetail ? '<span class="af-caret" aria-hidden="true">▸</span>' : '<span class="af-caret af-caret-none" aria-hidden="true"></span>')
       + '      <b>' + esc(it.name) + '</b>'
@@ -288,9 +309,13 @@ window.AdFormatBoard = (function () {
     if (!catObj) { listEl.innerHTML = ""; return; }
 
     const showMajorType = current === "腾讯视频合约";
+    const showMemberVisible = current === "腾讯视频合约";
+    const showDuration = current === "腾讯视频合约";
     const groups = (catObj.groups || []).map(g => {
       const items = (g.items || []).filter(it => !kw
         || String(it.majorType || "").toLowerCase().includes(kw)
+        || String(it.memberVisible || "").toLowerCase().includes(kw)
+        || String(it.duration || "").toLowerCase().includes(kw)
         || String(it.name || "").toLowerCase().includes(kw)
         || String(it.position || "").toLowerCase().includes(kw)
         || String(it.spec || "").toLowerCase().includes(kw)
@@ -316,12 +341,14 @@ window.AdFormatBoard = (function () {
       + '  <div class="af-table">'
       + '    <div class="af-row af-row-head">'
       + (showMajorType ? '      <div class="af-cell af-cell-major">大类</div>' : '')
+      + (showMemberVisible ? '      <div class="af-cell af-cell-member">会员是否可见</div>' : '')
+      + (showDuration ? '      <div class="af-cell af-cell-duration">时长</div>' : '')
       + '      <div class="af-cell af-cell-name">投放形式</div>'
       + '      <div class="af-cell af-cell-pos">具体位置</div>'
       + '      <div class="af-cell af-cell-btns">介绍文档 / Demo</div>'
       + '      <div class="af-cell af-cell-demo">Demo描述</div>'
       + '    </div>'
-      + g.items.map(it => itemHTML(it, showMajorType)).join("")
+      + g.items.map(it => itemHTML(it, showMajorType, showMemberVisible, showDuration)).join("")
       + '  </div>'
       + '</section>').join("");
   }

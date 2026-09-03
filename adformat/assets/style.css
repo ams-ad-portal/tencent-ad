@@ -123,6 +123,22 @@ body {
   background: #f3f7ff; color: var(--blue); border: 1px solid #d7e4ff;
   font-size: 12px; font-weight: 700; line-height: 1.2; text-align: center;
 }
+.af-cell-member { flex: 0 0 116px; }
+.af-member-tag {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 88px; padding: 6px 10px; border-radius: 999px;
+  font-size: 12px; font-weight: 700; line-height: 1.2; text-align: center;
+  border: 1px solid transparent;
+}
+.af-member-yes { background: #ebf8f2; color: #0f9d63; border-color: #cdeedd; }
+.af-member-no { background: #f4f6fa; color: #7b8597; border-color: #dce2eb; }
+.af-cell-duration { flex: 0 0 170px; }
+.af-duration-tag {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 88px; max-width: 100%; padding: 6px 10px; border-radius: 999px;
+  background: #fff7eb; color: #c76a00; border: 1px solid #ffe0b2;
+  font-size: 12px; font-weight: 700; line-height: 1.2; text-align: center;
+}
 .af-cell-name { flex: 0 0 210px; font-weight: 700; font-size: 14.5px; display: flex; align-items: center; gap: 6px; }
 .af-cell-name b { min-width: 0; }
 .af-cell-pos { flex: 1; min-width: 0; color: var(--ink-2); font-size: 13px; line-height: 1.5; }
@@ -240,6 +256,10 @@ body {
   .af-row-head { display: none; }
   .af-cell-major { flex: 0 0 auto; order: 0; }
   .af-major-tag { min-width: 0; padding: 4px 8px; font-size: 11px; }
+  .af-cell-member { flex: 0 0 auto; order: 0; }
+  .af-member-tag { min-width: 0; padding: 4px 8px; font-size: 11px; }
+  .af-cell-duration { flex: 0 0 auto; order: 0; }
+  .af-duration-tag { min-width: 0; padding: 4px 8px; font-size: 11px; }
   .af-cell-name { flex: 1 1 0; min-width: 0; order: 0; }
   .af-cell-pos { flex: 0 0 auto; max-width: 42%; margin-left: auto; order: 1; text-align: right; font-size: 12px; line-height: 1.4; }
   .af-cell-pos .af-spec { text-align: right; }
