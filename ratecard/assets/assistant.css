@@ -5,6 +5,7 @@
 
 /* 悬浮按钮 */
 .ai-fab {
+  position: relative;
   width: 62px; height: 62px; margin: 0; padding: 0; border-radius: 50%;
   display: inline-flex; align-items: center; justify-content: center;
   border: 3px solid #fff; cursor: pointer;
@@ -13,6 +14,20 @@
   transition: transform .15s ease;
   animation: aiNudge 5s infinite ease-in-out;
 }
+/* 光晕扩散闪烁 */
+.ai-fab::after {
+  content: ""; position: absolute; inset: -3px; border-radius: 50%;
+  border: 3px solid rgba(22, 224, 124, .55);
+  box-shadow: 0 0 14px rgba(22, 224, 124, .35);
+  animation: aiHalo 2.2s ease-out infinite;
+  pointer-events: none;
+}
+@keyframes aiHalo {
+  0% { transform: scale(1); opacity: .85; }
+  70% { transform: scale(1.5); opacity: 0; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+.ai-fab-on::after { animation: none; opacity: 0; }
 .ai-fab:hover { transform: scale(1.07); }
 .ai-fab:active { transform: scale(.95); }
 .ai-fab-on { animation: none; }
