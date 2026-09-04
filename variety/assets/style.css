@@ -47,12 +47,18 @@ body {
 .container { max-width: 1120px; margin: 0 auto; padding: 44px 20px 60px; }
 /* 搜索框与时间轴之间的副标题（靠左） */
 .page-sub { margin: 0 0 16px; font-size: 13px; color: var(--ink-2); text-align: left; }
-.page-sub-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 0 0 16px; }
+.page-sub-row {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; margin: 0 0 16px;
+}
 .page-sub-row .page-sub { margin: 0; }
+/* 与列表内「展开 / 收起」按钮同一套样式（.tl-expand） */
 .tl-toggle-all {
-  flex-shrink: 0; border: 1px solid var(--blue); background: #fff; color: var(--blue);
-  font-size: 12.5px; font-weight: 700; padding: 6px 15px; border-radius: 999px;
-  cursor: pointer; white-space: nowrap; transition: background .12s ease;
+  display: inline-flex; align-items: center; gap: 4px;
+  border: 1px solid var(--blue); background: #fff; color: var(--blue);
+  font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 999px;
+  cursor: pointer; flex-shrink: 0; margin-left: auto; white-space: nowrap;
+  transition: background .12s ease;
 }
 .tl-toggle-all:hover { background: var(--blue-soft); }
 
