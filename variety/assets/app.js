@@ -321,6 +321,7 @@ function getItems() { return VARIETY_ITEMS; }
 /* ===== 渲染逻辑 ===== */
 (function () {
   const wrap = document.getElementById("tlWrap");
+  const toggleAllBtn = document.getElementById("tlToggleAll");
   const empty = document.getElementById("tlEmpty");
   const filtersEl = document.getElementById("filters");
   const quarterChipsEl = document.getElementById("quarterChips");
@@ -472,6 +473,7 @@ function getItems() { return VARIETY_ITEMS; }
       const kind = currentTab === "tv" ? "电视剧" : "综艺";
       empty.innerHTML = '<div class="tl-empty-icon">📺</div><p>' + kind + '时间轴待填充</p><span>把' + kind + '节目和上线时间发给我，我会按最新在上依次排进来。</span>';
       empty.style.display = "";
+      syncToggleAll();
       return;
     }
     const list = filteredList();
@@ -483,11 +485,14 @@ function getItems() { return VARIETY_ITEMS; }
         empty.innerHTML = '<div class="tl-empty-icon">🔍</div><p>没有符合筛选条件的节目</p><span>换个季度、级别或类型试试。</span>';
       }
       empty.style.display = "";
+      syncToggleAll();
       return;
     }
     empty.style.display = "none";
+    syncToggleAll();
     const sorted = list.slice().sort((a, b) => String(b.sortKey).localeCompare(String(a.sortKey)));
     wrap.insertAdjacentHTML("beforeend", sorted.map(itemHTML).join(""));
+    syncToggleAll();
   }
 
   /* 板块切换由全局板块框架处理（TimelineBoard.switchTo） */
@@ -531,6 +536,32 @@ function getItems() { return VARIETY_ITEMS; }
     render();
   });
 
+  /* 一键展开 / 收起全部 */
+  function syncToggleAll() {
+    if (!toggleAllBtn) return;
+    const details = Array.from(wrap.querySelectorAll(".tl-detail"));
+    const anyClosed = details.some(d => d.hidden);
+    toggleAllBtn.textContent = (details.length && !anyClosed) ? "一键收起" : "一键展开";
+  }
+  function setAllOpen(open) {
+    wrap.querySelectorAll(".tl-row").forEach(row => {
+      const detail = row.nextElementSibling;
+      if (!detail || !detail.classList.contains("tl-detail")) return;
+      detail.hidden = !open;
+      row.classList.toggle("open", open);
+      const t = row.querySelector(".tl-expand-text");
+      if (t) t.textContent = open ? "收起" : "展开";
+    });
+    syncToggleAll();
+  }
+  if (toggleAllBtn) {
+    toggleAllBtn.addEventListener("click", () => {
+      const details = Array.from(wrap.querySelectorAll(".tl-detail"));
+      const anyClosed = details.some(d => d.hidden);
+      setAllOpen(anyClosed); // 有收起的就全展开，已经全展开就全收起
+    });
+  }
+
   /* 点击行/「点击展开」按钮展开收起大图 */
   wrap.addEventListener("click", e => {
     const row = e.target.closest(".tl-row");
@@ -542,6 +573,7 @@ function getItems() { return VARIETY_ITEMS; }
       row.classList.toggle("open", !isOpen);
       const txt = row.querySelector(".tl-expand-text");
       if (txt) txt.textContent = isOpen ? "展开" : "收起";
+      syncToggleAll();
     }
   });
 
