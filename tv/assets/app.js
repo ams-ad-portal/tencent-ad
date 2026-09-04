@@ -10,7 +10,7 @@ const TV_ITEMS = [
     sortKey: "2026-01-01",
     type: "谍战",
     cast: "张鲁一、张钧甯、张晨光、张颂文、金士杰、木幡龙",
-    img: "",
+    img: "images/changheluori.jpg",
     cats: [
       "革命"
     ]
@@ -22,7 +22,7 @@ const TV_ITEMS = [
     sortKey: "2026-01-10",
     type: "当代剧情",
     cast: "赵丽颖、黄晓明、陈明昊、朱媛媛、秦俊杰、耿乐",
-    img: "",
+    img: "images/xiaochengdashi.jpg",
     cats: [
       "现实"
     ]
@@ -34,7 +34,7 @@ const TV_ITEMS = [
     sortKey: "2026-01-15",
     type: "古装悬疑",
     cast: "王子奇、苏晓彤、杨廷东、赵尧珂、张宸逍、王彦鑫",
-    img: "",
+    img: "images/yucixiaowuzuo2.jpg",
     cats: [
       "古装",
       "悬疑"
@@ -47,7 +47,7 @@ const TV_ITEMS = [
     sortKey: "2026-01-22",
     type: "奇幻爱情",
     cast: "陈星旭、王玉雯、马思超、曾梦雪、于翔",
-    img: "",
+    img: "images/turandexihuan.jpg",
     cats: [
       "奇幻",
       "爱情"
@@ -60,7 +60,7 @@ const TV_ITEMS = [
     sortKey: "2026-01-23",
     type: "古装历史",
     cast: "白宇、周雨彤、朱亚文、俞灏明、董勇、倪大红",
-    img: "",
+    img: "images/taipingnian.jpg",
     cats: [
       "古装",
       "历史"
@@ -85,7 +85,7 @@ const TV_ITEMS = [
     sortKey: "2026-01-31",
     type: "都市喜剧",
     cast: "彭昱畅、林允、刘冠麟、王天放、何瑞贤、叶祖新",
-    img: "",
+    img: "images/nianshaoyouwei.jpg",
     cats: [
       "都市",
       "喜剧"
@@ -98,7 +98,7 @@ const TV_ITEMS = [
     sortKey: "2026-02-03",
     type: "悬疑刑侦",
     cast: "龚俊、姜武、孙怡、王迅、贾冰、李建义",
-    img: "",
+    img: "images/fengguoliuhen.jpg",
     cats: [
       "悬疑",
       "刑侦"
@@ -111,7 +111,7 @@ const TV_ITEMS = [
     sortKey: "2026-02-09",
     type: "都市话题",
     cast: "李诚儒、许娣、蔡明、范明、梁天、李琦",
-    img: "",
+    img: "images/chongfanqingchun.jpg",
     cats: [
       "都市"
     ]
@@ -136,7 +136,7 @@ const TV_ITEMS = [
     sortKey: "2026-02-21",
     type: "年代爱情",
     cast: "陈飞宇、孙千、刘敏涛、郭晓婷、王天辰、吴樾",
-    img: "",
+    img: "images/chunzhenniandaideaiqing.jpg",
     cats: [
       "传奇",
       "爱情"
@@ -149,7 +149,7 @@ const TV_ITEMS = [
     sortKey: "2026-02-22",
     type: "古风武侠爱情",
     cast: "周翊然、包上恩、余嘉诚、范静祎、边天扬、袁文康",
-    img: "",
+    img: "images/jianghuyeyushiniandeng.jpg",
     cats: [
       "古装",
       "武侠",
@@ -163,7 +163,7 @@ const TV_ITEMS = [
     sortKey: "2026-02-26",
     type: "都市爱情",
     cast: "王子文、刘宇宁、蒋欣、明道、高伟光、谷嘉诚",
-    img: "",
+    img: "images/meiguicongsheng.jpg",
     cats: [
       "都市",
       "爱情"
@@ -176,7 +176,7 @@ const TV_ITEMS = [
     sortKey: "2026-03-06",
     type: "古装爱情",
     cast: "张凌赫、田曦薇、任豪、孔雪儿、邓凯、李卿",
-    img: "",
+    img: "images/zhuyu.jpg",
     cats: [
       "古装",
       "爱情"
@@ -189,7 +189,7 @@ const TV_ITEMS = [
     sortKey: "2026-03-13",
     type: "都市女性励志",
     cast: "马思纯、宁理、袁姗姗、翟子路、章涛、郑则仕",
-    img: "",
+    img: "images/tadeshengyan.jpg",
     cats: [
       "都市"
     ]
@@ -201,7 +201,7 @@ const TV_ITEMS = [
     sortKey: "2026-03-18",
     type: "女性悬疑",
     cast: "倪妮、闫妮、刘雅瑟、刘敏涛、保剑锋、董洁",
-    img: "",
+    img: "images/yinshendemingzi.jpg",
     cats: [
       "悬疑"
     ]
@@ -213,7 +213,7 @@ const TV_ITEMS = [
     sortKey: "2026-03-25",
     type: "都市刑侦",
     cast: "龚俊、任敏、黄璐、高鑫、韩云云、李诚儒",
-    img: "",
+    img: "images/jiashifating.jpg",
     cats: [
       "都市",
       "刑侦"
@@ -226,7 +226,7 @@ const TV_ITEMS = [
     sortKey: "2026-03-28",
     type: "古装奇幻爱情",
     cast: "迪丽热巴、陈飞宇、魏哲鸣、张俪、杨肸子、陈楚河",
-    img: "",
+    img: "images/bairitideng.jpg",
     cats: [
       "奇幻",
       "爱情"
@@ -239,7 +239,7 @@ const TV_ITEMS = [
     sortKey: "2026-03-29",
     type: "战争传奇",
     cast: "张桐、苏青、李晨、马元、刘天佐、马苏",
-    img: "",
+    img: "images/zhanqiruhua.jpg",
     cats: [
       "传奇"
     ]
@@ -251,7 +251,7 @@ const TV_ITEMS = [
     sortKey: "2026-04-01",
     type: "现实悬疑",
     cast: "刘烨、聂远、王佳佳、李健、冯兵、王梓薇",
-    img: "",
+    img: "images/poce.jpg",
     cats: [
       "现实",
       "悬疑"
@@ -264,7 +264,7 @@ const TV_ITEMS = [
     sortKey: "2026-04-08",
     type: "古装爱情",
     cast: "李昀锐、黄杨钿甜、张康乐、李孝谦、夏梦、李梦",
-    img: "",
+    img: "images/binghuchongsheng.jpg",
     cats: [
       "古装",
       "爱情"
@@ -277,7 +277,7 @@ const TV_ITEMS = [
     sortKey: "2026-04-13",
     type: "都市话题",
     cast: "钟汉良、朱珠、李梦、经超、任彬、徐海乔",
-    img: "",
+    img: "images/miyuji.jpg",
     cats: [
       "都市"
     ]
@@ -289,7 +289,7 @@ const TV_ITEMS = [
     sortKey: "2026-04-17",
     type: "犯罪悬疑情感",
     cast: "许凯、丁勇岱、邓恩熙、胡可、涂松岩",
-    img: "",
+    img: "images/fangyuanbabaimi.jpg",
     cats: [
       "悬疑",
       "刑侦"
@@ -302,7 +302,7 @@ const TV_ITEMS = [
     sortKey: "2026-04-25",
     type: "古装奇幻",
     cast: "任嘉伦、王鹤润、张凯莹、王以纶、黄羿、付伟伦",
-    img: "",
+    img: "images/jiaoutiancheng.jpg",
     cats: [
       "古装",
       "奇幻"
@@ -315,7 +315,7 @@ const TV_ITEMS = [
     sortKey: "2026-04-28",
     type: "都市话题",
     cast: "唐嫣、赵又廷、杨采钰、冯绍峰、何蓝逗、王菊",
-    img: "",
+    img: "images/aiqingmeiyoushenhua.jpg",
     cats: [
       "都市"
     ]
@@ -327,7 +327,7 @@ const TV_ITEMS = [
     sortKey: "2026-05-10",
     type: "当代剧情",
     cast: "张嘉益、刘浩存、秦海璐、窦骁、翟子路、王晓晨",
-    img: "",
+    img: "images/zhujue.jpg",
     cats: [
       "现实"
     ]
@@ -339,7 +339,7 @@ const TV_ITEMS = [
     sortKey: "2026-05-23",
     type: "古装悬疑",
     cast: "冯绍峰、李彧、邵芸、单敬尧、邬君梅",
-    img: "",
+    img: "images/datangmiwudiyiji.jpg",
     cats: [
       "古装",
       "悬疑"
@@ -352,7 +352,7 @@ const TV_ITEMS = [
     sortKey: "2026-06-07",
     type: "荒诞悬疑",
     cast: "郭京飞、任素汐、谷嘉诚、漆昱辰、温峥嵘、刘天佐",
-    img: "",
+    img: "images/miqiang.jpg",
     cats: [
       "悬疑"
     ]
@@ -364,7 +364,7 @@ const TV_ITEMS = [
     sortKey: "2026-06-09",
     type: "古装爱情",
     cast: "白鹿、丞磊、蔡正杰、杨舒伊、林沐然、董洁",
-    img: "",
+    img: "images/moli.jpg",
     cats: [
       "古装",
       "爱情"
@@ -377,7 +377,7 @@ const TV_ITEMS = [
     sortKey: "2026-06-15",
     type: "都市情感",
     cast: "檀健次、王楚然、李乃文、姜珮瑶",
-    img: "",
+    img: "images/aiqingyouyanhuo.jpg",
     cats: [
       "都市"
     ]
@@ -389,7 +389,7 @@ const TV_ITEMS = [
     sortKey: "2026-06-18",
     type: "都市情感话题",
     cast: "赵又廷、毛晓彤、金世佳、张佳宁、陈冲、黄觉",
-    img: "",
+    img: "images/wenxin2.jpg",
     cats: [
       "都市"
     ]
@@ -401,7 +401,7 @@ const TV_ITEMS = [
     sortKey: "2026-07-05",
     type: "民国悬疑",
     cast: "翟子路、马思超、春夏、陈意涵、孟鹤堂、周九良",
-    img: "",
+    img: "images/jingchengqitan.jpg",
     cats: [
       "民国",
       "悬疑"
@@ -414,7 +414,7 @@ const TV_ITEMS = [
     sortKey: "2026-07-08",
     type: "战争传奇",
     cast: "张桐、何雨虹、卫仑、徐百慧、齐奎、孙绍龙",
-    img: "",
+    img: "images/jiugedankong.jpg",
     cats: [
       "战争",
       "传奇"
@@ -427,7 +427,7 @@ const TV_ITEMS = [
     sortKey: "2026-07-09",
     type: "古装爱情",
     cast: "孟子义、何与、孔雪儿、叶祖新、何润东、张峻宁",
-    img: "",
+    img: "images/baihuasha.jpg",
     cats: [
       "古装",
       "爱情"
@@ -453,7 +453,7 @@ const TV_ITEMS = [
     sortKey: "2026-07-19",
     type: "民国言情",
     cast: "张凌赫、王楚然、付辛博、胡杏儿、沙宝亮、吴莫愁、徐振轩、鹤秋",
-    img: "",
+    img: "images/zheyimiaoguohuo.jpg",
     cats: [
       "民国",
       "爱情"
@@ -466,7 +466,7 @@ const TV_ITEMS = [
     sortKey: "2026-07-21",
     type: "家庭轻喜剧",
     cast: "蒋依依、黄小蕾、王天辰、李依晓、吕昀峰、石杭鹭、彭雅琦、刘亚津",
-    img: "",
+    img: "images/yirandexishi.jpg",
     cats: [
       "家庭",
       "喜剧"
@@ -479,7 +479,7 @@ const TV_ITEMS = [
     sortKey: "2026-07-23",
     type: "军旅",
     cast: "欧豪、蓝盈莹、刘奕君、黄景瑜、丁勇岱、史兰芽、阮巨、李幼斌、侯勇",
-    img: "",
+    img: "images/bingzifengzhonglai.jpg",
     cats: [
       "军旅"
     ]
@@ -491,7 +491,7 @@ const TV_ITEMS = [
     sortKey: "2026-08-04",
     type: "校园女性悬疑",
     cast: "黄杨钿甜、董勇、张开泰、刘孜、张帆、陈创、何思甜、罗海琼",
-    img: "",
+    img: "images/renyu.jpg",
     cats: [
       "青春",
       "悬疑"
@@ -504,7 +504,7 @@ const TV_ITEMS = [
     sortKey: "2026-08-09",
     type: "古装爱情",
     cast: "丁禹兮、邓恩熙、尤靖茹、白澍、吕晓霖、张萌、迟蓬、温峥嵘、谭凯",
-    img: "",
+    img: "images/huakaijinxiu.jpg",
     cats: [
       "古装",
       "爱情"
@@ -529,7 +529,7 @@ const TV_ITEMS = [
     sortKey: "2026-08-20",
     type: "现实悬疑",
     cast: "钟楚曦、吴镇宇、郑云龙、郑宇承、吴幸键、易大千、周放、喻恩泰",
-    img: "",
+    img: "images/chan.jpg",
     cats: [
       "悬疑"
     ]
@@ -541,7 +541,7 @@ const TV_ITEMS = [
     sortKey: "2026-08-25",
     type: "古装悬疑武侠",
     cast: "辛芷蕾、尹昉、陈坤、高伟光、卜冠今、尹铸胜、吴汉坤、连奕名",
-    img: "",
+    img: "images/jinse.jpg",
     cats: [
       "古装",
       "悬疑",
@@ -555,7 +555,7 @@ const TV_ITEMS = [
     sortKey: "2026-08-01",
     type: "悬疑剧情",
     cast: "闫妮、秦海璐、刘琳、左小青、颖儿、李嘉琦、郭晓东、潘斌龙",
-    img: "",
+    img: "images/wugeshizongdeshaonian.jpg",
     cats: [
       "悬疑"
     ]
@@ -567,7 +567,7 @@ const TV_ITEMS = [
     sortKey: "2026-08-30",
     type: "时代悬疑",
     cast: "刘诗诗、胡先煦、李乃文、李沁、黄小蕾、陈永胜、林家川、姜超、姚安濂",
-    img: "",
+    img: "images/zuimeng.jpg",
     cats: [
       "悬疑"
     ]
@@ -579,7 +579,7 @@ const TV_ITEMS = [
     sortKey: "2026-09-01",
     type: "都市女性",
     cast: "李一桐、王佳佳、常华森、曾梦雪、乔振宇、何润东、程泓鑫、周大为",
-    img: "",
+    img: "images/meirenyu.jpg",
     cats: [
       "都市"
     ]
@@ -591,7 +591,7 @@ const TV_ITEMS = [
     sortKey: "2026-09-06",
     type: "现实国安",
     cast: "王凯、彭昱畅、欧豪、周依然、邱天、成泰燊、齐欢、祖峰、吴启华",
-    img: "",
+    img: "images/jiaofeng.jpg",
     cats: [
       "现实",
       "革命"
@@ -604,7 +604,7 @@ const TV_ITEMS = [
     sortKey: "2026-09-01",
     type: "古装奇幻爱情",
     cast: "李一桐、陈鑫海、郭俊辰、何洛洛、肖燕、古子成、饶嘉迪、陈芷琰",
-    img: "",
+    img: "images/gulefenghualu.jpg",
     cats: [
       "古装",
       "奇幻",
@@ -618,7 +618,7 @@ const TV_ITEMS = [
     sortKey: "2026-09-01",
     type: "军旅",
     cast: "李昀锐、陈永胜、周放、黄雯、周政杰、黑泽、周皓崎、鹿骐、冯满",
-    img: "",
+    img: "images/shibingrongyao.jpg",
     cats: [
       "军旅"
     ]
@@ -630,7 +630,7 @@ const TV_ITEMS = [
     sortKey: "2026-09-11",
     type: "古装爱情",
     cast: "谭松韵、刘学义、李梦、郑合惠子、郭柯宇、叶青、蒲萄、牛骏峰",
-    img: "",
+    img: "images/lanxiangrugu.jpg",
     cats: [
       "古装",
       "爱情"
@@ -643,7 +643,7 @@ const TV_ITEMS = [
     sortKey: "2026-09-30",
     type: "都市生活",
     cast: "廖凡、倪妮、周游、安沺、罗嘉良、徐飒、奇道、吴玉芳",
-    img: "",
+    img: "images/renjianqingxing.jpg",
     cats: [
       "都市"
     ]
@@ -655,7 +655,7 @@ const TV_ITEMS = [
     sortKey: "2026-09-30",
     type: "奇幻爱情",
     cast: "孟子义、王弘毅、马思超、王乙、郭耘奇、丁燃、张宁江",
-    img: "",
+    img: "images/sanxianmihui.jpg",
     cats: [
       "奇幻",
       "爱情"
@@ -668,7 +668,7 @@ const TV_ITEMS = [
     sortKey: "2026-09-30",
     type: "都市爱情",
     cast: "陈鑫海、张淼怡、夏浩然、鹤秋、赵诗意、孔连顺、黄圣池",
-    img: "",
+    img: "images/xiongyoumeigong.jpg",
     cats: [
       "都市",
       "爱情"
@@ -681,7 +681,7 @@ const TV_ITEMS = [
     sortKey: "2026-09-30",
     type: "悬疑剧情",
     cast: "魏翔、沙溢、刘雅瑟、王彦霖、高伟光、娜然、王志飞",
-    img: "",
+    img: "images/fengkuangdeheiyu.jpg",
     cats: [
       "悬疑"
     ]
@@ -717,7 +717,7 @@ const TV_ITEMS = [
     sortKey: "2026-10-01",
     type: "古装爱情",
     cast: "李昀锐、孟子义、全伊伦、吴汉坤、李孝谦、沈佳钰、余皑磊、胡杏儿、唐晓天、徐海乔、晏紫东",
-    img: "",
+    img: "images/shanggongzhu.jpg",
     cats: [
       "古装",
       "爱情"
@@ -744,7 +744,7 @@ const TV_ITEMS = [
     sortKey: "2026-10-01",
     type: "奇幻爱情",
     cast: "景甜、张彬彬、杨皓宇、余男、张萌、刘畅、李云霄",
-    img: "",
+    img: "images/longgufenxiang.jpg",
     cats: [
       "奇幻",
       "爱情"
@@ -757,7 +757,7 @@ const TV_ITEMS = [
     sortKey: "2026-10-01",
     type: "古装奇幻喜剧",
     cast: "彭昱畅、万鹏、陈鹤一、韩昊霖、黄维德、李治良、徐浩翔、刘昊然",
-    img: "",
+    img: "images/wanguzuiqiangzong.jpg",
     cats: [
       "喜剧",
       "古装",
@@ -771,7 +771,7 @@ const TV_ITEMS = [
     sortKey: "2026-11-01",
     type: "古装爱情",
     cast: "宋祖儿、陈鑫海、陈若轩、陈钰琪、张慧雯、柯蓝、谢彬彬、谭凯",
-    img: "",
+    img: "images/biaomeiwanfu.jpg",
     cats: [
       "古装",
       "爱情"
@@ -784,7 +784,7 @@ const TV_ITEMS = [
     sortKey: "2026-11-01",
     type: "都市爱情",
     cast: "秦岚、王阳、张萌、郑合惠子、经超、吴宇恒、潘之琳",
-    img: "",
+    img: "images/shanyaoruta.jpg",
     cats: [
       "都市",
       "爱情"
@@ -797,7 +797,7 @@ const TV_ITEMS = [
     sortKey: "2026-12-01",
     type: "都市生活",
     cast: "唐嫣、俞飞鸿、朱珠、张歆艺、古力娜扎、彭冠英、刘芮麟、邬君梅",
-    img: "",
+    img: "images/cikedeshenghuo.jpg",
     cats: [
       "都市"
     ]
@@ -861,7 +861,7 @@ const TV_ITEMS = [
     sortKey: "2026-12-31",
     type: "古装爱情",
     cast: "陈哲远、张婧仪、梁永棋、鹿骐、陈澄、鹤秋、王艳",
-    img: "",
+    img: "images/menghuating.jpg",
     cats: [
       "古装",
       "爱情"
