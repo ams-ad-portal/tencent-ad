@@ -285,6 +285,18 @@
           desc: "客户版流程文档 · Word 文件 · 适用于账户开户相关查看与下载。",
           openUrl: "./previews/tencent-adq-kaihu-flow/",
           downloadUrl: "./docs/tencent-adq-kaihu-flow-customer.docx"
+        },
+        {
+          name: "【如翼旗舰版开通流程】",
+          desc: "<b>1. 代理与腾讯对接品牌的渠道销售及直客销售沟通</b>，提供全部投放账户 id、竞品、小程序 appid 等，用于如翼后台配置；如后台支持配置，再进入第 2、3 步。<br>"
+            + "<b>2. 与品牌客户沟通，进行如翼建设及代理商使用授权邮件申请</b><br>"
+            + "&nbsp;&nbsp;· 2.1 品牌授权腾讯如翼建设邮件<br>"
+            + "&nbsp;&nbsp;· 2.2 品牌授权代理商如翼旗舰版使用邮件（UID 需代理商确认后反馈客户）<br>"
+            + "<b>3. 配置成功后</b>，代理商使用对应 UID 登录投放广告后台，即可看到「腾讯如翼」功能板块。",
+          links: [
+            { label: "打开 2.1 授权邮件模板", url: "https://doc.weixin.qq.com/doc/w3_AHMA8AaCACcDNKPkP8mQgWW5harHM?scode=AJEAIQdfAAoBg2zVFkAVsAKwatADY" },
+            { label: "打开 2.2 授权邮件模板", url: "https://doc.weixin.qq.com/doc/w3_AHMA8AaCACcBn4l8P5CT9a0JRixGz?scode=AJEAIQdfAAovhRVdxwAHMA8AaCACc" }
+          ]
         }
       ]
     },
@@ -345,8 +357,10 @@
           '<div class="detail-box">' +
             '<p>' + f.desc + '</p>' +
             '<div class="flow-actions">' +
-              '<a class="flow-btn" href="' + f.openUrl + '" target="_blank" rel="noopener">打开文档</a>' +
-              '<a class="flow-btn flow-btn-secondary" href="' + f.downloadUrl + '" download>下载文档</a>' +
+              (f.links && f.links.length
+                ? f.links.map(function (l) { return '<a class="flow-btn" href="' + l.url + '" target="_blank" rel="noopener">' + l.label + '</a>'; }).join("")
+                : '<a class="flow-btn" href="' + f.openUrl + '" target="_blank" rel="noopener">打开文档</a>' +
+                  '<a class="flow-btn flow-btn-secondary" href="' + f.downloadUrl + '" download>下载文档</a>') +
             '</div>' +
           '</div>' +
         '</div>' +
