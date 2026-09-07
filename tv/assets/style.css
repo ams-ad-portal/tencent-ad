@@ -31,13 +31,13 @@ body {
   display: inline-flex; align-items: center; gap: 5px;
   background: rgba(20, 28, 46, .82); color: #fff;
   border: 0; border-left: 0;
-  font-size: 13px; font-weight: 700; padding: 7px 16px 7px 14px; border-radius: 0 999px 999px 0;
+  font-size: 15px; font-weight: 700; padding: 11px 22px 11px 18px; border-radius: 0 999px 999px 0;
   text-decoration: none;
   box-shadow: 0 4px 14px rgba(0, 0, 0, .28);
   transition: background .15s ease;
 }
 .btn-home:hover { background: rgba(20, 28, 46, .95); }
-.btn-home svg { flex-shrink: 0; }
+.btn-home svg { flex-shrink: 0; width: 17px; height: 17px; }
 .head-inner h1 { margin: 0; font-size: 26px; font-weight: 800; letter-spacing: 2px; }
 .head-inner .disclaimer {
   margin: 12px auto 0; max-width: 860px; text-align: left;
