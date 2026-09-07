@@ -35,18 +35,19 @@
     width: min(1120px, calc(100% - 32px));
     margin: 0 auto;
   }
-  .topbar {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 14px;
-    border-radius: 999px;
-    background: rgba(255,255,255,0.14);
-    color: #fff;
+  /* 与其他板块一致的「← 返回首页」按钮 */
+  .btn-home {
+    position: fixed; left: 0; top: 14px; z-index: 60;
+    display: inline-flex; align-items: center; gap: 5px;
+    background: rgba(20, 28, 46, .82); color: #fff;
+    border: 0; border-left: 0;
+    font-size: 15px; font-weight: 700; padding: 11px 22px 11px 18px; border-radius: 0 999px 999px 0;
     text-decoration: none;
-    font-size: 13px;
-    font-weight: 700;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .28);
+    transition: background .15s ease;
   }
+  .btn-home:hover { background: rgba(20, 28, 46, .95); }
+  .btn-home svg { flex-shrink: 0; width: 17px; height: 17px; }
   .hero h1 {
     margin-top: 18px;
     font-size: 34px;
@@ -249,7 +250,7 @@
 <body>
   <header class="hero">
     <div class="hero-inner">
-      <a class="topbar" href="../">← 返回资源门户</a>
+      <a class="btn-home" href="../" title="返回首页"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M10.3 5.3a1 1 0 0 1 1.4 1.4L7.42 11H19a1 1 0 1 1 0 2H7.41l4.3 4.3a1 1 0 1 1-1.42 1.4l-6-6a1 1 0 0 1 0-1.4l6-6Z"/></svg>返回首页</a>
       <h1>常用流程</h1>
       <p>点击上方分区，下方只显示该分区收录的流程名称；再点流程名称，展开详情与下载入口。</p>
       <div class="tabs" id="tabs"></div>
