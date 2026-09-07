@@ -1143,7 +1143,7 @@ function getItems() { return TV_ITEMS; }
 
     /* 类型：综艺=单级小类；电视剧=大类→小类两级（复合类型可属多个大类，均支持多选） */
     if (currentTab === "tv") {
-      const CAT_ORDER = ["爱情", "都市", "青春", "奇幻", "武侠", "古装", "历史", "科幻", "猎奇", "竞技", "传奇", "逆袭", "战争", "军旅", "家庭", "喜剧", "悬疑", "权谋", "革命", "现实", "刑侦", "民国", "IP改编"];
+      const CAT_ORDER = ["爱情", "都市", "青春", "奇幻", "武侠", "古装", "历史", "年代", "科幻", "猎奇", "竞技", "传奇", "逆袭", "战争", "军旅", "家庭", "喜剧", "悬疑", "权谋", "革命", "现实", "刑侦", "民国", "IP改编"];
       const cats = [...new Set(getItems().flatMap(it => it.cats || []))]
         .sort((a, b) => (CAT_ORDER.indexOf(a) - CAT_ORDER.indexOf(b)));
       typeChipsEl.innerHTML =
