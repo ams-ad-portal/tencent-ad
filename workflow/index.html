@@ -323,7 +323,20 @@
       title: "业务审批类流程",
       summary: "业务提审、盖章、合同、结算、特殊审批等内容。",
       desc: "适合放业务审批、合同审批、盖章、付款、结算、特殊申请等流程。",
-      flows: []
+      flows: [
+        {
+          name: "【微信合约催审流程】",
+          desc: "广告提交审核 <b>4 小时后</b>仍未收到审核回复，可联系渠道经理催审，请将以下信息提供给对应的渠道经理：<br>"
+            + "<br><b>【合约催审】</b><br>"
+            + "投放点位：<br>"
+            + "账户名称：<br>"
+            + "行业：<br>"
+            + "账户ID：<br>"
+            + "计划ID：<br>"
+            + "广告ID：<br>"
+            + "诉求：辛苦帮忙审核"
+        }
+      ]
     }
   ];
 
@@ -365,12 +378,16 @@
         '<div class="detail">' +
           '<div class="detail-box">' +
             '<p>' + f.desc + '</p>' +
-            '<div class="flow-actions">' +
-              (f.links && f.links.length
-                ? f.links.map(function (l) { return '<a class="flow-btn" href="' + l.url + '" target="_blank" rel="noopener">' + l.label + '</a>'; }).join("")
-                : '<a class="flow-btn" href="' + f.openUrl + '" target="_blank" rel="noopener">打开文档</a>' +
-                  '<a class="flow-btn flow-btn-secondary" href="' + f.downloadUrl + '" download>下载文档</a>') +
-            '</div>' +
+            (function () {
+              var actions = "";
+              if (f.links && f.links.length) {
+                actions = f.links.map(function (l) { return '<a class="flow-btn" href="' + l.url + '" target="_blank" rel="noopener">' + l.label + '</a>'; }).join("");
+              } else if (f.openUrl && f.downloadUrl) {
+                actions = '<a class="flow-btn" href="' + f.openUrl + '" target="_blank" rel="noopener">打开文档</a>' +
+                  '<a class="flow-btn flow-btn-secondary" href="' + f.downloadUrl + '" download>下载文档</a>';
+              }
+              return actions ? '<div class="flow-actions">' + actions + '</div>' : "";
+            })() +
           '</div>' +
         '</div>' +
       '</li>';
