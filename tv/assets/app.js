@@ -1113,6 +1113,9 @@ function getItems() { return TV_ITEMS; }
 
   /* 按播出时间（sortKey）归季度：1-3月Q1 / 4-6月Q2 / 7-9月Q3 / 10-12月Q4，返回如 "26年Q1" */
   function quarterOf(it) {
+    // 只写到年份的（如「2027年」）显示为「27年」，不落到具体季度，避免歧义
+    const yOnly = /^(\d{4})\s*年$/.exec(String(it.dateText || "").trim());
+    if (yOnly) return yOnly[1].slice(2) + "年";
     const m = /^(\d{4})-(\d{2})/.exec(it.sortKey || "");
     if (!m) return "待定";
     const y = m[1].slice(2);
@@ -1123,11 +1126,14 @@ function getItems() { return TV_ITEMS; }
   function buildFilters() {
     const LV_ORDER = { "超级S+": 0, "高阶S+": 1, "热门S+": 2, "S+": 3, "S": 4, "A": 5, "待定": 6 };
     const levels = [...new Set(getItems().map(it => it.tag))].sort((a, b) => (LV_ORDER[a] ?? 9) - (LV_ORDER[b] ?? 9));
-    const quarters = [...new Set(getItems().map(quarterOf))].sort((a, b) => {
-      const ra = /^(\d{2})年Q(\d)$/.exec(a), rb = /^(\d{2})年Q(\d)$/.exec(b);
-      if (ra && rb) return (rb[1] - ra[1]) || (rb[2] - ra[2]);
-      return a < b ? -1 : 1;
-    });
+    const qKey = v => {
+      let m = /^(\d{2})年Q(\d)$/.exec(v);
+      if (m) return (+m[1]) * 10 + (+m[2]);
+      m = /^(\d{2})年$/.exec(v);
+      if (m) return (+m[1]) * 10 + 5; // 整年排在该年各季度之后（倒序时显示最前）
+      return -1;
+    };
+    const quarters = [...new Set(getItems().map(quarterOf))].sort((a, b) => qKey(b) - qKey(a));
     quarterChipsEl.innerHTML =
       chipHTML(!state.quarter.length, "quarter", "", "全部") +
       quarters.map(v => chipHTML(state.quarter.includes(v), "quarter", v, v)).join("");
