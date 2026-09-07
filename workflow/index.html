@@ -360,9 +360,10 @@
 
   function renderPanel() {
     const s = SECTIONS.find(function (x) { return x.id === currentId; });
-    titleEl.textContent = s.title;
-    descEl.textContent = s.desc;
-    badgeEl.textContent = s.flows.length ? (s.flows.length + " 条流程") : "待补内容";
+    // 板块名称/适用范围已在上方页卡展示，面板里不再重复，只显示流程数量
+    titleEl.hidden = true;
+    descEl.hidden = true;
+    badgeEl.textContent = s.flows.length ? ("共 " + s.flows.length + " 种流程") : "暂无流程";
 
     if (!s.flows.length) {
       bodyEl.innerHTML = '<div class="empty">这个分区还没有收录流程。你把内容发给我，我会直接补到这一类里。</div>';
