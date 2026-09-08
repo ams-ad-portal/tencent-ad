@@ -465,7 +465,7 @@ const TV_ITEMS = [
     tag: "高阶S+",
     dateText: "2026年5月10日",
     sortKey: "2026-05-10",
-    era: "现代",
+    era: "年代",
     themes: [
       "现实"
     ],
