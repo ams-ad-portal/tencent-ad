@@ -28,9 +28,7 @@ const TV_ITEMS = [
     dateText: "2026年1月10日",
     sortKey: "2026-01-10",
     era: "年代",
-    themes: [
-      "现实"
-    ],
+    themes: [],
     type: "当代剧情",
     cast: "赵丽颖、黄晓明、陈明昊、朱媛媛、秦俊杰、耿乐",
     img: "images/xiaochengdashi.webp",
@@ -357,7 +355,6 @@ const TV_ITEMS = [
     sortKey: "2026-04-01",
     era: "现代",
     themes: [
-      "现实",
       "悬疑"
     ],
     type: "现实悬疑",
@@ -466,9 +463,7 @@ const TV_ITEMS = [
     dateText: "2026年5月10日",
     sortKey: "2026-05-10",
     era: "年代",
-    themes: [
-      "现实"
-    ],
+    themes: [],
     type: "当代剧情",
     cast: "张嘉益、刘浩存、秦海璐、窦骁、翟子路、王晓晨",
     img: "images/zhujue.webp",
@@ -754,7 +749,6 @@ const TV_ITEMS = [
     sortKey: "2026-08-20",
     era: "现代",
     themes: [
-      "现实",
       "悬疑"
     ],
     type: "现实悬疑",
@@ -843,7 +837,6 @@ const TV_ITEMS = [
     sortKey: "2026-09-06",
     era: "现代",
     themes: [
-      "现实",
       "刑侦"
     ],
     type: "现实国安",
@@ -1269,8 +1262,7 @@ const TV_ITEMS = [
     sortKey: "2027-03-31",
     era: "近现代",
     themes: [
-      "传奇",
-      "现实"
+      "传奇"
     ],
     type: "女性时代传奇",
     cast: "杨紫、欧豪",
@@ -1288,8 +1280,7 @@ const TV_ITEMS = [
     sortKey: "2027-03-31",
     era: "年代",
     themes: [
-      "传奇",
-      "现实"
+      "传奇"
     ],
     type: "年代传奇",
     cast: "宋佳、高伟光、任彬、张瑶",
@@ -1457,7 +1448,7 @@ function getItems() { return TV_ITEMS; }
   /* 按播出时间（sortKey）归季度：1-3月Q1 / 4-6月Q2 / 7-9月Q3 / 10-12月Q4，返回如 "26年Q1" */
   /* 电视剧筛选维度：时代(单值) × 题材(多值)；同维度多选=并集，两维度之间=交集 */
   const ERA_ORDER = ["古代", "民国-建国前", "近现代", "年代", "现代", "未分类"];
-  const THEME_ORDER = ["爱情", "都市", "青春", "奇幻", "武侠", "历史", "传奇", "战争", "军旅", "家庭", "喜剧", "悬疑", "谍战", "现实", "刑侦"];
+  const THEME_ORDER = ["爱情", "都市", "青春", "奇幻", "武侠", "历史", "传奇", "战争", "军旅", "家庭", "喜剧", "悬疑", "谍战", "刑侦"];
   const eraOf = it => (it.era && String(it.era).trim()) ? String(it.era).trim() : "未分类";
 
   function quarterOf(it) {
