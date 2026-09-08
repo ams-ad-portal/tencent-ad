@@ -217,19 +217,19 @@ const AD_FORMATS = [
       {
         label: "",
         items: [
-          {
-            name: "轮播卡片",
-            position: "朋友圈广告",
-            demoDesc: "荣耀",
-            video: "videos/moments/moments-lunbo-kapian-honor.mp4",
-            videoLabel: "朋友圈轮播卡片-荣耀.mp4"
-          },
-          {
+                    {
             name: "画廊",
             position: "朋友圈广告",
             demoDesc: "古驰香水-张凌赫-跳JD",
             video: "videos/moments/moments-hualang-guochi-zhanglinghe-jd.mp4",
             videoLabel: "朋友圈画廊-古驰香水-张凌赫-跳JD.mp4"
+          },
+          {
+            name: "轮播静态",
+            position: "朋友圈广告",
+            demoDesc: "Chanel手工坊",
+            video: "videos/moments/moments-lunbo-jingtai-chanel.mp4",
+            videoLabel: "朋友圈轮播式静态-Chanel.mp4"
           },
           {
             name: "明星头像+轮播动态",
