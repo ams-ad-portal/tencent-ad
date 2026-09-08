@@ -9,8 +9,8 @@
 <meta property="og:title" content="腾讯内容平台 · 公开资源站" />
 <meta property="og:description" content="广告刊例报价 + 综艺/电视剧上线时间轴，内部参考，访问需凭访问码。" />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-<link rel="stylesheet" href="assets/style.css?v=20260908g" />
-<link rel="stylesheet" href="assets/assistant.css?v=20260908g" />
+<link rel="stylesheet" href="assets/style.css" />
+<link rel="stylesheet" href="assets/assistant.css" />
 </head>
 <body>
 <header class="site-head">
@@ -31,8 +31,12 @@
       <span class="filter-label">级别</span>
       <div class="filter-chips" id="levelChips"></div>
     </div>
+    <div class="filter-group" id="eraGroup">
+      <span class="filter-label">时代</span>
+      <div class="filter-chips" id="eraChips"></div>
+    </div>
     <div class="filter-group">
-      <span class="filter-label">类型</span>
+      <span class="filter-label" id="typeLabel">题材</span>
       <div class="filter-chips" id="typeChips"></div>
     </div>
     <div class="filter-group" id="subTypeGroup" hidden>
@@ -125,7 +129,7 @@
 </footer>
 
 <script src="assets/vendor/pdf.min.js"></script>
-<script src="assets/app.js?v=20260908g"></script>
-<script src="assets/assistant.js?v=20260908g"></script>
+<script src="assets/app.js"></script>
+<script src="assets/assistant.js"></script>
 </body>
 </html>

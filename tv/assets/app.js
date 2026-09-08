@@ -8,6 +8,12 @@ const TV_ITEMS = [
     tag: "S",
     dateText: "2026年1月1日",
     sortKey: "2026-01-01",
+    era: "近代",
+    themes: [
+      "战争",
+      "革命",
+      "悬疑"
+    ],
     type: "谍战",
     cast: "张鲁一、张钧甯、张晨光、张颂文、金士杰、木幡龙",
     img: "images/changheluori.jpg",
@@ -21,6 +27,10 @@ const TV_ITEMS = [
     tag: "超级S+",
     dateText: "2026年1月10日",
     sortKey: "2026-01-10",
+    era: "现代",
+    themes: [
+      "现实"
+    ],
     type: "当代剧情",
     cast: "赵丽颖、黄晓明、陈明昊、朱媛媛、秦俊杰、耿乐",
     img: "images/xiaochengdashi.jpg",
@@ -34,6 +44,10 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年1月15日",
     sortKey: "2026-01-15",
+    era: "古代",
+    themes: [
+      "悬疑"
+    ],
     type: "古装悬疑",
     cast: "王子奇、苏晓彤、杨廷东、赵尧珂、张宸逍、王彦鑫",
     img: "images/yucixiaowuzuo2.jpg",
@@ -48,6 +62,11 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年1月22日",
     sortKey: "2026-01-22",
+    era: "",
+    themes: [
+      "爱情",
+      "奇幻"
+    ],
     type: "奇幻爱情",
     cast: "陈星旭、王玉雯、马思超、曾梦雪、于翔",
     img: "images/turandexihuan.jpg",
@@ -62,6 +81,10 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年1月23日",
     sortKey: "2026-01-23",
+    era: "古代",
+    themes: [
+      "历史"
+    ],
     type: "古装历史",
     cast: "白宇、周雨彤、朱亚文、俞灏明、董勇、倪大红",
     img: "images/taipingnian.jpg",
@@ -76,6 +99,10 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年1月28日",
     sortKey: "2026-01-28",
+    era: "现代",
+    themes: [
+      "都市"
+    ],
     type: "都市话题",
     cast: "江疏影、佟大为、张超、蓝盈莹、阚清子、袁文康",
     img: "",
@@ -89,6 +116,11 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年1月31日",
     sortKey: "2026-01-31",
+    era: "现代",
+    themes: [
+      "都市",
+      "喜剧"
+    ],
     type: "都市喜剧",
     cast: "彭昱畅、林允、刘冠麟、王天放、何瑞贤、叶祖新",
     img: "images/nianshaoyouwei.jpg",
@@ -103,6 +135,11 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年2月3日",
     sortKey: "2026-02-03",
+    era: "现代",
+    themes: [
+      "悬疑",
+      "刑侦"
+    ],
     type: "悬疑刑侦",
     cast: "龚俊、姜武、孙怡、王迅、贾冰、李建义",
     img: "images/fengguoliuhen.jpg",
@@ -117,6 +154,10 @@ const TV_ITEMS = [
     tag: "S",
     dateText: "2026年2月9日",
     sortKey: "2026-02-09",
+    era: "现代",
+    themes: [
+      "都市"
+    ],
     type: "都市话题",
     cast: "李诚儒、许娣、蔡明、范明、梁天、李琦",
     img: "images/chongfanqingchun.jpg",
@@ -130,6 +171,11 @@ const TV_ITEMS = [
     tag: "S",
     dateText: "2026年2月13日",
     sortKey: "2026-02-13",
+    era: "现代",
+    themes: [
+      "家庭",
+      "喜剧"
+    ],
     type: "亲情喜剧",
     cast: "邓恩熙、蒋龙、刘琳、刘些宁、左林杰、许慧强",
     img: "",
@@ -144,6 +190,10 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年2月21日",
     sortKey: "2026-02-21",
+    era: "年代",
+    themes: [
+      "爱情"
+    ],
     type: "年代爱情",
     cast: "陈飞宇、孙千、刘敏涛、郭晓婷、王天辰、吴樾",
     img: "images/chunzhenniandaideaiqing.jpg",
@@ -158,6 +208,11 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年2月22日",
     sortKey: "2026-02-22",
+    era: "古代",
+    themes: [
+      "武侠",
+      "爱情"
+    ],
     type: "古风武侠爱情",
     cast: "周翊然、包上恩、余嘉诚、范静祎、边天扬、袁文康",
     img: "images/jianghuyeyushiniandeng.jpg",
@@ -173,6 +228,11 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年2月26日",
     sortKey: "2026-02-26",
+    era: "现代",
+    themes: [
+      "都市",
+      "爱情"
+    ],
     type: "都市爱情",
     cast: "王子文、刘宇宁、蒋欣、明道、高伟光、谷嘉诚",
     img: "images/meiguicongsheng.jpg",
@@ -187,6 +247,10 @@ const TV_ITEMS = [
     tag: "高阶S+",
     dateText: "2026年3月6日",
     sortKey: "2026-03-06",
+    era: "古代",
+    themes: [
+      "爱情"
+    ],
     type: "古装爱情",
     cast: "张凌赫、田曦薇、任豪、孔雪儿、邓凯、李卿",
     img: "images/zhuyu.jpg",
@@ -201,6 +265,10 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年3月13日",
     sortKey: "2026-03-13",
+    era: "现代",
+    themes: [
+      "都市"
+    ],
     type: "都市女性励志",
     cast: "马思纯、宁理、袁姗姗、翟子路、章涛、郑则仕",
     img: "images/tadeshengyan.jpg",
@@ -214,6 +282,10 @@ const TV_ITEMS = [
     tag: "高阶S+",
     dateText: "2026年3月18日",
     sortKey: "2026-03-18",
+    era: "现代",
+    themes: [
+      "悬疑"
+    ],
     type: "女性悬疑",
     cast: "倪妮、闫妮、刘雅瑟、刘敏涛、保剑锋、董洁",
     img: "images/yinshendemingzi.jpg",
@@ -227,6 +299,11 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年3月25日",
     sortKey: "2026-03-25",
+    era: "现代",
+    themes: [
+      "都市",
+      "刑侦"
+    ],
     type: "都市刑侦",
     cast: "龚俊、任敏、黄璐、高鑫、韩云云、李诚儒",
     img: "images/jiashifating.jpg",
@@ -241,6 +318,11 @@ const TV_ITEMS = [
     tag: "超级S+",
     dateText: "2026年3月28日",
     sortKey: "2026-03-28",
+    era: "古代",
+    themes: [
+      "奇幻",
+      "爱情"
+    ],
     type: "古装奇幻爱情",
     cast: "迪丽热巴、陈飞宇、魏哲鸣、张俪、杨肸子、陈楚河",
     img: "images/bairitideng.jpg",
@@ -255,6 +337,11 @@ const TV_ITEMS = [
     tag: "S",
     dateText: "2026年3月29日",
     sortKey: "2026-03-29",
+    era: "",
+    themes: [
+      "战争",
+      "传奇"
+    ],
     type: "战争传奇",
     cast: "张桐、苏青、李晨、马元、刘天佐、马苏",
     img: "images/zhanqiruhua.jpg",
@@ -268,6 +355,11 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年4月1日",
     sortKey: "2026-04-01",
+    era: "现代",
+    themes: [
+      "现实",
+      "悬疑"
+    ],
     type: "现实悬疑",
     cast: "刘烨、聂远、王佳佳、李健、冯兵、王梓薇",
     img: "images/poce.jpg",
@@ -282,6 +374,10 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年4月8日",
     sortKey: "2026-04-08",
+    era: "古代",
+    themes: [
+      "爱情"
+    ],
     type: "古装爱情",
     cast: "李昀锐、黄杨钿甜、张康乐、李孝谦、夏梦、李梦",
     img: "images/binghuchongsheng.jpg",
@@ -296,6 +392,10 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年4月13日",
     sortKey: "2026-04-13",
+    era: "现代",
+    themes: [
+      "都市"
+    ],
     type: "都市话题",
     cast: "钟汉良、朱珠、李梦、经超、任彬、徐海乔",
     img: "images/miyuji.jpg",
@@ -309,6 +409,11 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年4月17日",
     sortKey: "2026-04-17",
+    era: "现代",
+    themes: [
+      "悬疑",
+      "刑侦"
+    ],
     type: "犯罪悬疑情感",
     cast: "许凯、丁勇岱、邓恩熙、胡可、涂松岩",
     img: "images/fangyuanbabaimi.jpg",
@@ -323,6 +428,11 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年4月25日",
     sortKey: "2026-04-25",
+    era: "古代",
+    themes: [
+      "奇幻",
+      "爱情"
+    ],
     type: "古装奇幻",
     cast: "任嘉伦、王鹤润、张凯莹、王以纶、黄羿、付伟伦",
     img: "images/jiaoutiancheng.jpg",
@@ -337,6 +447,11 @@ const TV_ITEMS = [
     tag: "超级S+",
     dateText: "2026年4月28日",
     sortKey: "2026-04-28",
+    era: "现代",
+    themes: [
+      "都市",
+      "爱情"
+    ],
     type: "都市话题",
     cast: "唐嫣、赵又廷、杨采钰、冯绍峰、何蓝逗、王菊",
     img: "images/aiqingmeiyoushenhua.jpg",
@@ -350,6 +465,10 @@ const TV_ITEMS = [
     tag: "高阶S+",
     dateText: "2026年5月10日",
     sortKey: "2026-05-10",
+    era: "现代",
+    themes: [
+      "现实"
+    ],
     type: "当代剧情",
     cast: "张嘉益、刘浩存、秦海璐、窦骁、翟子路、王晓晨",
     img: "images/zhujue.jpg",
@@ -363,6 +482,10 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年5月23日",
     sortKey: "2026-05-23",
+    era: "古代",
+    themes: [
+      "悬疑"
+    ],
     type: "古装悬疑",
     cast: "冯绍峰、李彧、邵芸、单敬尧、邬君梅",
     img: "images/datangmiwudiyiji.jpg",
@@ -377,6 +500,10 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年6月7日",
     sortKey: "2026-06-07",
+    era: "现代",
+    themes: [
+      "悬疑"
+    ],
     type: "荒诞悬疑",
     cast: "郭京飞、任素汐、谷嘉诚、漆昱辰、温峥嵘、刘天佐",
     img: "images/miqiang.jpg",
@@ -390,6 +517,10 @@ const TV_ITEMS = [
     tag: "超级S+",
     dateText: "2026年6月9日",
     sortKey: "2026-06-09",
+    era: "古代",
+    themes: [
+      "爱情"
+    ],
     type: "古装爱情",
     cast: "白鹿、丞磊、蔡正杰、杨舒伊、林沐然、董洁",
     img: "images/moli.jpg",
@@ -404,6 +535,11 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年6月15日",
     sortKey: "2026-06-15",
+    era: "现代",
+    themes: [
+      "都市",
+      "爱情"
+    ],
     type: "都市情感",
     cast: "檀健次、王楚然、李乃文、姜珮瑶",
     img: "images/aiqingyouyanhuo.jpg",
@@ -417,6 +553,10 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年6月18日",
     sortKey: "2026-06-18",
+    era: "现代",
+    themes: [
+      "都市"
+    ],
     type: "都市情感话题",
     cast: "赵又廷、毛晓彤、金世佳、张佳宁、陈冲、黄觉",
     img: "images/wenxin2.jpg",
@@ -430,6 +570,10 @@ const TV_ITEMS = [
     tag: "S",
     dateText: "2026年7月5日",
     sortKey: "2026-07-05",
+    era: "民国",
+    themes: [
+      "悬疑"
+    ],
     type: "民国悬疑",
     cast: "翟子路、马思超、春夏、陈意涵、孟鹤堂、周九良",
     img: "images/jingchengqitan.jpg",
@@ -444,6 +588,11 @@ const TV_ITEMS = [
     tag: "S",
     dateText: "2026年7月8日",
     sortKey: "2026-07-08",
+    era: "",
+    themes: [
+      "战争",
+      "传奇"
+    ],
     type: "战争传奇",
     cast: "张桐、何雨虹、卫仑、徐百慧、齐奎、孙绍龙",
     img: "images/jiugedankong.jpg",
@@ -458,6 +607,10 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年7月9日",
     sortKey: "2026-07-09",
+    era: "古代",
+    themes: [
+      "爱情"
+    ],
     type: "古装爱情",
     cast: "孟子义、何与、孔雪儿、叶祖新、何润东、张峻宁",
     img: "images/baihuasha.jpg",
@@ -472,6 +625,11 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年7月13日",
     sortKey: "2026-07-13",
+    era: "",
+    themes: [
+      "家庭",
+      "喜剧"
+    ],
     type: "家庭女性喜剧",
     cast: "颖儿、范明、王影璐、辛云来、王姬、林永健、吴彦姝、王勉",
     img: "",
@@ -486,6 +644,10 @@ const TV_ITEMS = [
     tag: "高阶S+",
     dateText: "2026年7月19日",
     sortKey: "2026-07-19",
+    era: "民国",
+    themes: [
+      "爱情"
+    ],
     type: "民国言情",
     cast: "张凌赫、王楚然、付辛博、胡杏儿、沙宝亮、吴莫愁、徐振轩、鹤秋",
     img: "images/zheyimiaoguohuo.jpg",
@@ -500,6 +662,11 @@ const TV_ITEMS = [
     tag: "S",
     dateText: "2026年7月21日",
     sortKey: "2026-07-21",
+    era: "现代",
+    themes: [
+      "家庭",
+      "喜剧"
+    ],
     type: "家庭轻喜剧",
     cast: "蒋依依、黄小蕾、王天辰、李依晓、吕昀峰、石杭鹭、彭雅琦、刘亚津",
     img: "images/yirandexishi.jpg",
@@ -514,6 +681,10 @@ const TV_ITEMS = [
     tag: "S",
     dateText: "2026年7月23日",
     sortKey: "2026-07-23",
+    era: "现代",
+    themes: [
+      "军旅"
+    ],
     type: "军旅",
     cast: "欧豪、蓝盈莹、刘奕君、黄景瑜、丁勇岱、史兰芽、阮巨、李幼斌、侯勇",
     img: "images/bingzifengzhonglai.jpg",
@@ -527,6 +698,11 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年8月4日",
     sortKey: "2026-08-04",
+    era: "现代",
+    themes: [
+      "青春",
+      "悬疑"
+    ],
     type: "校园女性悬疑",
     cast: "黄杨钿甜、董勇、张开泰、刘孜、张帆、陈创、何思甜、罗海琼",
     img: "images/renyu.jpg",
@@ -541,6 +717,10 @@ const TV_ITEMS = [
     tag: "高阶S+",
     dateText: "2026年8月9日",
     sortKey: "2026-08-09",
+    era: "古代",
+    themes: [
+      "爱情"
+    ],
     type: "古装爱情",
     cast: "丁禹兮、邓恩熙、尤靖茹、白澍、吕晓霖、张萌、迟蓬、温峥嵘、谭凯",
     img: "images/huakaijinxiu.jpg",
@@ -555,6 +735,10 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年8月17日",
     sortKey: "2026-08-17",
+    era: "现代",
+    themes: [
+      "刑侦"
+    ],
     type: "缉毒刑侦",
     cast: "段奕宏、余男、阿如那、李纯、万鹏、刘欢、凌潇肃、邢佳栋、张国强",
     img: "",
@@ -568,6 +752,11 @@ const TV_ITEMS = [
     tag: "S",
     dateText: "2026年8月20日",
     sortKey: "2026-08-20",
+    era: "现代",
+    themes: [
+      "现实",
+      "悬疑"
+    ],
     type: "现实悬疑",
     cast: "钟楚曦、吴镇宇、郑云龙、郑宇承、吴幸键、易大千、周放、喻恩泰",
     img: "images/chan.jpg",
@@ -581,6 +770,11 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年8月25日",
     sortKey: "2026-08-25",
+    era: "古代",
+    themes: [
+      "悬疑",
+      "武侠"
+    ],
     type: "古装悬疑武侠",
     cast: "辛芷蕾、尹昉、陈坤、高伟光、卜冠今、尹铸胜、吴汉坤、连奕名",
     img: "images/jinse.jpg",
@@ -596,6 +790,10 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年11月暂定",
     sortKey: "2026-11-01",
+    era: "现代",
+    themes: [
+      "悬疑"
+    ],
     type: "悬疑剧情",
     cast: "闫妮、秦海璐、刘琳、左小青、颖儿、李嘉琦、郭晓东、潘斌龙",
     img: "images/wugeshizongdeshaonian.jpg",
@@ -609,6 +807,10 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年Q4",
     sortKey: "2026-12-31",
+    era: "年代",
+    themes: [
+      "悬疑"
+    ],
     type: "时代悬疑",
     cast: "刘诗诗、胡先煦、李乃文、李沁、黄小蕾、陈永胜、林家川、姜超、姚安濂",
     img: "images/zuimeng.jpg",
@@ -622,6 +824,10 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年9月1日",
     sortKey: "2026-09-01",
+    era: "现代",
+    themes: [
+      "都市"
+    ],
     type: "都市女性",
     cast: "李一桐、王佳佳、常华森、曾梦雪、乔振宇、何润东、程泓鑫、周大为",
     img: "images/meirenyu.jpg",
@@ -635,6 +841,11 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年9月6日",
     sortKey: "2026-09-06",
+    era: "现代",
+    themes: [
+      "现实",
+      "刑侦"
+    ],
     type: "现实国安",
     cast: "王凯、彭昱畅、欧豪、周依然、邱天、成泰燊、齐欢、祖峰、吴启华",
     img: "images/jiaofeng.jpg",
@@ -649,6 +860,11 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年9月",
     sortKey: "2026-09-01",
+    era: "古代",
+    themes: [
+      "奇幻",
+      "爱情"
+    ],
     type: "古装奇幻爱情",
     cast: "李一桐、陈鑫海、郭俊辰、何洛洛、肖燕、古子成、饶嘉迪、陈芷琰",
     img: "images/gulefenghualu.jpg",
@@ -664,6 +880,10 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年9月",
     sortKey: "2026-09-01",
+    era: "现代",
+    themes: [
+      "军旅"
+    ],
     type: "军旅",
     cast: "李昀锐、陈永胜、周放、黄雯、周政杰、黑泽、周皓崎、鹿骐、冯满",
     img: "images/shibingrongyao.jpg",
@@ -677,6 +897,10 @@ const TV_ITEMS = [
     tag: "高阶S+",
     dateText: "2026年9月11日暂定",
     sortKey: "2026-09-11",
+    era: "古代",
+    themes: [
+      "爱情"
+    ],
     type: "古装爱情",
     cast: "谭松韵、刘学义、李梦、郑合惠子、郭柯宇、叶青、蒲萄、牛骏峰",
     img: "images/lanxiangrugu.jpg",
@@ -691,6 +915,10 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2027年",
     sortKey: "2027-12-31",
+    era: "现代",
+    themes: [
+      "都市"
+    ],
     type: "都市生活",
     cast: "廖凡、倪妮、周游、安沺、罗嘉良、徐飒、奇道、吴玉芳",
     img: "images/renjianqingxing.jpg",
@@ -704,6 +932,11 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年Q3",
     sortKey: "2026-09-30",
+    era: "",
+    themes: [
+      "奇幻",
+      "爱情"
+    ],
     type: "奇幻爱情",
     cast: "孟子义、王弘毅、马思超、王乙、郭耘奇、丁燃、张宁江",
     img: "images/sanxianmihui.jpg",
@@ -718,6 +951,11 @@ const TV_ITEMS = [
     tag: "S",
     dateText: "2026年Q3",
     sortKey: "2026-09-30",
+    era: "现代",
+    themes: [
+      "都市",
+      "爱情"
+    ],
     type: "都市爱情",
     cast: "陈鑫海、张淼怡、夏浩然、鹤秋、赵诗意、孔连顺、黄圣池",
     img: "images/xiongyoumeigong.jpg",
@@ -732,6 +970,11 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年Q3",
     sortKey: "2026-09-30",
+    era: "现代",
+    themes: [
+      "悬疑",
+      "喜剧"
+    ],
     type: "悬疑剧情",
     cast: "魏翔、沙溢、刘雅瑟、王彦霖、高伟光、娜然、王志飞",
     img: "images/fengkuangdeheiyu.jpg",
@@ -745,6 +988,10 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年10月",
     sortKey: "2026-10-01",
+    era: "现代",
+    themes: [
+      "喜剧"
+    ],
     type: "黑色喜剧",
     cast: "贾冰、田嘉瑞、闫佩伦、孔令美、刘桦、黄小蕾、杨皓宇",
     img: "",
@@ -758,6 +1005,10 @@ const TV_ITEMS = [
     tag: "高阶S+",
     dateText: "2026年9月24日",
     sortKey: "2026-09-24",
+    era: "民国",
+    themes: [
+      "悬疑"
+    ],
     type: "悬疑剧情",
     cast: "李现、李一桐、刘冠麟、果靖霖、吴刚、海一天、梁天",
     img: "images/changfengqi.jpg",
@@ -773,6 +1024,10 @@ const TV_ITEMS = [
     tag: "超级S+",
     dateText: "2026年10月",
     sortKey: "2026-10-01",
+    era: "古代",
+    themes: [
+      "爱情"
+    ],
     type: "古装爱情",
     cast: "李昀锐、孟子义、全伊伦、吴汉坤、李孝谦、沈佳钰、余皑磊、胡杏儿、唐晓天、徐海乔、晏紫东",
     img: "images/shanggongzhu.jpg",
@@ -787,6 +1042,10 @@ const TV_ITEMS = [
     tag: "高阶S+",
     dateText: "2026年11月",
     sortKey: "2026-11-01",
+    era: "现代",
+    themes: [
+      "家庭"
+    ],
     type: "家庭情感",
     cast: "蒋欣、李光洁、梁冠华、杨采钰、冯嘉怡、任重、韩童生",
     img: "images/duoxiyijiaren.jpg",
@@ -802,6 +1061,11 @@ const TV_ITEMS = [
     tag: "高阶S+",
     dateText: "2026年10月",
     sortKey: "2026-10-01",
+    era: "",
+    themes: [
+      "奇幻",
+      "爱情"
+    ],
     type: "奇幻爱情",
     cast: "景甜、张彬彬、杨皓宇、余男、张萌、刘畅、李云霄",
     img: "images/longgufenxiang.jpg",
@@ -816,6 +1080,11 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年10月",
     sortKey: "2026-10-01",
+    era: "虚构",
+    themes: [
+      "喜剧",
+      "奇幻"
+    ],
     type: "古装奇幻喜剧",
     cast: "彭昱畅、万鹏、陈鹤一、韩昊霖、黄维德、李治良、徐浩翔、刘昊然",
     img: "images/wanguzuiqiangzong.jpg",
@@ -831,6 +1100,10 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年11月",
     sortKey: "2026-11-01",
+    era: "古代",
+    themes: [
+      "爱情"
+    ],
     type: "古装爱情",
     cast: "宋祖儿、陈鑫海、陈若轩、陈钰琪、张慧雯、柯蓝、谢彬彬、谭凯",
     img: "images/biaomeiwanfu.jpg",
@@ -845,6 +1118,11 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年11月",
     sortKey: "2026-11-01",
+    era: "现代",
+    themes: [
+      "都市",
+      "爱情"
+    ],
     type: "都市爱情",
     cast: "秦岚、王阳、张萌、郑合惠子、经超、吴宇恒、潘之琳",
     img: "images/shanyaoruta.jpg",
@@ -859,6 +1137,10 @@ const TV_ITEMS = [
     tag: "超级S+",
     dateText: "2026年12月",
     sortKey: "2026-12-01",
+    era: "现代",
+    themes: [
+      "都市"
+    ],
     type: "都市生活",
     cast: "唐嫣、俞飞鸿、朱珠、张歆艺、古力娜扎、彭冠英、刘芮麟、邬君梅",
     img: "images/cikedeshenghuo.jpg",
@@ -872,6 +1154,11 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年Q4",
     sortKey: "2026-12-31",
+    era: "现代",
+    themes: [
+      "悬疑",
+      "爱情"
+    ],
     type: "悬疑爱情",
     cast: "景甜、张新成、刘畅、黄米依、秦晓轩、盛冠森、阿丽亚、柯蓝",
     img: "images/daiwoxinglaishi.jpg",
@@ -886,6 +1173,11 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年Q4",
     sortKey: "2026-12-31",
+    era: "现代",
+    themes: [
+      "都市",
+      "悬疑"
+    ],
     type: "都市悬疑",
     cast: "杨茜尧、陈豪、林夏薇、马国明、陈展鹏、姚子羚、傅嘉莉、陈自瑶",
     img: "images/meiguizhanzheng.jpg",
@@ -900,6 +1192,10 @@ const TV_ITEMS = [
     tag: "高阶S+",
     dateText: "2026年Q4",
     sortKey: "2026-12-31",
+    era: "虚构",
+    themes: [
+      "奇幻"
+    ],
     type: "志怪传说",
     cast: "张淼怡、常华森、林允、叶祖新、陈瑶、李嘉琦、陈若轩、宋祖儿",
     img: "images/liaozhai.jpg",
@@ -914,6 +1210,11 @@ const TV_ITEMS = [
     tag: "高阶S+",
     dateText: "2027年Q1",
     sortKey: "2027-03-31",
+    era: "虚构",
+    themes: [
+      "奇幻",
+      "爱情"
+    ],
     type: "奇幻爱情",
     cast: "鞠婧祎、张云龙、肖燕、古子成、张峻宁、漆昱辰、海一天、林允",
     img: "images/laizhan.jpg",
@@ -928,6 +1229,11 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2027年",
     sortKey: "2027-12-31",
+    era: "",
+    themes: [
+      "爱情",
+      "奇幻"
+    ],
     type: "古装爱情",
     cast: "陈哲远、张婧仪、梁永棋、鹿骐、陈澄、鹤秋、王艳",
     img: "images/menghuating.jpg",
@@ -942,6 +1248,11 @@ const TV_ITEMS = [
     tag: "超级S+",
     dateText: "2026年12月",
     sortKey: "2026-12-01",
+    era: "民国",
+    themes: [
+      "悬疑",
+      "革命"
+    ],
     type: "民国谍战",
     cast: "张若昀、王阳、刘诗诗、李兰迪、关晓彤、陈道明、陈龙、彭冠英",
     img: "images/qianlijiangshantu.jpg",
@@ -956,6 +1267,11 @@ const TV_ITEMS = [
     tag: "超级S+",
     dateText: "2027年Q1",
     sortKey: "2027-03-31",
+    era: "",
+    themes: [
+      "传奇",
+      "现实"
+    ],
     type: "女性时代传奇",
     cast: "杨紫、欧豪",
     img: "images/yulanhuakaijunzailai.jpg",
@@ -970,6 +1286,11 @@ const TV_ITEMS = [
     tag: "高阶S+",
     dateText: "2027年Q1",
     sortKey: "2027-03-31",
+    era: "年代",
+    themes: [
+      "传奇",
+      "现实"
+    ],
     type: "年代传奇",
     cast: "宋佳、高伟光、任彬、张瑶",
     img: "images/fangmingsanjiu.jpg",
@@ -984,6 +1305,10 @@ const TV_ITEMS = [
     tag: "超级S+",
     dateText: "2027年",
     sortKey: "2027-12-31",
+    era: "年代",
+    themes: [
+      "刑侦"
+    ],
     type: "警匪刑侦",
     cast: "白敬亭、孙千、蓝盈莹",
     img: "images/xingjingshike1fenghuazhengmao.jpg",
@@ -997,6 +1322,10 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2027年",
     sortKey: "2027-12-31",
+    era: "古代",
+    themes: [
+      "传奇"
+    ],
     type: "古装传奇",
     cast: "龚俊、王玉雯",
     img: "images/baiyigongqing.jpg",
@@ -1011,6 +1340,11 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2027年",
     sortKey: "2027-12-31",
+    era: "",
+    themes: [
+      "爱情",
+      "奇幻"
+    ],
     type: "古装爱情",
     cast: "包上恩、王弘毅",
     img: "images/yuemingqianli.jpg",
@@ -1039,9 +1373,12 @@ function getItems() { return TV_ITEMS; }
   const subTypeGroup = document.getElementById("subTypeGroup");
   const subTypeLabel = document.getElementById("subTypeLabel");
   const subTypeChipsEl = document.getElementById("subTypeChips");
+  const eraChipsEl = document.getElementById("eraChips");
+  const eraGroupEl = document.getElementById("eraGroup");
+  const typeLabelEl = document.getElementById("typeLabel");
   const searchInput = document.getElementById("searchInput");
   const searchClear = document.getElementById("searchClear");
-  const state = { quarter: [], level: [], type: [], cat: [], subType: [] };
+  const state = { quarter: [], level: [], type: [], cat: [], subType: [], era: [], theme: [] };
   // 语义：数组为空 = 显示全部（不过滤该维度）；数组为「已选中的值」，多选叠加（如 Q3+Q4）。
 
   function lvClass(tag) {
@@ -1118,6 +1455,11 @@ function getItems() { return TV_ITEMS; }
   }
 
   /* 按播出时间（sortKey）归季度：1-3月Q1 / 4-6月Q2 / 7-9月Q3 / 10-12月Q4，返回如 "26年Q1" */
+  /* 电视剧筛选维度：时代(单值) × 题材(多值)；同维度多选=并集，两维度之间=交集 */
+  const ERA_ORDER = ["古代", "民国", "近代", "年代", "现代", "虚构", "未分类"];
+  const THEME_ORDER = ["爱情", "都市", "青春", "奇幻", "武侠", "历史", "传奇", "战争", "军旅", "家庭", "喜剧", "悬疑", "革命", "现实", "刑侦"];
+  const eraOf = it => (it.era && String(it.era).trim()) ? String(it.era).trim() : "未分类";
+
   function quarterOf(it) {
     // 只写到年份的（如「2027年」）显示为「27年」，不落到具体季度，避免歧义
     const yOnly = /^(\d{4})\s*年$/.exec(String(it.dateText || "").trim());
@@ -1147,26 +1489,22 @@ function getItems() { return TV_ITEMS; }
       chipHTML(!state.level.length, "level", "", "全部") +
       levels.map(v => chipHTML(state.level.includes(v), "level", v, v)).join("");
 
-    /* 类型：综艺=单级小类；电视剧=大类→小类两级（复合类型可属多个大类，均支持多选） */
+    /* 电视剧：时代 + 题材 两级筛选（各自多选=并集，两者之间=交集） */
     if (currentTab === "tv") {
-      const CAT_ORDER = ["爱情", "都市", "青春", "奇幻", "武侠", "古装", "历史", "年代", "科幻", "猎奇", "竞技", "传奇", "逆袭", "战争", "军旅", "家庭", "喜剧", "悬疑", "权谋", "革命", "现实", "刑侦", "民国", "IP改编"];
-      const cats = [...new Set(getItems().flatMap(it => it.cats || []))]
-        .sort((a, b) => (CAT_ORDER.indexOf(a) - CAT_ORDER.indexOf(b)));
+      if (eraGroupEl) eraGroupEl.hidden = false;
+      if (typeLabelEl) typeLabelEl.textContent = "题材";
+      const eras = ERA_ORDER.filter(e => getItems().some(it => eraOf(it) === e));
+      eraChipsEl.innerHTML =
+        chipHTML(!state.era.length, "era", "", "全部") +
+        eras.map(v => chipHTML(state.era.includes(v), "era", v, v)).join("");
+      const themes = THEME_ORDER.filter(t => getItems().some(it => (it.themes || []).includes(t)));
       typeChipsEl.innerHTML =
-        chipHTML(!state.cat.length, "cat", "", "全部") +
-        cats.map(v => chipHTML(state.cat.includes(v), "cat", v, v)).join("");
-      const subs = state.cat.length ? [...new Set(getItems().filter(it => state.cat.some(c => (it.cats || []).includes(c))).map(it => it.type))].sort() : [];
-      // 大类为「全部」（空）时不显示小类；仅在缩小大类范围后出现
-      if (state.cat.length && state.cat.length < cats.length && subs.length > 1) {
-        subTypeLabel.textContent = state.cat.join("/") + "·小类";
-        subTypeChipsEl.innerHTML =
-          chipHTML(!state.subType.length, "subType", "", "全部") +
-          subs.map(v => chipHTML(state.subType.includes(v), "subType", v, v)).join("");
-        subTypeGroup.hidden = false;
-      } else {
-        subTypeGroup.hidden = true;
-      }
+        chipHTML(!state.theme.length, "theme", "", "全部") +
+        themes.map(v => chipHTML(state.theme.includes(v), "theme", v, v)).join("");
+      subTypeGroup.hidden = true;
     } else {
+      if (eraGroupEl) eraGroupEl.hidden = true;
+      if (typeLabelEl) typeLabelEl.textContent = "类型";
       const types = [...new Set(getItems().map(it => it.type))];
       typeChipsEl.innerHTML =
         chipHTML(!state.type.length, "type", "", "全部") +
@@ -1180,8 +1518,8 @@ function getItems() { return TV_ITEMS; }
     return getItems().filter(it =>
       (!state.level.length || state.level.includes(it.tag)) &&
       (currentTab === "tv"
-        ? ((!state.cat.length || state.cat.some(c => (it.cats || []).includes(c)))
-           && (subTypeGroup.hidden || !state.subType.length || state.subType.includes(it.type)))
+        ? ((!state.era.length || state.era.includes(eraOf(it)))
+           && (!state.theme.length || (it.themes || []).some(t => state.theme.includes(t))))
         : (!state.type.length || state.type.includes(it.type))) &&
       (!state.quarter.length || state.quarter.includes(quarterOf(it))) &&
       (!q || it.name.toLowerCase().includes(q) || (it.cast || "").toLowerCase().includes(q))
@@ -1243,7 +1581,8 @@ function getItems() { return TV_ITEMS; }
     if (!chip) return;
     const f = chip.dataset.filter;
     const v = chip.dataset.value;
-    const key = f === "quarter" ? "quarter" : f === "level" ? "level" : f === "type" ? "type" : f === "cat" ? "cat" : f === "subType" ? "subType" : null;
+    const key = f === "quarter" ? "quarter" : f === "level" ? "level" : f === "type" ? "type"
+      : f === "cat" ? "cat" : f === "subType" ? "subType" : f === "era" ? "era" : f === "theme" ? "theme" : null;
     if (!key) return;
     if (v === "") {
       // 「全部」按钮：清空该组已选 → 显示全部
@@ -1252,7 +1591,6 @@ function getItems() { return TV_ITEMS; }
       const i = state[key].indexOf(v);
       if (i > -1) state[key].splice(i, 1); else state[key].push(v);
     }
-    if (key === "cat") state.subType = []; // 大类变化后小类重置为「全部」
     buildFilters();
     render();
   });
@@ -1301,7 +1639,7 @@ function getItems() { return TV_ITEMS; }
   window.TimelineBoard = {
     switchTo(key) {
       currentTab = key;
-      state.quarter = []; state.level = []; state.type = []; state.cat = []; state.subType = [];
+      state.quarter = []; state.level = []; state.type = []; state.cat = []; state.subType = []; state.era = []; state.theme = [];
       subTypeGroup.hidden = true;
       if (searchInput) { searchInput.value = ""; searchClear.hidden = true; }
       buildFilters();
