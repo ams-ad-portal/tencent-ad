@@ -337,7 +337,7 @@ const TV_ITEMS = [
     tag: "S",
     dateText: "2026年3月29日",
     sortKey: "2026-03-29",
-    era: "现代",
+    era: "年代",
     themes: [
       "战争",
       "传奇"
