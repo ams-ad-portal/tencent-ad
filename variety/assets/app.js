@@ -534,10 +534,11 @@ function getItems() { return VARIETY_ITEMS; }
     const sorted = list.slice().sort((a, b) => String(b.sortKey).localeCompare(String(a.sortKey)));
     fullList = sorted;
     shown = 0;
-    ensureMore();
+    // 先插首批，再放「加载更多」按钮，保证按钮始终在列表末尾
     const first = fullList.slice(0, PAGE_SIZE);
     shown = first.length;
     if (first.length) wrap.insertAdjacentHTML("beforeend", first.map(itemHTML).join(""));
+    ensureMore();
     updateMore();
     syncToggleAll();
   }

@@ -888,7 +888,7 @@ const TV_ITEMS = [
   {
     name: "兰香如故",
     tag: "高阶S+",
-    dateText: "2026年9月11日暂定",
+    dateText: "2026年9月11日",
     sortKey: "2026-09-11",
     era: "古代",
     themes: [
@@ -1583,10 +1583,11 @@ function getItems() { return TV_ITEMS; }
     const sorted = list.slice().sort((a, b) => String(b.sortKey).localeCompare(String(a.sortKey)));
     fullList = sorted;
     shown = 0;
-    ensureMore();
+    // 先插首批，再放「加载更多」按钮，保证按钮始终在列表末尾
     const first = fullList.slice(0, PAGE_SIZE);
     shown = first.length;
     if (first.length) wrap.insertAdjacentHTML("beforeend", first.map(itemHTML).join(""));
+    ensureMore();
     updateMore();
     syncToggleAll();
   }
