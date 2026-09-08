@@ -218,15 +218,20 @@
   }
 
   /* ---------- 5. FAQ 与兜底 ---------- */
-  function helpText() {
-    return "你好 👋 我是站内小助手，可以帮你查腾讯广告常见投放形式，试着这样问我：<br>"
-      + "· <b>闪屏广告</b>（直接问形式名看详情）<br>"
-      + "· <b>朋友圈有哪些形式</b> / <b>TME 有什么</b><br>"
-      + "· <b>腾讯视频招商包含哪些</b><br>"
-      + "· <b>前贴片有什么形式</b>（按位置搜）<br>"
-      + "· <b>一共有多少个形式</b><br>"
-      + "· <b>怎么看 Demo 视频</b> / <b>访问码怎么拿</b><br>"
-      + "· <b>我要留言</b>（给管理员提需求/纠错）";
+    /* 可点击的示例问题：点一下直接问 */
+  function askBtn(q, label) {
+    return '<button type="button" class="ai-ask" data-q="' + String(q).replace(/"/g, "&quot;") + '">' + (label || q) + "</button>";
+  }
+
+function helpText() {
+    return "你好 👋 我是站内小助手，可以帮你查腾讯广告常见投放形式，试着这样问我（<b>直接点就能问</b>）：<br>"
+      + "· " + askBtn("闪屏广告") + "（直接问形式名看详情）<br>"
+      + "· " + askBtn("朋友圈有哪些形式") + " / " + askBtn("TME 有什么") + "<br>"
+      + "· " + askBtn("腾讯视频招商包含哪些") + "<br>"
+      + "· " + askBtn("前贴片有什么形式") + "（按位置搜）<br>"
+      + "· " + askBtn("一共有多少个形式") + "<br>"
+      + "· " + askBtn("怎么看 Demo 视频") + " / " + askBtn("访问码怎么拿") + "<br>"
+      + "· " + askBtn("我要留言") + "（给管理员提需求/纠错）";
   }
   function answerFAQ(qRaw) {
     const q = norm(qRaw);
@@ -263,7 +268,6 @@
       + '    <button class="ai-x" id="aiClose" type="button" aria-label="关闭">×</button>'
       + '  </div>'
       + '  <div class="ai-body" id="aiBody"></div>'
-      + '  <div class="ai-quick" id="aiQuick"></div>'
       + '  <form class="ai-input" id="aiForm">'
       + '    <input type="text" id="aiText" placeholder="输入你的问题，回车发送…" autocomplete="off" />'
       + '    <button type="submit" aria-label="发送"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M3.4 20.4l17.45-7.48a1 1 0 0 0 0-1.84L3.4 3.6a.996.996 0 0 0-1.39.91L2 9.12c0 .5.37.93.87.99L17 12 2.87 13.88c-.5.07-.87.5-.87 1l.01 4.61c0 .71.73 1.2 1.39.91Z"/></svg></button>'
@@ -307,11 +311,11 @@
         body.scrollTop = body.scrollHeight;
       }, 260 + Math.random() * 220);
     }
-    buildQuicks().forEach(q => {
-      const b = document.createElement("button");
-      b.type = "button"; b.className = "ai-chip"; b.textContent = q;
-      b.addEventListener("click", () => ask(q));
-      quick.appendChild(b);
+    /* 底部快捷问题按钮已取消：示例问题直接做进欢迎语里，点一下就能问 */
+    body.addEventListener("click", function (e) {
+      const btn = e.target.closest(".ai-ask");
+      if (!btn) return;
+      ask(btn.getAttribute("data-q"));
     });
 
     let opened = false;
