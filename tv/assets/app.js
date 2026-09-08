@@ -1333,8 +1333,7 @@ const TV_ITEMS = [
     sortKey: "2027-12-31",
     era: "古代",
     themes: [
-      "爱情",
-      "奇幻"
+      "爱情"
     ],
     type: "古装爱情",
     cast: "包上恩、王弘毅",
