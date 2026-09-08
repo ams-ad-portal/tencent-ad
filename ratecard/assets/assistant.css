@@ -135,6 +135,13 @@
 }
 .ai-fb button:hover { background: #eef2f9; border-color: #c2ccdd; }
 .ai-fb .ai-fb-no:hover { background: #fff0f0; border-color: #f3b4b4; color: #c0392b; }
+.ai-fb .ai-fb-link {
+  display: inline-flex; align-items: center; gap: 4px;
+  border: 1px solid #cfdbf0; background: #fff; color: #0052d9;
+  border-radius: 999px; padding: 3px 12px; font-size: 12px; font-weight: 700;
+  text-decoration: none; transition: background .15s ease, border-color .15s ease;
+}
+.ai-fb .ai-fb-link:hover { background: #eaf2ff; border-color: #9dbcf0; }
 .ai-fb .ai-fb-fix:hover { background: #eaf2ff; border-color: #b9d2ff; color: #0052d9; }
 .ai-fb button:disabled { opacity: .5; cursor: default; }
 .ai-fb-box { flex-basis: 100%; display: flex; gap: 6px; margin-top: 4px; }

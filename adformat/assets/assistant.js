@@ -81,54 +81,15 @@
   }
 
   /* 给每条机器人回答挂一个 👍/👎 + 纠错 条 */
-  function attachFeedback(msgEl, q, ansHtml) {
+    /* 每条回答下方：直接给「我要留言」按钮，点开就是留言板（不再有中间输入框） */
+  function attachFeedback(msgEl) {
     if (!msgEl || msgEl.querySelector(".ai-fb")) return;
     const fb = document.createElement("div");
     fb.className = "ai-fb";
     fb.innerHTML =
-      '<span class="ai-fb-tip">这个回答有帮助吗？</span>' +
-      '<button class="ai-fb-yes" type="button">👍 有用</button>' +
-      '<button class="ai-fb-no" type="button">👎 有误</button>' +
-      '<button class="ai-fb-fix" type="button">纠错</button>' +
-      '<div class="ai-fb-box" hidden>' +
-        '<textarea class="ai-fb-ta" rows="3" placeholder="请告诉我们正确答案或补充信息（可留空，仅标记回答有误）"></textarea>' +
-        '<button class="ai-fb-send" type="button">提交</button>' +
-      '</div>' +
-      '<span class="ai-fb-ok" hidden></span>';
+      '<span class="ai-fb-tip">回答不准或有补充？</span>' +
+      '<a class="ai-fb-link" href="' + FEEDBACK_URL + '" target="_blank" rel="noopener">✍️ 我要留言</a>';
     msgEl.appendChild(fb);
-
-    const box = fb.querySelector(".ai-fb-box");
-    const ta = fb.querySelector(".ai-fb-ta");
-    const ok = fb.querySelector(".ai-fb-ok");
-    const yes = fb.querySelector(".ai-fb-yes");
-    const no = fb.querySelector(".ai-fb-no");
-    const fix = fb.querySelector(".ai-fb-fix");
-    const send = fb.querySelector(".ai-fb-send");
-    let sent = false;
-
-    function done(msg) { ok.textContent = msg; ok.hidden = false; }
-    function reveal() { box.hidden = false; ta.focus(); }
-
-    yes.addEventListener("click", () => {
-      yes.disabled = no.disabled = fix.disabled = true;
-      done("感谢反馈！");
-    });
-    no.addEventListener("click", () => {
-      reveal();
-      if (!sent) {
-        sent = true;
-        sendFeedback({ question: q, answer: stripTags(ansHtml), correction: "", page: location.href, site: SITE, time: new Date().toISOString() });
-        done("已记录：这条回答可能有误");
-      }
-    });
-    fix.addEventListener("click", reveal);
-    send.addEventListener("click", () => {
-      if (sent) { done("已收到，感谢纠正！"); box.hidden = true; return; }
-      sent = true;
-      sendFeedback({ question: q, answer: stripTags(ansHtml), correction: ta.value.trim(), page: location.href, site: SITE, time: new Date().toISOString() });
-      done(FEEDBACK_ENDPOINT ? "已提交，感谢纠正！" : "已复制到剪贴板，请发给管理员纠正");
-      box.hidden = true;
-    });
   }
 
   function itemLine(rec) {
