@@ -233,6 +233,13 @@ const AD_FORMATS = [
             demoDesc: "百事-浪浪山-跳视频号",
             video: "videos/moments/moments-quanfu-huadong-baishi.mp4",
             videoLabel: "朋友圈全幅滑动+图形氛围-百事-跳视频号.mp4"
+          },
+          {
+            name: "IP破框",
+            position: "朋友圈广告",
+            demoDesc: "沃尔沃汽车（冰壶挑战）",
+            video: "videos/moments/moments-ip-pokuang-volvo.mp4",
+            videoLabel: "朋友圈IP破框-沃尔沃汽车（冰壶挑战）.mp4"
           }
         ]
       }
