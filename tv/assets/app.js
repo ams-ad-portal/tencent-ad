@@ -1080,7 +1080,7 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年10月",
     sortKey: "2026-10-01",
-    era: "虚构",
+    era: "古代",
     themes: [
       "喜剧",
       "奇幻"
@@ -1192,7 +1192,7 @@ const TV_ITEMS = [
     tag: "高阶S+",
     dateText: "2026年Q4",
     sortKey: "2026-12-31",
-    era: "虚构",
+    era: "古代",
     themes: [
       "奇幻"
     ],
@@ -1210,7 +1210,7 @@ const TV_ITEMS = [
     tag: "高阶S+",
     dateText: "2027年Q1",
     sortKey: "2027-03-31",
-    era: "虚构",
+    era: "古代",
     themes: [
       "奇幻",
       "爱情"
@@ -1456,7 +1456,7 @@ function getItems() { return TV_ITEMS; }
 
   /* 按播出时间（sortKey）归季度：1-3月Q1 / 4-6月Q2 / 7-9月Q3 / 10-12月Q4，返回如 "26年Q1" */
   /* 电视剧筛选维度：时代(单值) × 题材(多值)；同维度多选=并集，两维度之间=交集 */
-  const ERA_ORDER = ["古代", "民国", "近代", "年代", "现代", "虚构", "未分类"];
+  const ERA_ORDER = ["古代", "民国", "近代", "年代", "现代", "未分类"];
   const THEME_ORDER = ["爱情", "都市", "青春", "奇幻", "武侠", "历史", "传奇", "战争", "军旅", "家庭", "喜剧", "悬疑", "革命", "现实", "刑侦"];
   const eraOf = it => (it.era && String(it.era).trim()) ? String(it.era).trim() : "未分类";
 
