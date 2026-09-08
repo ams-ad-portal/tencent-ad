@@ -223,6 +223,13 @@ const AD_FORMATS = [
             demoDesc: "荣耀",
             video: "videos/moments/moments-lunbo-kapian-honor.mp4",
             videoLabel: "朋友圈轮播卡片-荣耀.mp4"
+          },
+          {
+            name: "朋友圈画廊",
+            position: "朋友圈广告",
+            demoDesc: "古驰香水-张凌赫-跳JD",
+            video: "videos/moments/moments-hualang-guochi-zhanglinghe-jd.mp4",
+            videoLabel: "朋友圈画廊-古驰香水-张凌赫-跳JD.mp4"
           }
         ]
       }
