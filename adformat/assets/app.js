@@ -218,35 +218,35 @@ const AD_FORMATS = [
         label: "",
         items: [
           {
-            name: "朋友圈轮播卡片",
+            name: "轮播卡片",
             position: "朋友圈广告",
             demoDesc: "荣耀",
             video: "videos/moments/moments-lunbo-kapian-honor.mp4",
             videoLabel: "朋友圈轮播卡片-荣耀.mp4"
           },
           {
-            name: "朋友圈画廊",
+            name: "画廊",
             position: "朋友圈广告",
             demoDesc: "古驰香水-张凌赫-跳JD",
             video: "videos/moments/moments-hualang-guochi-zhanglinghe-jd.mp4",
             videoLabel: "朋友圈画廊-古驰香水-张凌赫-跳JD.mp4"
           },
           {
-            name: "朋友圈明星头像+轮播动态",
+            name: "明星头像+轮播动态",
             position: "朋友圈广告",
             demoDesc: "大众点评-谢霆锋",
             video: "videos/moments/moments-star-avatar-carousel-xietingfeng-dianping.mp4",
             videoLabel: "朋友圈明星头像+动态轮播卡片-谢霆锋大众点评.mp4"
           },
           {
-            name: "朋友圈双幕互动",
+            name: "双幕互动",
             position: "朋友圈广告",
             demoDesc: "莱珀妮鱼子酱面霜",
             video: "videos/moments/moments-shuangmu-hudong-laiponi.mp4",
             videoLabel: "朋友圈双幕互动-莱珀妮鱼子酱面霜.mp4"
           },
           {
-            name: "朋友圈全幅滑动+图形氛围",
+            name: "全幅滑动+图形氛围",
             position: "朋友圈广告",
             demoDesc: "百事-浪浪山-跳视频号",
             video: "videos/moments/moments-quanfu-huadong-baishi.mp4",
