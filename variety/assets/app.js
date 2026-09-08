@@ -63,7 +63,7 @@ const VARIETY_ITEMS = [
     dateText: "2026年4-6月",
     sortKey: "2026-04-01",
     type: "生活类",
-    img: "images/maoxuewang.jpg",
+    img: "images/maoxuewang.webp",
     cast: "毛不易、李雪琴、小沈阳、沈佳润"
   },
   {
@@ -72,7 +72,7 @@ const VARIETY_ITEMS = [
     dateText: "2026年5月14日",
     sortKey: "2026-05-14",
     type: "生活类",
-    img: "images/wushigongliutaohuawu6.png",
+    img: "images/wushigongliutaohuawu6.webp",
     file: "plans/wushigongliutaohuawu6.pdf",
     fileLabel: "五十公里桃花坞6 通发版.pdf",
     cast: "周涛、贺峻霖、袁咏仪、彭冠英、萧敬腾、方媛、阿如那、徐志胜、李雪琴、李嘉琦、王子奇、滕哲、徐若晗、陈鑫海、庾恩利"
@@ -83,7 +83,7 @@ const VARIETY_ITEMS = [
     dateText: "2026年5月27日",
     sortKey: "2026-05-27",
     type: "游戏生活类",
-    img: "images/kaishituiliba4.jpg",
+    img: "images/kaishituiliba4.webp",
     cast: "迪丽热巴、张凌赫、刘宇宁、金靖、周柯宇、丁程鑫、白宇"
   },
   {
@@ -110,7 +110,7 @@ const VARIETY_ITEMS = [
     dateText: "2026年6月27日",
     sortKey: "2026-06-27",
     type: "大众游戏",
-    img: "images/diqiuchaoxinxian2.jpg",
+    img: "images/diqiuchaoxinxian2.webp",
     cast: "龚俊、刘宇宁、王玉雯、孙红雷、李乃文、郭京飞、陈星旭、林一、宋茜、杨超越、周也、陈赫"
   },
   {
@@ -137,7 +137,7 @@ const VARIETY_ITEMS = [
     dateText: "2026年8月6日",
     sortKey: "2026-08-06",
     type: "真人秀",
-    img: "images/yiluxianghaidehaonian.jpg",
+    img: "images/yiluxianghaidehaonian.webp",
     cast: "倪萍、TOP登陆少年、陆虎、阎鹤祥、刘旸、许昕、徐志胜、郑恺"
   },
   {
@@ -146,7 +146,7 @@ const VARIETY_ITEMS = [
     dateText: "2026年8月29-30日",
     sortKey: "2026-08-29",
     type: "嘉年华",
-    img: "images/jumppark.jpg",
+    img: "images/jumppark.webp",
     file: "plans/jumppark2026.pdf",
     fileLabel: "JUMP+PARK音乐大赏2026方案-0519带艺人.pdf",
     cast: "谭松韵、丁禹兮、那英、小鬼王琳凯、单依纯、余佳运、周柯宇、孙浩、黄子弘凡、孔雪儿"
@@ -157,7 +157,7 @@ const VARIETY_ITEMS = [
     dateText: "2026年9月9日",
     sortKey: "2026-09-09",
     type: "体育/生存竞技",
-    img: "images/xiayishunweishita2.png",
+    img: "images/xiayishunweishita2.webp",
     file: "plans/xiayishunweishita2.pdf",
     fileLabel: "0701《下一顺位是她》S2招商通案.pdf",
     cast: "郭碧婷、周震南、孟佳、李斯丹妮、美娜、敖心仪"
@@ -177,7 +177,7 @@ const VARIETY_ITEMS = [
     dateText: "2026年Q3",
     sortKey: "2026-09-30",
     type: "亲子垂类",
-    img: "images/ziranxueyuanlin3.png",
+    img: "images/ziranxueyuanlin3.webp",
     file: "plans/ziranxueyuanlin3.pdf",
     fileLabel: "【通用】自然学院林第三季260311.pdf",
     cast: "王昱珩、张雅琪、张祎祎（小喵）、柒柒、小虫草、小米"
@@ -188,7 +188,7 @@ const VARIETY_ITEMS = [
     dateText: "2026年10月",
     sortKey: "2026-10-01",
     type: "职场",
-    img: "images/lingrendongdeoffer8.jpg",
+    img: "images/lingrendongdeoffer8.webp",
     file: "plans/lingrendongdeoffer8.pdf",
     fileLabel: "令人心动的offer8·医生季0710.pdf",
     cast: "陈铭、张纯烨、贺峻霖、毛晓彤、徐志胜、徐晔、杨超越"
@@ -199,7 +199,7 @@ const VARIETY_ITEMS = [
     dateText: "2026年10月",
     sortKey: "2026-10-01",
     type: "大众游戏",
-    img: "images/xianzaijiuchufa4.jpg",
+    img: "images/xianzaijiuchufa4.webp",
     file: "plans/xianzaijiuchufa4.pdf",
     fileLabel: "现在就出发4+方案0327.pdf",
     cast: "沈腾、白敬亭、贾冰、范丞丞、王安宇、胡先煦、黄景瑜、王楚然"
@@ -210,7 +210,7 @@ const VARIETY_ITEMS = [
     dateText: "2026年11月",
     sortKey: "2026-11-01",
     type: "真人秀",
-    img: "images/huakaibushuxian.jpg",
+    img: "images/huakaibushuxian.webp",
     file: "plans/huakaibushuxian.pdf",
     fileLabel: "0512《花开不设限》.pdf",
     cast: "杨幂、闫妮、吴谨言、单依纯、吴艳妮、papi酱"
@@ -221,7 +221,7 @@ const VARIETY_ITEMS = [
     dateText: "2026年11月16日（暂定）",
     sortKey: "2026-11-16",
     type: "情感恋综类",
-    img: "images/riluoshifenshuoaini2.png",
+    img: "images/riluoshifenshuoaini2.webp",
     file: "plans/riluoshifenshuoaini2.pdf",
     fileLabel: "626《日落时分说爱你》第二季合作方案.pdf",
     cast: "纯素人"
@@ -232,7 +232,7 @@ const VARIETY_ITEMS = [
     dateText: "2026年12月1日",
     sortKey: "2026-12-01",
     type: "电竞",
-    img: "images/poxiaozhilu.png",
+    img: "images/poxiaozhilu.webp",
     file: "plans/poxiaozhilu.pdf",
     fileLabel: "《破晓之路》0507招商方案.pdf",
     cast: "拟邀华晨宇、田曦薇、吴磊等"
@@ -243,7 +243,7 @@ const VARIETY_ITEMS = [
     dateText: "2026年12月1日",
     sortKey: "2026-12-01",
     type: "情感恋综类",
-    img: "images/qingyuandijiehun.png",
+    img: "images/qingyuandijiehun.webp",
     file: "plans/qingyuandijiehun.pdf",
     fileLabel: "请原地结婚0519+.pdf",
     cast: "陈汉典、郑合惠子、王紫璇、俞灏明、王晓晨、任宥纶、李鸿其、陈瑜、林子濠、孙乐言、奥斯卡"
@@ -254,7 +254,7 @@ const VARIETY_ITEMS = [
     dateText: "2026年12月",
     sortKey: "2026-12-01",
     type: "美食节目",
-    img: "images/jintianhaohaochi.png",
+    img: "images/jintianhaohaochi.webp",
     file: "plans/jintianhaohaochi.pdf",
     fileLabel: "《今天好好吃》招商通案0417.pdf",
     cast: "刘涛、任嘉伦、孙千、樊振东、黎子安、徐志胜、林更新"
@@ -265,7 +265,7 @@ const VARIETY_ITEMS = [
     dateText: "2026年12月跨年",
     sortKey: "2026-12-31",
     type: "喜剧脱口秀",
-    img: "images/xirenqimiaoyie3.png",
+    img: "images/xirenqimiaoyie3.webp",
     file: "plans/xirenqimiaoyie3.pdf",
     fileLabel: "《喜人奇妙夜3》招商通案0521.pdf",
     cast: "马东、李诞、王安宇、李川、张维威、卜冠今、宋木子、史策"
@@ -306,7 +306,7 @@ const VARIETY_ITEMS = [
     dateText: "2025年10月1日",
     sortKey: "2025-10-01",
     type: "大众游戏",
-    img: "images/xianzaijiuchufa3.png",
+    img: "images/xianzaijiuchufa3.webp",
     file: "plans/xianzaijiuchufa3.pdf",
     fileLabel: "《现在就出发3》方案0218.pdf",
     cast: "沈腾、白敬亭、金晨、贾冰、胡先煦、王安宇、范丞丞、黄景瑜"
@@ -467,8 +467,49 @@ function getItems() { return VARIETY_ITEMS; }
     );
   }
 
+  /* 首屏先渲染 20 条，其余点按钮或滚到底再加载（页面更快） */
+  const PAGE_SIZE = 20;
+  let fullList = [], shown = 0, moreEl = null, moreIO = null;
+
+  function ensureMore() {
+    if (moreEl) return moreEl;
+    moreEl = document.createElement("div");
+    moreEl.className = "tl-more";
+    moreEl.innerHTML = '<button type="button" class="tl-more-btn">加载更多</button>';
+    moreEl.querySelector(".tl-more-btn").addEventListener("click", renderMore);
+    wrap.appendChild(moreEl);
+    return moreEl;
+  }
+
+  function renderMore() {
+    const slice = fullList.slice(shown, shown + PAGE_SIZE);
+    if (!slice.length) return;
+    moreEl.insertAdjacentHTML("beforebegin", slice.map(itemHTML).join(""));
+    shown += slice.length;
+    updateMore();
+    syncToggleAll();
+  }
+
+  function updateMore() {
+    const rest = fullList.length - shown;
+    moreEl.hidden = rest <= 0;
+    const btn = moreEl.querySelector(".tl-more-btn");
+    if (btn) btn.textContent = rest > 0 ? ("加载更多（还有 " + rest + " 部）") : "已全部加载";
+    if ("IntersectionObserver" in window) {
+      if (moreIO) moreIO.disconnect();
+      if (rest > 0) {
+        moreIO = new IntersectionObserver(function (entries) {
+          if (entries[0].isIntersecting) renderMore();
+        }, { rootMargin: "400px" });
+        moreIO.observe(moreEl);
+      }
+    }
+  }
+
   function render() {
-    wrap.querySelectorAll(".tl-row, .tl-detail").forEach(el => el.remove());
+    wrap.querySelectorAll(".tl-row, .tl-detail, .tl-more").forEach(el => el.remove());
+    if (moreEl) { moreEl = null; }
+    if (moreIO) { moreIO.disconnect(); moreIO = null; }
     if (!getItems().length) {
       const kind = currentTab === "tv" ? "电视剧" : "综艺";
       empty.innerHTML = '<div class="tl-empty-icon">📺</div><p>' + kind + '时间轴待填充</p><span>把' + kind + '节目和上线时间发给我，我会按最新在上依次排进来。</span>';
@@ -491,7 +532,13 @@ function getItems() { return VARIETY_ITEMS; }
     empty.style.display = "none";
     syncToggleAll();
     const sorted = list.slice().sort((a, b) => String(b.sortKey).localeCompare(String(a.sortKey)));
-    wrap.insertAdjacentHTML("beforeend", sorted.map(itemHTML).join(""));
+    fullList = sorted;
+    shown = 0;
+    ensureMore();
+    const first = fullList.slice(0, PAGE_SIZE);
+    shown = first.length;
+    if (first.length) wrap.insertAdjacentHTML("beforeend", first.map(itemHTML).join(""));
+    updateMore();
     syncToggleAll();
   }
 

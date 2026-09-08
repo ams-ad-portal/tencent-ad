@@ -692,3 +692,14 @@ body {
 .rc-toolbar .intro { flex: 1; min-width: 260px; margin: 0; }
 .rc-allpack { flex-shrink: 0; }
 .board[hidden] { display: none; }
+
+/* 加载更多 */
+.tl-more { text-align: center; padding: 16px 0 6px; }
+.tl-more[hidden] { display: none; }
+.tl-more-btn {
+  display: inline-flex; align-items: center; gap: 5px;
+  border: 1px solid var(--blue); background: #fff; color: var(--blue);
+  font-size: 13px; font-weight: 700; padding: 8px 20px; border-radius: 999px;
+  cursor: pointer; transition: background .12s ease;
+}
+.tl-more-btn:hover { background: var(--blue-soft); }
