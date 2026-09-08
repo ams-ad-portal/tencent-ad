@@ -193,24 +193,6 @@ const AD_FORMATS = [
     ]
   },
   {
-    category: "TME",
-    key: "tme",
-    groups: [
-      {
-        label: "",
-        items: [
-          {
-            name: "Oneshot移动端",
-            position: "TME移动端闪屏+焦点图",
-            demoDesc: "Chanel唇膏",
-            video: "videos/tme/tme-oneshot-mobile-chanel.mp4",
-            videoLabel: "TME-Oneshot移动端-Chanel.mp4"
-          }
-        ]
-      }
-    ]
-  },
-  {
     category: "朋友圈",
     key: "moments",
     groups: [
@@ -251,6 +233,24 @@ const AD_FORMATS = [
             demoDesc: "百事-浪浪山-跳视频号",
             video: "videos/moments/moments-quanfu-huadong-baishi.mp4",
             videoLabel: "朋友圈全幅滑动+图形氛围-百事-跳视频号.mp4"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    category: "TME",
+    key: "tme",
+    groups: [
+      {
+        label: "",
+        items: [
+          {
+            name: "Oneshot移动端",
+            position: "TME移动端闪屏+焦点图",
+            demoDesc: "Chanel唇膏",
+            video: "videos/tme/tme-oneshot-mobile-chanel.mp4",
+            videoLabel: "TME-Oneshot移动端-Chanel.mp4"
           }
         ]
       }
