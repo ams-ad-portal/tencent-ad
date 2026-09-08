@@ -35,6 +35,26 @@
     width: min(1120px, calc(100% - 32px));
     margin: 0 auto;
   }
+  /* 手机端手风琴（默认隐藏，仅小屏启用） */
+  .wf-acc { display: none; }
+  .wf-acc-item {
+    background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+    margin-bottom: 12px; overflow: hidden; box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+  }
+  .wf-acc-head {
+    width: 100%; display: flex; align-items: center; gap: 10px;
+    padding: 16px 16px; background: #fff; border: 0; cursor: pointer;
+    font-family: inherit; font-size: 16.5px; font-weight: 800; color: var(--text); text-align: left;
+  }
+  .wf-acc-head .wf-acc-n {
+    margin-left: auto; font-size: 12.5px; font-weight: 700; color: var(--sub);
+    background: #eef2f9; border-radius: 999px; padding: 3px 10px;
+  }
+  .wf-acc-caret { color: var(--primary-2); font-size: 13px; transition: transform .15s ease; }
+  .wf-acc-item.open .wf-acc-caret { transform: rotate(180deg); }
+  .wf-acc-body { display: none; padding: 0 12px 14px; }
+  .wf-acc-item.open .wf-acc-body { display: block; }
+  .wf-acc-body .name-list { margin: 0; }
   /* 与其他板块一致的「← 返回首页」按钮 */
   .btn-home {
     position: fixed; left: 0; top: 14px; z-index: 60;
@@ -245,6 +265,12 @@
     .detail-box { flex-direction: column; align-items: flex-start; }
     .flow-actions { width: 100%; justify-content: flex-start; }
   }
+
+  @media (max-width: 767px) {
+    .tabs { display: none; }
+    .panel { display: none; }
+    .wf-acc { display: block; }
+  }
 </style>
 </head>
 <body>
@@ -268,6 +294,9 @@
       </div>
       <div id="panel-body"></div>
     </section>
+
+    <!-- 手机端：大类标题与流程紧挨着的手风琴 -->
+    <div class="wf-acc" id="wfAcc"></div>
   </main>
 
   <footer class="foot">腾讯内容平台 · 常用流程 · © 2026</footer>
@@ -345,6 +374,7 @@
   const descEl = document.getElementById("panel-desc");
   const badgeEl = document.getElementById("panel-badge");
   const bodyEl = document.getElementById("panel-body");
+  const accEl = document.getElementById("wfAcc");
 
   let currentId = SECTIONS[0].id;
 
@@ -370,29 +400,49 @@
       return;
     }
 
-    bodyEl.innerHTML = '<ul class="name-list">' + s.flows.map(function (f, i) {
-      return '<li class="name-row" data-index="' + i + '">' +
-        '<button type="button" class="name-btn">' +
-          '<span>' + f.name + '</span>' +
-          '<span class="arrow">展开 ›</span>' +
-        '</button>' +
-        '<div class="detail">' +
-          '<div class="detail-box">' +
-            '<p>' + f.desc + '</p>' +
-            (function () {
-              var actions = "";
-              if (f.links && f.links.length) {
-                actions = f.links.map(function (l) { return '<a class="flow-btn" href="' + l.url + '" target="_blank" rel="noopener">' + l.label + '</a>'; }).join("");
-              } else if (f.openUrl && f.downloadUrl) {
-                actions = '<a class="flow-btn" href="' + f.openUrl + '" target="_blank" rel="noopener">打开文档</a>' +
-                  '<a class="flow-btn flow-btn-secondary" href="' + f.downloadUrl + '" download>下载文档</a>';
-              }
-              return actions ? '<div class="flow-actions">' + actions + '</div>' : "";
-            })() +
-          '</div>' +
+    bodyEl.innerHTML = '<ul class="name-list">' + s.flows.map(flowRowHTML).join("") + '</ul>';
+  }
+
+  function flowRowHTML(f, i) {
+    return '<li class="name-row" data-index="' + i + '">' +
+      '<button type="button" class="name-btn">' +
+        '<span>' + f.name + '</span>' +
+        '<span class="arrow">展开 ›</span>' +
+      '</button>' +
+      '<div class="detail">' +
+        '<div class="detail-box">' +
+          '<p>' + f.desc + '</p>' +
+          (function () {
+            var actions = "";
+            if (f.links && f.links.length) {
+              actions = f.links.map(function (l) { return '<a class="flow-btn" href="' + l.url + '" target="_blank" rel="noopener">' + l.label + '</a>'; }).join("");
+            } else if (f.openUrl && f.downloadUrl) {
+              actions = '<a class="flow-btn" href="' + f.openUrl + '" target="_blank" rel="noopener">打开文档</a>' +
+                '<a class="flow-btn flow-btn-secondary" href="' + f.downloadUrl + '" download>下载文档</a>';
+            }
+            return actions ? '<div class="flow-actions">' + actions + '</div>' : "";
+          })() +
         '</div>' +
-      '</li>';
-    }).join("") + '</ul>';
+      '</div>' +
+    '</li>';
+  }
+
+  /* 手机端手风琴：点大类标题展开其流程，再点收起（同时只展开一个） */
+  function renderAccordion() {
+    accEl.innerHTML = SECTIONS.map(function (s) {
+      return '<div class="wf-acc-item" data-id="' + s.id + '">' +
+        '<button type="button" class="wf-acc-head">' +
+          '<span>' + s.title + '</span>' +
+          (s.flows.length ? '<span class="wf-acc-n">共 ' + s.flows.length + ' 种</span>' : '<span class="wf-acc-n">暂无</span>') +
+          '<span class="wf-acc-caret" aria-hidden="true">▾</span>' +
+        '</button>' +
+        '<div class="wf-acc-body">' +
+          (s.flows.length
+            ? '<ul class="name-list">' + s.flows.map(flowRowHTML).join("") + '</ul>'
+            : '<div class="empty">这个分区还没有收录流程。</div>') +
+        '</div>' +
+      '</div>';
+    }).join("");
   }
 
   tabsEl.addEventListener("click", function (e) {
@@ -403,14 +453,25 @@
     renderPanel();
   });
 
-  bodyEl.addEventListener("click", function (e) {
+  /* 流程行展开/收起：面板与手风琴共用 */
+  document.addEventListener("click", function (e) {
     const btn = e.target.closest(".name-btn");
-    if (!btn) return;
-    btn.closest(".name-row").classList.toggle("open");
+    if (btn) {
+      btn.closest(".name-row").classList.toggle("open");
+      return;
+    }
+    const head = e.target.closest(".wf-acc-head");
+    if (head) {
+      const item = head.closest(".wf-acc-item");
+      const willOpen = !item.classList.contains("open");
+      accEl.querySelectorAll(".wf-acc-item").forEach(function (x) { x.classList.remove("open"); });
+      if (willOpen) item.classList.add("open");
+    }
   });
 
   renderTabs();
   renderPanel();
+  renderAccordion();
 </script>
 </body>
 </html>
