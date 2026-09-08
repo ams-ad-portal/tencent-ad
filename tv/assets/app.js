@@ -8,7 +8,7 @@ const TV_ITEMS = [
     tag: "S",
     dateText: "2026年1月1日",
     sortKey: "2026-01-01",
-    era: "近代",
+    era: "民国-建国前",
     themes: [
       "战争",
       "革命",
@@ -337,7 +337,7 @@ const TV_ITEMS = [
     tag: "S",
     dateText: "2026年3月29日",
     sortKey: "2026-03-29",
-    era: "近代",
+    era: "现代",
     themes: [
       "战争",
       "传奇"
@@ -570,7 +570,7 @@ const TV_ITEMS = [
     tag: "S",
     dateText: "2026年7月5日",
     sortKey: "2026-07-05",
-    era: "民国",
+    era: "民国-建国前",
     themes: [
       "悬疑"
     ],
@@ -588,7 +588,7 @@ const TV_ITEMS = [
     tag: "S",
     dateText: "2026年7月8日",
     sortKey: "2026-07-08",
-    era: "近代",
+    era: "民国-建国前",
     themes: [
       "战争",
       "传奇"
@@ -644,7 +644,7 @@ const TV_ITEMS = [
     tag: "高阶S+",
     dateText: "2026年7月19日",
     sortKey: "2026-07-19",
-    era: "民国",
+    era: "民国-建国前",
     themes: [
       "爱情"
     ],
@@ -1005,7 +1005,7 @@ const TV_ITEMS = [
     tag: "高阶S+",
     dateText: "2026年9月24日",
     sortKey: "2026-09-24",
-    era: "民国",
+    era: "民国-建国前",
     themes: [
       "悬疑"
     ],
@@ -1248,7 +1248,7 @@ const TV_ITEMS = [
     tag: "超级S+",
     dateText: "2026年12月",
     sortKey: "2026-12-01",
-    era: "民国",
+    era: "民国-建国前",
     themes: [
       "悬疑",
       "革命"
@@ -1456,7 +1456,7 @@ function getItems() { return TV_ITEMS; }
 
   /* 按播出时间（sortKey）归季度：1-3月Q1 / 4-6月Q2 / 7-9月Q3 / 10-12月Q4，返回如 "26年Q1" */
   /* 电视剧筛选维度：时代(单值) × 题材(多值)；同维度多选=并集，两维度之间=交集 */
-  const ERA_ORDER = ["古代", "民国", "近代", "近现代", "年代", "现代", "未分类"];
+  const ERA_ORDER = ["古代", "民国-建国前", "近现代", "年代", "现代", "未分类"];
   const THEME_ORDER = ["爱情", "都市", "青春", "奇幻", "武侠", "历史", "传奇", "战争", "军旅", "家庭", "喜剧", "悬疑", "革命", "现实", "刑侦"];
   const eraOf = it => (it.era && String(it.era).trim()) ? String(it.era).trim() : "未分类";
 
