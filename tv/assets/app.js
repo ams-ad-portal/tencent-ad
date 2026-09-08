@@ -62,7 +62,7 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年1月22日",
     sortKey: "2026-01-22",
-    era: "",
+    era: "现代",
     themes: [
       "爱情",
       "奇幻"
@@ -337,7 +337,7 @@ const TV_ITEMS = [
     tag: "S",
     dateText: "2026年3月29日",
     sortKey: "2026-03-29",
-    era: "",
+    era: "近代",
     themes: [
       "战争",
       "传奇"
@@ -588,7 +588,7 @@ const TV_ITEMS = [
     tag: "S",
     dateText: "2026年7月8日",
     sortKey: "2026-07-08",
-    era: "",
+    era: "近代",
     themes: [
       "战争",
       "传奇"
@@ -625,7 +625,7 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年7月13日",
     sortKey: "2026-07-13",
-    era: "",
+    era: "现代",
     themes: [
       "家庭",
       "喜剧"
@@ -932,7 +932,7 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2026年Q3",
     sortKey: "2026-09-30",
-    era: "",
+    era: "现代",
     themes: [
       "奇幻",
       "爱情"
@@ -1061,7 +1061,7 @@ const TV_ITEMS = [
     tag: "高阶S+",
     dateText: "2026年10月",
     sortKey: "2026-10-01",
-    era: "",
+    era: "现代",
     themes: [
       "奇幻",
       "爱情"
@@ -1229,7 +1229,7 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2027年",
     sortKey: "2027-12-31",
-    era: "",
+    era: "古代",
     themes: [
       "爱情",
       "奇幻"
@@ -1267,7 +1267,7 @@ const TV_ITEMS = [
     tag: "超级S+",
     dateText: "2027年Q1",
     sortKey: "2027-03-31",
-    era: "",
+    era: "近代",
     themes: [
       "传奇",
       "现实"
@@ -1340,7 +1340,7 @@ const TV_ITEMS = [
     tag: "热门S+",
     dateText: "2027年",
     sortKey: "2027-12-31",
-    era: "",
+    era: "古代",
     themes: [
       "爱情",
       "奇幻"
