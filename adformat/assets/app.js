@@ -244,6 +244,13 @@ const AD_FORMATS = [
             demoDesc: "莱珀妮鱼子酱面霜",
             video: "videos/moments/moments-shuangmu-hudong-laiponi.mp4",
             videoLabel: "朋友圈双幕互动-莱珀妮鱼子酱面霜.mp4"
+          },
+          {
+            name: "朋友圈全幅滑动+图形氛围",
+            position: "朋友圈广告",
+            demoDesc: "百事-浪浪山-跳视频号",
+            video: "videos/moments/moments-quanfu-huadong-baishi.mp4",
+            videoLabel: "朋友圈全幅滑动+图形氛围-百事-跳视频号.mp4"
           }
         ]
       }
