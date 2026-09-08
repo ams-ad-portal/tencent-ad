@@ -230,6 +230,13 @@ const AD_FORMATS = [
             demoDesc: "古驰香水-张凌赫-跳JD",
             video: "videos/moments/moments-hualang-guochi-zhanglinghe-jd.mp4",
             videoLabel: "朋友圈画廊-古驰香水-张凌赫-跳JD.mp4"
+          },
+          {
+            name: "朋友圈明星头像+轮播动态",
+            position: "朋友圈广告",
+            demoDesc: "大众点评-谢霆锋",
+            video: "videos/moments/moments-star-avatar-carousel-xietingfeng-dianping.mp4",
+            videoLabel: "朋友圈明星头像+动态轮播卡片-谢霆锋大众点评.mp4"
           }
         ]
       }
