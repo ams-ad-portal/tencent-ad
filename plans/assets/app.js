@@ -46,6 +46,14 @@ const PLAN_STRUCTURE = [
         size: "11.6 MB",
         period: "26年",
         dlName: "体育26年通案精简版.pdf"
+      },
+      {
+        title: "26体育通案（1027版）",
+        file: "files/txsports/2026-tongan-1027.pdf",
+        type: "PDF",
+        size: "11.3 MB",
+        period: "26年",
+        dlName: "26体育通案-1027版.pdf"
       }
     ]
   },
