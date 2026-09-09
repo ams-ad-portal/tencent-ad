@@ -79,7 +79,16 @@ const PLAN_STRUCTURE = [
   {
     category: "TME",
     key: "tme",
-    items: []
+    items: [
+      {
+        title: "【26年Q1更新】TME合约广告创新资源介绍",
+        file: "files/tme/2026q1-tme-chuangxin.pdf",
+        type: "PDF",
+        size: "6.0 MB",
+        period: "26年",
+        dlName: "【26年Q1更新】TME合约广告创新资源介绍.pdf"
+      }
+    ]
   },
   {
     category: "QQ",
