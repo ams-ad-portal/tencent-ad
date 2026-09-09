@@ -2,7 +2,7 @@
  * 腾讯内容平台 · 公开资源站（独立版）
  * 权限：统一门禁（访问码 + 腾讯文档申请审批）
  * ============================================================ */
-/* ===== 平台营销方案（各平台营销方案 · 数据与渲染，框架复用刊例站） ===== */
+/* ===== 平台营销手册（各平台营销手册 · 数据与渲染，框架复用刊例站） ===== */
 (function () {
 const PLAN_STRUCTURE = [
   {
@@ -11,6 +11,7 @@ const PLAN_STRUCTURE = [
     items: [
       {
         title: "2026大剧营销手册",
+        period: "26年",
         file: "files/txvideo/2026-daju-yingxiao-shouce.pdf",
         type: "PDF",
         size: "33.2 MB",
@@ -18,6 +19,7 @@ const PLAN_STRUCTURE = [
       },
       {
         title: "2026腾讯视频 综艺 纪录片 商业共创营销手册",
+        period: "26年",
         file: "files/txvideo/2026-zongyi-jilupian-gongchuang-shouce.pdf",
         type: "PDF",
         size: "34.4 MB",
@@ -25,6 +27,7 @@ const PLAN_STRUCTURE = [
       },
       {
         title: "剧场营销",
+        period: "26年",
         file: "files/txvideo/juchang-yingxiao-20251104.pptx",
         type: "PPTX",
         size: "34.9 MB",
@@ -35,7 +38,16 @@ const PLAN_STRUCTURE = [
   {
     category: "腾讯体育",
     key: "txsports",
-    items: []
+    items: [
+      {
+        title: "体育26年通案（精简版）",
+        file: "files/txsports/2026-tongan-jianyao.pdf",
+        type: "PDF",
+        size: "11.6 MB",
+        period: "26年",
+        dlName: "体育26年通案精简版.pdf"
+      }
+    ]
   },
   {
     category: "腾讯新闻",
@@ -43,6 +55,7 @@ const PLAN_STRUCTURE = [
     items: [
       {
         title: "【健康赛道】2026H1腾讯新闻招商资源手册",
+        period: "26年H1",
         file: "files/txnews/2026h1-health-track.pdf",
         type: "PDF",
         size: "28.9 MB",
@@ -50,6 +63,7 @@ const PLAN_STRUCTURE = [
       },
       {
         title: "2026H2腾讯新闻招商方案",
+        period: "26年H2",
         file: "files/txnews/2026h2-zhaoshang.pdf",
         type: "PDF",
         size: "10.1 MB",
@@ -103,7 +117,7 @@ function rowHTML(item, category) {
       </button>
     </td>
     <td class="rate-type">${item.type}</td>
-    <td class="rate-size">${item.size}</td>
+    <td class="rate-size">${item.size}</td><td class="rate-period">${item.period || "—"}</td>
     <td class="rate-actions">
       <a class="btn btn-dl" href="${item.file}" download="${item.dlName}">下载</a>
     </td>
@@ -116,7 +130,7 @@ function render(filter = "all") {
       const items = cat.items;
       const body = items.length
         ? `<div class="table-wrap"><table class="rate-table">
-            <thead><tr><th>方案名称</th><th>文件类型</th><th>文件大小</th><th>下载</th></tr></thead>
+            <thead><tr><th>方案名称</th><th>文件类型</th><th>文件大小</th><th>时间周期</th><th>下载</th></tr></thead>
             <tbody>${items.map(it => rowHTML(it, cat.category)).join("")}</tbody>
           </table></div>`
         : `<div class="plan-empty">这个板块的方案还在路上，先把文件发给我，我马上补上。</div>`;
@@ -390,7 +404,7 @@ window.RatecardBoard = { render: render };
 /* ===== 板块初始化（授权后由门禁调用 window.mergeInit） ===== */
 window.mergeInit = function () {
   var t = document.getElementById("pageTitle");
-  if (t) t.textContent = "平台营销方案";
+  if (t) t.textContent = "平台营销手册";
   window.RatecardBoard.render("all");
 };
 
