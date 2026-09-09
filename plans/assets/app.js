@@ -40,7 +40,22 @@ const PLAN_STRUCTURE = [
   {
     category: "腾讯新闻",
     key: "txnews",
-    items: []
+    items: [
+      {
+        title: "【健康赛道】2026H1腾讯新闻招商资源手册",
+        file: "files/txnews/2026h1-health-track.pdf",
+        type: "PDF",
+        size: "28.9 MB",
+        dlName: "【健康赛道】2026H1腾讯新闻招商资源手册.pdf"
+      },
+      {
+        title: "2026H2腾讯新闻招商方案",
+        file: "files/txnews/2026h2-zhaoshang.pdf",
+        type: "PDF",
+        size: "10.1 MB",
+        dlName: "2026H2腾讯新闻招商方案.pdf"
+      }
+    ]
   },
   {
     category: "微信",
