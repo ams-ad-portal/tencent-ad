@@ -18,6 +18,14 @@ const PLAN_STRUCTURE = [
         dlName: "2026大剧营销手册.pdf"
       },
       {
+        title: "2027腾讯视频动漫营销手册",
+        file: "files/txvideo/2027-dongman-shouce.pdf",
+        type: "PDF",
+        size: "45.7 MB",
+        period: "27年",
+        dlName: "2027腾讯视频动漫营销手册.pdf"
+      },
+      {
         title: "2026腾讯视频 综艺 纪录片 商业共创营销手册",
         period: "26年",
         file: "files/txvideo/2026-zongyi-jilupian-gongchuang-shouce.pdf",
