@@ -10,6 +10,22 @@ const PLAN_STRUCTURE = [
     key: "txvideo",
     items: [
       {
+        title: "腾讯2026年Q4-2027年Q1重点项目推荐",
+        file: "files/txvideo/2026q4-2027q1-zhongdian.pdf",
+        type: "PDF",
+        size: "19.8 MB",
+        period: "26年Q4-27年Q1",
+        dlName: "腾讯2026年Q4-2027年Q1重点项目推荐.pdf"
+      },
+      {
+        title: "26年Q4大剧",
+        file: "files/txvideo/2026q4-daju.pdf",
+        type: "PDF",
+        size: "22.8 MB",
+        period: "26年Q4",
+        dlName: "26年Q4大剧.pdf"
+      },
+      {
         title: "2026大剧营销手册",
         period: "26年",
         file: "files/txvideo/2026-daju-yingxiao-shouce.pdf",
