@@ -207,13 +207,13 @@ const VARIETY_ITEMS = [
   {
     name: "花开不设限",
     tag: "S+",
-    dateText: "2026年11月",
-    sortKey: "2026-11-01",
+    dateText: "2026年12月",
+    sortKey: "2026-12-01",
     type: "真人秀",
     img: "images/huakaibushuxian.webp",
     file: "plans/huakaibushuxian.pdf",
     fileLabel: "0512《花开不设限》.pdf",
-    cast: "杨幂、闫妮、吴谨言、单依纯、吴艳妮、papi酱"
+    cast: "杨幂、闫妮、吴谨言、章若楠、单依纯、包上恩"
   },
   {
     name: "日落时分说爱你2",
