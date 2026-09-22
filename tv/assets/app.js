@@ -816,14 +816,14 @@ const TV_ITEMS = [
   {
     name: "美人余",
     tag: "热门S+",
-    dateText: "2026年9月1日",
-    sortKey: "2026-09-01",
+    dateText: "2026年10月9日",
+    sortKey: "2026-10-09",
     era: "现代",
     themes: [
       "都市"
     ],
     type: "都市女性",
-    cast: "李一桐、王佳佳、常华森、曾梦雪、乔振宇、何润东、程泓鑫、周大为",
+    cast: "李一桐、王佳佳、常华森、曾梦雪、乔振宇、何润东、程泓鑫、周大为、易梦玲",
     img: "images/meirenyu.webp",
     intro: "根据伊北同名小说改编，以当代都市为背景，两性关系作为切口，直戳现代社会“有性无爱，有爱无性”等真实情感和婚姻现状。",
     cats: [
@@ -902,6 +902,19 @@ const TV_ITEMS = [
       "古装",
       "爱情"
     ]
+  },
+  {
+    name: "开启",
+    tag: "超级S+",
+    dateText: "2027年",
+    sortKey: "2027-12-31",
+    era: "",
+    themes: [],
+    type: "",
+    cast: "主演待定",
+    img: "",
+    intro: "",
+    cats: []
   },
   {
     name: "人间清醒",
@@ -1013,10 +1026,27 @@ const TV_ITEMS = [
     ]
   },
   {
-    name: "尚公主",
-    tag: "超级S+",
+    name: "走马上任",
+    tag: "热门S+",
     dateText: "2026年10月",
     sortKey: "2026-10-01",
+    era: "现代",
+    themes: [
+      "喜剧"
+    ],
+    type: "荒诞喜剧",
+    cast: "赵本山、王小利、葛珊珊等",
+    img: "",
+    intro: "",
+    cats: [
+      "喜剧"
+    ]
+  },
+  {
+    name: "尚公主",
+    tag: "超级S+",
+    dateText: "2026年10月22日暂定",
+    sortKey: "2026-10-22",
     era: "古代",
     themes: [
       "爱情"
@@ -1239,8 +1269,8 @@ const TV_ITEMS = [
   {
     name: "千里江山图",
     tag: "超级S+",
-    dateText: "2026年12月",
-    sortKey: "2026-12-01",
+    dateText: "2027年",
+    sortKey: "2027-12-01",
     era: "民国-建国前",
     themes: [
       "历史",
